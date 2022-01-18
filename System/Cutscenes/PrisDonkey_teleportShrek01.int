@@ -1,0 +1,11 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Cue _SHREK_0
+line_1=Cue _SHREK_1
+[Sequence_1]
+PawnTag=SHREK
+line_0=WaitForCue _SHREK_0
+line_1=teleport PrisDonkey_teleptShrekLoc01
+line_2=Cue CutEnd
+line_3=WaitForCue _SHREK_1
+line_4=WaitForCue CutEnd

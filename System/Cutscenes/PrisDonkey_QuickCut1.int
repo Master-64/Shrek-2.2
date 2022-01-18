@@ -1,0 +1,25 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Cue _CAMERA_0
+line_1=Cue _DONKEY_1
+line_2=Cue _DONKEY_2
+line_3=Cue _CAMERA_3
+[Sequence_1]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo QuickCut1_Target1
+line_2=FlyTo QuickCut1_Cam1
+line_3=Sleep 0.5
+line_4=TargetFlyTo QuickCut1_Target2 Time=3
+line_5=FlyTo QuickCut1_Cam2 Time=2
+line_6=Trigger Stairs_Down
+line_7=Sleep 2.5
+line_8=Cue CutEnd
+line_9=WaitForCue _CAMERA_3
+line_10=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=DONKEY
+line_0=WaitForCue _DONKEY_1
+line_1=TurnTo QuickCut1_Target2
+line_2=WaitForCue _DONKEY_2
+line_3=WaitForCue CutEnd

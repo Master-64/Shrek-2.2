@@ -1,0 +1,15 @@
+[CutScene]
+line_0=NoBypass
+[Sequence_0]
+PawnTag=MAIN
+line_0=SetProp Actor=ZoneInfo0 bDistanceFog=True
+line_1=SetProp Actor=ZoneInfo0 DistanceFogColor=(B=222,G=160,R=80,A=0)
+line_2=SetProp Actor=ZoneInfo0 DistanceFogEnd=6000
+line_3=SetProp Actor=ZoneInfo0 DistanceFogStart=4000
+line_4=SetProp Actor=ZoneInfo2 bDistanceFog=True
+line_5=SetProp Actor=ZoneInfo2 DistanceFogColor=(B=222,G=160,R=80,A=0)
+line_6=SetProp Actor=ZoneInfo2 DistanceFogEnd=6000
+line_7=SetProp Actor=ZoneInfo2 DistanceFogStart=4000
+[Sequence_1]
+PawnTag=ONEXIT
+line_0=Donkey TriggerActor Hunt_Start_Save

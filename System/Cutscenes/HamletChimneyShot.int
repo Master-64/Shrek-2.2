@@ -1,0 +1,29 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Cue _SHREK_0
+line_1=Cue _CAMERA_1
+line_2=Cue _SHREK_2
+line_3=Cue _CAMERA_3
+line_4=Cue _SHREK_4
+[Sequence_1]
+PawnTag=SHREK
+line_0=WaitForCue _SHREK_0
+line_1=LookAt ChimneyCam03
+line_2=WaitForCue _SHREK_2
+line_3=WaitForCue StopLooking
+line_4=sleep 0.4
+line_5=LookAt none
+line_6=WaitForCue _SHREK_4
+line_7=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_1
+line_1=TargetFlyTo ChimneyTarget01 time=2
+line_2=FlyTo ChimneyCam01 time=2
+line_3=TargetFlyTo ChimneyTarget02 time=4
+line_4=FlyTo ChimneyCam02 time=4
+line_5=Cue StopLooking
+line_6=sleep 1
+line_7=Cue CutEnd
+line_8=WaitForCue _CAMERA_3
+line_9=WaitForCue CutEnd

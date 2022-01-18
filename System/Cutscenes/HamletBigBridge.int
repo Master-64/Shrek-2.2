@@ -1,0 +1,29 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Sleep 0.5
+line_1=Cue _CAMERA_0
+line_2=Cue _SHREK_1
+line_3=Cue _DONKEY_2
+line_4=Cue _PIB_3
+[Sequence_1]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo BigBridge_Target1
+line_2=FlyTo BigBridge_Cam1
+line_3=Sleep 1.5
+line_4=TargetFlyTo BigBridge_Target2 Time=6 *
+line_5=FlyTo BigBridge_Cam2 Time=6
+line_6=Sleep 2.0
+line_7=Cue CutEnd
+[Sequence_2]
+PawnTag=SHREK
+line_0=WaitForCue _SHREK_1
+line_1=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=DONKEY
+line_0=WaitForCue _DONKEY_2
+line_1=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=PIB
+line_0=WaitForCue _PIB_3
+line_1=WaitForCue CutEnd

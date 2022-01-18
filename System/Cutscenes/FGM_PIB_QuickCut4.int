@@ -1,0 +1,44 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Cue _CAMERA_0
+line_1=Cue _ELFHAZMATTRIGGER_1
+line_2=Cue _PIB_2
+line_3=Cue _ELFHAZMATTRIGGER_3
+line_4=Cue _PIB_4
+line_5=Cue _CAMERA_5
+[Sequence_1]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo QuickCut4_Target1
+line_2=FlyTo QuickCut4_Cam1
+line_3=Sleep 0.5
+line_4=TargetFlyTo QuickCut4_Target2 Time=3
+line_5=Sleep 2.0
+line_6=Trigger GoDownToFloor
+line_7=Sleep 1.0
+line_8=Cue HazElfMoveOffLift
+line_9=Sleep 1.0
+line_10=TargetFlyTo QuickCut4_Target3 Time=1
+line_11=FlyTo QuickCut4_Cam2 Time=1
+line_12=Sleep 1.5
+line_13=WaitForCue HazDone
+line_14=Cue CutEnd
+line_15=WaitForCue _CAMERA_5
+line_16=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=ELFHAZMATTRIGGER
+line_0=WaitForCue _ELFHAZMATTRIGGER_1
+line_1=WaitForCue HazElfMoveOffLift
+line_2=WalkTo QuickCut4_HazLoc1
+line_3=Trigger GoToSwitch
+line_4=TurnTo PIB
+line_5=Cue HazDone
+line_6=WaitForCue _ELFHAZMATTRIGGER_3
+line_7=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=PIB
+line_0=WaitForCue _PIB_2
+line_1=RunTo QuickCut4_PIBLoc1
+line_2=TurnTo ElfHazMatTrigger
+line_3=WaitForCue _PIB_4
+line_4=WaitForCue CutEnd

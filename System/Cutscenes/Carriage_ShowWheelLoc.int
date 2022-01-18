@@ -1,0 +1,26 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Cue _CAMERA_0
+line_1=Sleep 1.0
+line_2=Say pc_dnk_CarHijack_72
+line_3=WaitForSay
+line_4=Cue _SHREK_1
+line_5=Cue _SHREK_2
+line_6=Cue _CAMERA_3
+[Sequence_1]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo PickUpWheel
+line_2=FlyTo EstablishWheel_Cam2
+line_3=Sleep 1.5
+line_4=FlyTo PickUpWheel X=100 Y=100 Z=50 Time=2.5
+line_5=Sleep 1.0
+line_6=Cue CutEnd
+line_7=WaitForCue _CAMERA_3
+line_8=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=SHREK
+line_0=WaitForCue _SHREK_1
+line_1=TurnTo PickUpWheel
+line_2=WaitForCue _SHREK_2
+line_3=WaitForCue CutEnd

@@ -1,0 +1,20 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Cue _CAMERA_0
+line_1=Cue _DONKEY_1
+line_2=Cue _CAMERA_2
+[Sequence_1]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo EscapeHint1_Target1
+line_2=FlyTo EscapeHint1_Cam1
+line_3=FlyTo EscapeHint1_Cam2 Time=2
+line_4=Trigger GasDoor
+line_5=Sleep 2.0
+line_6=Cue CutEnd
+line_7=WaitForCue _CAMERA_2
+line_8=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=DONKEY
+line_0=WaitForCue _DONKEY_1
+line_1=WaitForCue CutEnd

@@ -1,0 +1,129 @@
+[CutScene]
+line_0=NoBypass
+[Sequence_0]
+PawnTag=MAIN
+line_0=SetProp Actor=ZoneInfo bDistanceFog=True
+line_1=SetProp Actor=ZoneInfo DistanceFogColor=(B=49,G=0,R=0,A=0)
+line_2=SetProp Actor=ZoneInfo DistanceFogEnd=8000
+line_3=SetProp Actor=ZoneInfo DistanceFogStart=6000
+line_4=FadeTo Time=0
+line_5=PlayMusic 8_Castle_Siege_Track_1a Fade=0.0 Loop=True
+line_6=Cue _CAMERA_0
+line_7=Sleep 0.5
+line_8=Cue _MONGO_1
+line_9=Say pc_knt_FFACastle_10
+line_10=Cue _MONGOKNIGHTCS_2
+line_11=Sleep 6.0
+line_12=Cue _CAMERA_3
+line_13=WaitForSay
+line_14=Say pc_pib_FFACastle_35
+line_15=Cue _MONGO_4
+line_16=WaitForCue CamRise
+line_17=Cue _CAMERA_5
+line_18=WaitForSay
+line_19=Say pc_dnk_FFACastle_36
+line_20=WaitForSay
+line_21=Say pc_shk_FFACastle_16
+line_22=WaitForCue MongoPunchNow
+line_23=Cue _MONGO_6
+line_24=WaitForCue CamChange1
+line_25=Cue _CAMERA_7
+line_26=Cue RunLikeCrazy
+line_27=Cue _MANHATONE_8
+line_28=Cue _WOMANNOHAT_9
+line_29=Cue _WOMANHATONE_10
+line_30=Cue _MANHATONE_11
+line_31=WaitForSay
+line_32=Cue _CAMERA_12
+line_33=Cue _MONGO_13
+line_34=Cue _SHREK_14
+line_35=Cue _KNIGHT_15
+line_36=Cue _MONGOKNIGHTCS_16
+line_37=Cue _MONGOPANICSPEAKERONE_17
+line_38=Cue _MONGOPANICSPEAKERTWO_18
+[Sequence_1]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo CastleSIntro_Target4
+line_2=FlyTo CastleSIntro_Cam4
+line_3=FadeIn Time=1
+line_4=FlyTo CastleSIntro_Cam5 Time=8 *
+line_5=WaitForCue _CAMERA_3
+line_6=TargetFlyTo CastleSIntro_Target1
+line_7=FlyTo CastleSIntro_Cam1
+line_8=WaitForCue _CAMERA_5
+line_9=TargetFlyTo CastleSIntro_Target2 Time=3
+line_10=Sleep 3.0
+line_11=Cue MongoPunchNow
+line_12=WaitForCue _CAMERA_7
+line_13=TargetFlyTo CastleSIntro_Target3 Time=1
+line_14=FlyTo CastleSIntro_Cam2 Time=2
+line_15=TargetFlyTo Mongo Z=310 Time=10
+line_16=FlyTo CastleSIntro_Cam3 Time=10 *
+line_17=Sleep 7.0
+line_18=Trigger blockMongoIn
+line_19=Cue CutEnd
+line_20=WaitForCue _CAMERA_12
+line_21=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=MONGO
+line_0=WaitForCue _MONGO_1
+line_1=WalkTo CastleSIntro_MongoLoc0
+line_2=WaitForCue _MONGO_4
+line_3=WalkTo CastleSIntro_MongoLoc1
+line_4=Face KWMusicTrigger1
+line_5=Cue CamRise
+line_6=WaitForCue _MONGO_6
+line_7=PlayAnim Punch1
+line_8=Sleep 0.55
+line_9=Trigger FirstGate_1
+line_10=WaitForAnim
+line_11=PlayAnim Punch2
+line_12=Sleep 0.5
+line_13=Trigger FirstGate_2
+line_14=WaitForAnim
+line_15=Trigger people
+line_16=Cue CamChange1
+line_17=WalkTo CastleSIntro_MongoLoc2
+line_18=WaitForCue _MONGO_13
+line_19=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=MONGOKNIGHTCS
+line_0=WaitForCue _MONGOKNIGHTCS_2
+line_1=PlayAnim SwordRight
+line_2=WaitForAnim
+line_3=WaitForCue _MONGOKNIGHTCS_16
+line_4=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=MANHATONE
+line_0=WaitForCue _MANHATONE_8
+line_1=WaitForCue RunLikeCrazy
+line_2=WaitForCue _MANHATONE_11
+line_3=WaitForCue RunLikeCrazy
+[Sequence_5]
+PawnTag=WOMANNOHAT
+line_0=WaitForCue _WOMANNOHAT_9
+line_1=WaitForCue RunLikeCrazy
+[Sequence_6]
+PawnTag=WOMANHATONE
+line_0=WaitForCue _WOMANHATONE_10
+line_1=WaitForCue RunLikeCrazy
+[Sequence_7]
+PawnTag=SHREK
+line_0=WaitForCue _SHREK_14
+line_1=WaitForCue CutEnd
+[Sequence_8]
+PawnTag=KNIGHT
+line_0=WaitForCue _KNIGHT_15
+line_1=WaitForCue CutEnd
+[Sequence_9]
+PawnTag=MONGOPANICSPEAKERONE
+line_0=WaitForCue _MONGOPANICSPEAKERONE_17
+line_1=WaitForCue CutEnd
+[Sequence_10]
+PawnTag=MONGOPANICSPEAKERTWO
+line_0=WaitForCue _MONGOPANICSPEAKERTWO_18
+line_1=WaitForCue CutEnd
+[Sequence_11]
+PawnTag=ONEXIT
+line_0=SaveGame 1

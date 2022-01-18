@@ -1,0 +1,123 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Cue _CAMERA_0
+line_1=WaitForCue DialogStart
+line_2=Sleep 2.0
+line_3=Cue _SHSTORYBOOK_1
+line_4=WaitForCue DoneTurning1
+line_5=Sleep 2.0
+line_6=Cue _CAMERA_2
+line_7=Sleep 2.0
+line_8=Cue _SHSTORYBOOK3_3
+line_9=Cue _SHSTORYBOOK2_4
+line_10=WaitForCue DoneTurning2
+line_11=Sleep 2.0
+line_12=Cue _CAMERA_5
+line_13=Sleep 2.0
+line_14=Cue _SHSTORYBOOK3_6
+line_15=WaitForCue DoneTurning3
+line_16=Sleep 2.0
+line_17=Cue _CAMERA_7
+line_18=Sleep 2.0
+line_19=Cue _SHSTORYBOOK4_8
+line_20=WaitForCue DoneTurning4
+line_21=Sleep 2.0
+line_22=Cue _CAMERA_9
+line_23=Sleep 2.0
+line_24=Cue _SHSTORYBOOK5_10
+line_25=WaitForCue DoneTurning5
+line_26=Sleep 2.0
+line_27=Cue _SHSTORYBOOK_11
+line_28=Cue _SHSTORYBOOK2_12
+line_29=Cue _SHSTORYBOOK3_13
+line_30=Cue _SHSTORYBOOK4_14
+line_31=Cue _SHSTORYBOOK5_15
+line_32=Cue _SHREK_16
+line_33=Cue _CAMERA_17
+[Sequence_1]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=FOV Angle=85 Time=0
+line_2=TargetFlyTo Menu_Target2 X=-15
+line_3=FlyTo Menu_Cam2
+line_4=FadeIn Time=3
+line_5=Sleep 3.0
+line_6=Cue DialogStart
+line_7=WaitForCue _CAMERA_2
+line_8=FOV Angle=85 Time=0
+line_9=TargetFlyTo Book2_Target2 X=-15
+line_10=FlyTo Book2_Cam2
+line_11=WaitForCue _CAMERA_5
+line_12=FOV Angle=85 Time=0
+line_13=TargetFlyTo Book3_Target2 X=-15
+line_14=FlyTo Book3_Cam2
+line_15=WaitForCue _CAMERA_7
+line_16=FOV Angle=85 Time=0
+line_17=TargetFlyTo Book4_Target2 X=-15
+line_18=FlyTo Book4_Cam2
+line_19=WaitForCue _CAMERA_9
+line_20=FOV Angle=85 Time=0
+line_21=TargetFlyTo Book5_Target2 X=-15
+line_22=FlyTo Book5_Cam2
+line_23=WaitForCue _CAMERA_17
+line_24=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=SHSTORYBOOK
+line_0=WaitForCue _SHSTORYBOOK_1
+line_1=PlaySound Page_Turn
+line_2=PlayAnim PageTurn Rate=0.5 Tween=1
+line_3=WaitForAnim
+line_4=Cue DoneTurning1
+line_5=PlayAnim Pageturnedstatic Loop Tween=0
+line_6=WaitForCue _SHSTORYBOOK_11
+line_7=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=SHSTORYBOOK3
+line_0=WaitForCue _SHSTORYBOOK3_3
+line_1=PlayAnim PageTurnedStatic Loop
+line_2=WaitForCue _SHSTORYBOOK3_6
+line_3=PlaySound Page_Turn2
+line_4=PlayAnim PageTurnBack Rate=0.7 Tween=1
+line_5=WaitForAnim
+line_6=Cue DoneTurning3
+line_7=SetIdle Open
+line_8=PlayAnim Open Loop Tween=0
+line_9=WaitForCue _SHSTORYBOOK3_13
+line_10=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=SHSTORYBOOK2
+line_0=WaitForCue _SHSTORYBOOK2_4
+line_1=PlaySound Page_Turn
+line_2=PlayAnim PageTurn Rate=0.5 Tween=1
+line_3=WaitForAnim
+line_4=Cue DoneTurning2
+line_5=SetIdle Pageturnedstatic
+line_6=PlayAnim Pageturnedstatic Loop Tween=0
+line_7=WaitForCue _SHSTORYBOOK2_12
+line_8=WaitForCue CutEnd
+[Sequence_5]
+PawnTag=SHSTORYBOOK4
+line_0=WaitForCue _SHSTORYBOOK4_8
+line_1=PlaySound Page_Turn
+line_2=PlayAnim PageTurn Rate=0.5 Tween=1
+line_3=WaitForAnim
+line_4=Cue DoneTurning4
+line_5=SetIdle Pageturnedstatic
+line_6=PlayAnim Pageturnedstatic Loop Tween=0
+line_7=WaitForCue _SHSTORYBOOK4_14
+line_8=WaitForCue CutEnd
+[Sequence_6]
+PawnTag=SHSTORYBOOK5
+line_0=WaitForCue _SHSTORYBOOK5_10
+line_1=PlaySound Page_Turn
+line_2=PlayAnim PageTurn Rate=0.5 Tween=1
+line_3=WaitForAnim
+line_4=Cue DoneTurning5
+line_5=SetIdle Pageturnedstatic
+line_6=PlayAnim Pageturnedstatic Loop Tween=0
+line_7=WaitForCue _SHSTORYBOOK5_15
+line_8=WaitForCue CutEnd
+[Sequence_7]
+PawnTag=SHREK
+line_0=WaitForCue _SHREK_16
+line_1=WaitForCue CutEnd

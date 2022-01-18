@@ -1,0 +1,10 @@
+new TrueTypeFontFactory PACKAGE="SH2_Fonts" Name=SHPigae48Font FontName="Pigae" AntiAlias=1 Xpad=12 Height=48 AntiAlias=1 CharactersPerPage=16
+new TrueTypeFontFactory PACKAGE="SH2_Fonts" Name=SHPigae36Font FontName="Pigae" AntiAlias=1 Xpad=12 Height=36 AntiAlias=1 CharactersPerPage=16
+new TrueTypeFontFactory PACKAGE="SH2_Fonts" Name=SHPigaeHugeFont FontName="Pigae" AntiAlias=1 Xpad=12 Height=24 AntiAlias=1 CharactersPerPage=16
+new TrueTypeFontFactory PACKAGE="SH2_Fonts" Name=SHPigaeBigFont FontName="Pigae" AntiAlias=1 Xpad=12 Height=18 AntiAlias=1 CharactersPerPage=16
+new TrueTypeFontFactory PACKAGE="SH2_Fonts" Name=SHPigaeMedFont FontName="Pigae" AntiAlias=1 Xpad=2 Height=14 AntiAlias=1 CharactersPerPage=32 
+new TrueTypeFontFactory PACKAGE="SH2_Fonts" Name=SHPigaeSmallFont FontName="Pigae" AntiAlias=1  Height=12 AntiAlias=1 CharactersPerPage=32 
+new TrueTypeFontFactory PACKAGE="SH2_Fonts" Name=SHPigaeTinyFont FontName="Pigae" AntiAlias=1  Height=10 AntiAlias=1 CharactersPerPage=32 
+OBJ SAVEPACKAGE PACKAGE="SH2_Fonts" FILE="..\Textures\SH2_Fonts.utx"
+
+

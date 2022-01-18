@@ -1,0 +1,20 @@
+[Sequence_0]
+PawnTag=CAMERA
+line_0=TargetFlyTo Shimmy_Target1
+line_1=FlyTo Shimmy_Cam1
+line_2=FlyTo Shimmy_Cam2 Time=3.5
+line_3=Cue CameraDoneMoving
+line_4=WaitForCue CutEnd
+[Sequence_1]
+PawnTag=SHREK
+line_0=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=DONKEY
+line_0=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=MAIN
+line_0=Say pc_dnk_SwampJShimmy_2
+line_1=WaitForSay
+line_2=Sleep 1.0
+line_3=WaitForCue CameraDoneMoving
+line_4=Cue CutEnd

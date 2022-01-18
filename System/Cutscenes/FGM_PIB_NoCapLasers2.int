@@ -1,0 +1,6 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=LockCamTo NoCapLasers2_Target1
+line_1=Say pc_pib_IntroLasers_2
+line_2=WaitForSay
+line_3=UnLockCamTo NoCapLasers2_Target1

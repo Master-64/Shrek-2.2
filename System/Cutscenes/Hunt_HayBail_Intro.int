@@ -1,0 +1,30 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Cue _CAMERA_0
+line_1=WaitForCue DialogStartNow
+line_2=Say pc_dnk_HayTutoral_2
+line_3=WaitForSay
+line_4=Cue CutEnd
+line_5=Cue _CAMERA_1
+line_6=Cue _DONKEY_2
+line_7=Cue _SHREK_3
+[Sequence_1]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo HayBail_Target1
+line_2=FlyTo HayBail_Cam1
+line_3=Sleep 1.8
+line_4=TargetFlyTo HayBail_Target2 Time=2
+line_5=FlyTo HayBail_Cam2 Time=2
+line_6=Sleep 1.8
+line_7=Cue DialogStartNow
+line_8=WaitForCue _CAMERA_1
+line_9=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=DONKEY
+line_0=WaitForCue _DONKEY_2
+line_1=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=SHREK
+line_0=WaitForCue _SHREK_3
+line_1=WaitForCue CutEnd

@@ -1,0 +1,37 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Cue _CAMERA_0
+line_1=Cue _DONKEY_1
+line_2=Cue _SHREK_2
+line_3=Say pc_dnk_FlatTopMushroom_2
+line_4=WaitForSay
+line_5=Say pc_dnk_FlatTopMushroom_4
+line_6=WaitForSay
+line_7=Say pc_dnk_FlatTopMushroom_6
+line_8=WaitForSay
+line_9=Cue CutEnd
+line_10=Cue _CAMERA_3
+line_11=Cue _DONKEY_4
+line_12=Cue _SHREK_5
+[Sequence_1]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo MushRoomRejection_Target1
+line_2=FlyTo MushRoomRejection_Cam1
+line_3=FlyTo MushRoomRejection_Cam2 Time=20 *
+line_4=WaitForCue _CAMERA_3
+line_5=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=DONKEY
+line_0=WaitForCue _DONKEY_1
+line_1=Teleport MushRoomRejection_DonkeyLoc1
+line_2=WalkTo MushRoomRejection_DonkeyLoc2
+line_3=WaitForCue _DONKEY_4
+line_4=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=SHREK
+line_0=WaitForCue _SHREK_2
+line_1=Teleport MushRoomRejection_ShrekLoc1
+line_2=WalkTo MushRoomRejection_ShrekLoc2
+line_3=WaitForCue _SHREK_5
+line_4=WaitForCue CutEnd

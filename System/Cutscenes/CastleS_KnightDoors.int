@@ -1,0 +1,34 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Cue _CAMERA_0
+line_1=Say pc_shk_MongoTutoral_12
+line_2=WaitForSay
+line_3=Trigger knights01_director
+line_4=Trigger knights02_director
+line_5=WaitForCue CamDone
+line_6=Cue CutEnd
+line_7=Cue _CAMERA_1
+line_8=Cue _MONGO_2
+line_9=Cue _MONGOPANICSPEAKERONE_3
+line_10=Cue _MONGOPANICSPEAKERTWO_4
+[Sequence_1]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo KnightDoors_Target1 Time=2
+line_2=FlyTo KnightDoors_Cam1 Time=2
+line_3=Sleep 2.0
+line_4=Cue CamDone
+line_5=WaitForCue _CAMERA_1
+line_6=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=MONGO
+line_0=WaitForCue _MONGO_2
+line_1=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=MONGOPANICSPEAKERONE
+line_0=WaitForCue _MONGOPANICSPEAKERONE_3
+line_1=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=MONGOPANICSPEAKERTWO
+line_0=WaitForCue _MONGOPANICSPEAKERTWO_4
+line_1=WaitForCue CutEnd

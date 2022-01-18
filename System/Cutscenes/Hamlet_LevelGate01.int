@@ -1,0 +1,18 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Cue _CAMERA_0
+line_1=Cue _SHREK_1
+line_2=Cue _CAMERA_2
+[Sequence_1]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo HamGate01_cameraTarget01
+line_2=FlyTo HamGate01_cameraPosition01
+line_3=Sleep 3.0
+line_4=Cue CutEnd
+line_5=WaitForCue _CAMERA_2
+line_6=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=SHREK
+line_0=WaitForCue _SHREK_1
+line_1=WaitForCue CutEnd

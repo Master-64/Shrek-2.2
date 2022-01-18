@@ -1,0 +1,381 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=StopMusic
+line_1=PlayMusic 9_FGM_Battle_Track_2
+line_2=Sleep 1.5
+line_3=Cue _CSFGM_0
+line_4=Cue _BOSSFGM_1
+line_5=Cue _CAMERA_2
+line_6=Cue _BOSSFGM_3
+line_7=Cue _KING_4
+line_8=Cue _FIONA_5
+line_9=Cue _PIB_6
+line_10=Cue _DONKEY_7
+line_11=Cue _PRINCECHARMING_8
+line_12=Cue _SHREK_9
+line_13=WaitForCue Scene2
+line_14=Cue _SHREK_10
+line_15=Cue _PIB_11
+line_16=Cue _DONKEY_12
+line_17=WaitForCue ShrekDonePosing
+line_18=Cue _CAMERA_13
+line_19=Cue _DONKEY_14
+line_20=Sleep 1
+line_21=Say PC_DNK_BUMPLINE_58
+line_22=Cue _PIB_15
+line_23=Cue _CAMERA_16
+line_24=WaitForCue SwapDonkeys
+line_25=playsound transform_poof
+line_26=Flash R=255 G=255 B=255 Time=0.5
+line_27=Cue _DONKEY_17
+line_28=Cue _REALDONKEY_18
+line_29=WaitForCue Transformation1Done
+line_30=Cue _REALDONKEY_19
+line_31=Say PC_DNK_BUMPLINE_471
+line_32=WaitForSay
+line_33=Say pc_dnk_Victory_2
+line_34=Sleep 2.0
+line_35=Cue _CAMERA_20
+line_36=WaitForSay
+line_37=Cue _PIB_21
+line_38=Say pc_pib_Victory_13
+line_39=Cue _REALDONKEY_22
+line_40=Sleep 1.25
+line_41=Cue _CAMERA_23
+line_42=WaitForSay
+line_43=Cue _CAMERA_24
+line_44=Cue _REALDONKEY_25
+line_45=Cue _SHREK_26
+line_46=Say pc_dnk_Victory_14
+line_47=WaitForSay
+line_48=Cue _CAMERA_27
+line_49=Cue _REALDONKEY_28
+line_50=Cue _PIB_29
+line_51=Cue _SHREK_30
+line_52=Cue _FIONA_31
+line_53=Sleep .5
+line_54=Cue _CAMERA_32
+line_55=Say pc_dnk_Victory_15
+line_56=Cue _CAMERA_33
+line_57=WaitForSay
+line_58=Say pc_shk_Victory_16
+line_59=Cue _SHREK_34
+line_60=WaitForSay
+line_61=Sleep 0.5
+line_62=Cue _CAMERA_35
+line_63=Say pc_fin_Victory_17
+line_64=Cue _FIONA_36
+line_65=WaitForSay
+line_66=Cue _CAMERA_37
+line_67=trigger Regress_Transformfiona
+line_68=trigger Regress_TransformShrek
+line_69=playsound transform
+line_70=sleep 1
+line_71=playsound transform
+line_72=Cue _SHREK_38
+line_73=Cue _FIONA_39
+line_74=WaitForCue PrepareforWhiteFlash
+line_75=Cue _CAMERA_40
+line_76=WaitForCue Shrek_FionaChangeBack
+line_77=Cue _FIONA_41
+line_78=Cue _SHREK_42
+line_79=Cue _FIONAOGRE_43
+line_80=Cue _SHREKOGRE_44
+line_81=WaitForCue OgreAreDone
+line_82=Sleep 1
+line_83=trigger Regress_Transformfiona
+line_84=trigger Regress_TransformShrek
+line_85=Say pc_fin_Victory_20 Pawn=FionaOgre
+line_86=WaitForSay
+line_87=Cue _CAMERA_45
+line_88=Say pc_fin_Victory_25 Pawn=FionaOgre
+line_89=Cue _FIONAOGRE_46
+line_90=WaitForSay
+line_91=Cue _CAMERA_47
+line_92=Cue _REALDONKEY_48
+line_93=Cue _PIB_49
+line_94=Cue _KING_50
+line_95=Sleep 1
+line_96=Say pc_fin_Victory_22 Pawn=FionaOgre
+line_97=Cue _FIONAOGRE_51
+line_98=WaitForSay
+line_99=Sleep 1
+line_100=Cue _SHREKOGRE_52
+line_101=WaitForCue RotateDone
+line_102=Cue _CAMERA_53
+line_103=Cue _BOSSFGM_54
+line_104=Cue _CSFGM_55
+line_105=Cue _KING_56
+line_106=Cue _PRINCECHARMING_57
+line_107=Cue _PIB_58
+line_108=Cue _FIONA_59
+line_109=Cue _FIONAOGRE_60
+line_110=Cue _SHREK_61
+line_111=Cue _SHREKOGRE_62
+line_112=Cue _DONKEY_63
+line_113=Cue _REALDONKEY_64
+line_114=Cue _CAMERA_65
+[Sequence_1]
+PawnTag=CSFGM
+line_0=WaitForCue _CSFGM_0
+line_1=Teleport FGMPreBattle_FGMOutOfWay1
+line_2=Cue FakeFGMOut
+line_3=WaitForCue _CSFGM_55
+line_4=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=BOSSFGM
+line_0=WaitForCue _BOSSFGM_1
+line_1=WaitForCue FakeFGMOut
+line_2=Teleport YouWin_FGMLoc1
+line_3=WaitForCue _BOSSFGM_3
+line_4=PlayAnim Dizzy Loop
+line_5=WaitForAnim
+line_6=PlayAnim cs_beforeblowup rate=1.5
+line_7=Trigger EmitterFGM_Explode
+line_8=PlaySound FGM_explode no3d=true
+line_9=Say PC_FGM_FGMEMOTE_24
+line_10=FadeActor Time=1
+line_11=Sleep 2
+line_12=Sleep 1
+line_13=Cue Scene2
+line_14=WaitForCue _BOSSFGM_54
+line_15=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_2
+line_1=KnightsRunHome
+line_2=FOV Angle=54 Time=0
+line_3=TargetFlyTo YouWin_Target0 Z=-5
+line_4=FlyTo YouWin_Cam0
+line_5=Sleep 1.5
+line_6=FOV Angle=65 EaseTo Time=2.4
+line_7=TargetFlyTo YouWin_Target1 Z=-44 EaseTo Time=2.4
+line_8=FlyTo YouWin_Cam1 EaseTo Time=2.4
+line_9=WaitForCue _CAMERA_13
+line_10=targetflyto YouWin_Cam2TargetA
+line_11=flyto YouWin_Cam2A
+line_12=fov angle=36
+line_13=sleep 2
+line_14=WaitForCue _CAMERA_16
+line_15=FOV Angle=55 Time=2.75
+line_16=TargetFlyTo YouWin_Target3 Z=6 Y=8 Time=2.75
+line_17=FlyTo YouWin_Cam3 Time=2.75
+line_18=Cue SwapDonkeys
+line_19=WaitForCue _CAMERA_20
+line_20=FOV Angle=45 Time=0
+line_21=TargetFlyTo YouWin_Target2 Z=-29
+line_22=FlyTo YouWin_Cam2 Z=-29
+line_23=WaitForCue _CAMERA_23
+line_24=targetflyto pib z=10
+line_25=flyto YouWin_PIBMedShotCam
+line_26=fov angle=25
+line_27=WaitForCue _CAMERA_24
+line_28=FOV Angle=54 Time=0
+line_29=TargetFlyTo YouWin_Target4 Z=-9
+line_30=FlyTo YouWin_Cam4
+line_31=WaitForCue _CAMERA_27
+line_32=FOV Angle=45 Time=0
+line_33=TargetFlyTo YouWin_Target5 Z=8
+line_34=FlyTo YouWin_Cam6
+line_35=WaitForCue _CAMERA_32
+line_36=FOV Angle=54 Time=2
+line_37=TargetFlyTo YouWin_Target5 Z=15 Time=2
+line_38=FlyTo YouWin_Cam5 Time=2
+line_39=WaitForCue _CAMERA_33
+line_40=FOV Angle=54 Time=0
+line_41=TargetFlyTo YouWin_Target7
+line_42=FlyTo YouWin_Cam7
+line_43=WaitForCue _CAMERA_35
+line_44=FOV Angle=54 Time=0
+line_45=TargetFlyTo YouWin_Target8
+line_46=FlyTo YouWin_Cam8
+line_47=WaitForCue _CAMERA_37
+line_48=FOV Angle=45 Time=0
+line_49=TargetFlyTo YouWin_Target5 Z=8
+line_50=FlyTo YouWin_Cam6
+line_51=WaitForCue _CAMERA_40
+line_52=Cue Shrek_FionaChangeBack
+line_53=playsound transform_poof
+line_54=Flash R=255 G=255 B=255 Time=0.5
+line_55=FOV Angle=65 Time=0
+line_56=WaitForCue _CAMERA_45
+line_57=TargetFlyTo FionaOgre z=40
+line_58=flyto ShrekOgre x=-35 y=-55 z=55
+line_59=fov angle=36
+line_60=WaitForCue _CAMERA_47
+line_61=FOV Angle=70 Time=5
+line_62=TargetFlyTo YouWin_Target9 Z=7 Time=5
+line_63=FlyTo YouWin_Cam10 SplinePoint=YouWin_SplinePull1 Time=5
+line_64=Cue RotateDone
+line_65=WaitForCue _CAMERA_53
+line_66=FadeTo Time=3
+line_67=StopMusic Fade=2
+line_68=Sleep 3.0
+line_69=Cue CutEnd
+line_70=WaitForCue _CAMERA_65
+line_71=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=KING
+line_0=WaitForCue _KING_4
+line_1=Teleport FGMPreBattle_KingLoc3
+line_2=TurnTo Shrek
+line_3=WaitForCue _KING_50
+line_4=Teleport YouWin_KingLoc1
+line_5=TurnTo YouWin_ShrekLoc2
+line_6=WaitForCue _KING_56
+line_7=WaitForCue CutEnd
+[Sequence_5]
+PawnTag=FIONA
+line_0=WaitForCue _FIONA_5
+line_1=Teleport FGMPreBattle_FionaLoc2
+line_2=TurnTo Shrek
+line_3=WaitForCue _FIONA_31
+line_4=Teleport YouWin_FionaLoc1
+line_5=walkTo YouWin_FionaLoc2
+line_6=TurnTo YouWin_ShrekLoc2
+line_7=WaitForCue _FIONA_36
+line_8=playanim CS_NotHereYet
+line_9=WaitForAnim
+line_10=WaitForCue _FIONA_39
+line_11=Sleep .5
+line_12=playanim CS_ChangeBack
+line_13=WaitForAnim
+line_14=Cue PrepareforWhiteFlash
+line_15=WaitForCue _FIONA_41
+line_16=Teleport YouWin_FionaOutOfWay1
+line_17=Cue OgreFionaIN
+line_18=WaitForCue _FIONA_59
+line_19=WaitForCue CutEnd
+[Sequence_6]
+PawnTag=PIB
+line_0=WaitForCue _PIB_6
+line_1=Teleport FGMPreBattle_PIBLoc2
+line_2=TurnTo Shrek
+line_3=WaitForCue _PIB_11
+line_4=WalkTo YouWin_PIBLoc1
+line_5=TurnTo YouWin_PIBFaceHere
+line_6=WaitForCue _PIB_15
+line_7=TurnTo YouWin_DonkeyLoc1
+line_8=WaitForCue _PIB_21
+line_9=playanim CS_UnfortunateForm
+line_10=WaitForAnim
+line_11=WaitForCue _PIB_29
+line_12=TurnTo YouWin_ShrekLoc2
+line_13=WaitForCue _PIB_49
+line_14=WalkTo YouWin_PIBLoc3
+line_15=TurnTo YouWin_ShrekLoc2
+line_16=WaitForCue _PIB_58
+line_17=WaitForCue CutEnd
+[Sequence_7]
+PawnTag=STEED
+line_0=WaitForCue _DONKEY_7
+line_1=Teleport FGMPreBattle_DonkeyLoc2
+line_2=TurnTo FGMPreBattle_DonkeyFaceMark
+line_3=WaitForCue _DONKEY_12
+line_4=WalkTo YouWin_DonkeyLoc1
+line_5=TurnTo YouWin_DonkeyFaceHere
+line_6=WaitForCue _DONKEY_14
+line_7=sleep .15
+line_8=playsound FGM_ping no3d=true
+line_9=PlayAnim cs_changetodonkey frame=5
+line_10=sleep 1.5
+line_11=trigger Regress_Transform
+line_12=playsound transform
+line_13=sleep 1
+line_14=playsound transform
+line_15=WaitForAnim
+line_16=WaitForCue _DONKEY_17
+line_17=Teleport YouWin_SteedOutOfWay1
+line_18=Cue BringRealDonkey
+line_19=WaitForCue _DONKEY_63
+line_20=WaitForCue CutEnd
+[Sequence_8]
+PawnTag=PRINCECHARMING
+line_0=WaitForCue _PRINCECHARMING_8
+line_1=Teleport FGMPreBattle_CharmingLoc3
+line_2=WaitForCue _PRINCECHARMING_57
+line_3=WaitForCue CutEnd
+[Sequence_9]
+PawnTag=SHREK
+line_0=WaitForCue _SHREK_9
+line_1=Teleport YouWin_ShrekLoc1
+line_2=Face FGMPreBattle_FGMLoc1
+line_3=WaitForCue _SHREK_10
+line_4=PlayAnim Bored2
+line_5=playsound FGM_sleeve_brush01 no3d=true
+line_6=playsound FGM_sleeve_brush02 no3d=true
+line_7=Sleep 3
+line_8=playsound FGM_gotcha no3d=true
+line_9=WaitForAnim
+line_10=Cue ShrekDonePosing
+line_11=WaitForCue _SHREK_26
+line_12=Teleport YouWin_ShrekLoc3
+line_13=WaitForCue _SHREK_30
+line_14=walkTo YouWin_ShrekLoc2
+line_15=TurnTo YouWin_FionaLoc2
+line_16=WaitForCue _SHREK_34
+line_17=playanim cs_hereprince
+line_18=WaitForAnim
+line_19=WaitForCue _SHREK_38
+line_20=Sleep .5
+line_21=Playanim CS_ChangeToShrek
+line_22=WaitForAnim
+line_23=WaitForCue _SHREK_42
+line_24=Teleport YouWin_ShrekOutOfWay1
+line_25=Cue OgreShrekIN
+line_26=WaitForCue _SHREK_61
+line_27=WaitForCue CutEnd
+[Sequence_10]
+PawnTag=DONKEY
+line_0=WaitForCue _REALDONKEY_18
+line_1=WaitForCue BringRealDonkey
+line_2=Teleport YouWin_DonkeyLoc3
+line_3=Face YouWin_PIBLoc1
+line_4=Cue Transformation1Done
+line_5=WaitForCue _REALDONKEY_19
+line_6=PlayAnim WalkCircle
+line_7=Sleep 1
+line_8=trigger Regress_Transform
+line_9=WaitForAnim
+line_10=WaitForCue _REALDONKEY_22
+line_11=Sleep 0.5
+line_12=TurnTo PIB
+line_13=WaitForCue _REALDONKEY_25
+line_14=PlayAnim PointHead Rate=0.8
+line_15=WaitForAnim
+line_16=WaitForCue _REALDONKEY_28
+line_17=TurnTo YouWin_DonkeyFaceHere2
+line_18=WaitForCue _REALDONKEY_48
+line_19=WalkTo YouWin_DonkeyLoc4
+line_20=TurnTo YouWin_FionaLoc2
+line_21=WaitForCue _REALDONKEY_64
+line_22=WaitForCue CutEnd
+[Sequence_11]
+PawnTag=FIONAOGRE
+line_0=WaitForCue _FIONAOGRE_43
+line_1=WaitForCue OgreFionaIN
+line_2=Teleport YouWin_FionaLoc2
+line_3=Face YouWin_ShrekLoc2
+line_4=WaitForCue _FIONAOGRE_46
+line_5=playanim CS_Grrr
+line_6=WaitForAnim
+line_7=WaitForCue _FIONAOGRE_51
+line_8=playanim CS_EverAfter
+line_9=WaitForAnim
+line_10=WaitForCue _FIONAOGRE_60
+line_11=WaitForCue CutEnd
+[Sequence_12]
+PawnTag=SHREKOGRE
+line_0=WaitForCue _SHREKOGRE_44
+line_1=WaitForCue OgreShrekIN
+line_2=Teleport YouWin_ShrekLoc2
+line_3=Face YouWin_FionaLoc2
+line_4=Cue OgreAreDone
+line_5=WaitForCue _SHREKOGRE_52
+line_6=playanim CS_VictorySmile
+line_7=WaitForAnim
+line_8=WaitForCue _SHREKOGRE_62
+line_9=WaitForCue CutEnd
+[Sequence_13]
+PawnTag=ONEXIT
+line_0=Shrek Trigger LoadStoryBook4

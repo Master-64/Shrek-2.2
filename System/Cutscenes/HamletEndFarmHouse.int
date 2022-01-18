@@ -1,0 +1,155 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=StopMusic Fade=9
+line_1=Cue _CAMERA_0
+line_2=Cue _SHREK_1
+line_3=Cue _DONKEY_2
+line_4=Cue _PIB_3
+line_5=Cue _CAMERA_4
+line_6=Say pc_dnk_GoingToBed_42
+line_7=WaitForSay
+line_8=Say pc_shk_GoingToBed_43
+line_9=WaitForSay
+line_10=Say pc_dnk_GoingToBed_36
+line_11=Cue _DONKEY_5
+line_12=WaitForSay
+line_13=PlayMusic 6_Hamlet_Track_2a Loop=True
+line_14=Say pc_shk_GoingToBed_22
+line_15=Cue _CAMERA_6
+line_16=WaitForSay
+line_17=Cue _CAMERA_7
+line_18=Say pc_pib_GoingToBed_44
+line_19=WaitForSay
+line_20=Cue _CAMERA_8
+line_21=Cue _SHREK_9
+line_22=Say pc_shk_GoingToBed_45
+line_23=Cue _SHREK_10
+line_24=WaitForSay
+line_25=Say pc_pib_GoingToBed_46
+line_26=Cue _CAMERA_11
+line_27=WaitForSay
+line_28=Cue _CAMERA_12
+line_29=Cue _SHREK_13
+line_30=Cue _DONKEY_14
+line_31=Cue _PIB_15
+line_32=Cue _SHREK_16
+line_33=Say pc_dnk_GoingToBed_28
+line_34=WaitForSay
+line_35=WaitForCue 2ndFart
+line_36=sleep 2
+line_37=StopMusic Fade=12
+line_38=Say pc_dnk_GoingToBed_47
+line_39=WaitForSay
+line_40=Say pc_shk_GoingToBed_32
+line_41=WaitForSay
+line_42=Say pc_pib_GoingToBed_48
+line_43=WaitForSay
+line_44=Say pc_shk_GoingToBed_49
+line_45=Sleep 1.5
+line_46=WaitForSay
+line_47=Cue _CAMERA_17
+line_48=Cue _CAMERA_18
+line_49=Cue _SHREK_19
+line_50=Cue _DONKEY_20
+line_51=Cue _PIB_21
+[Sequence_1]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=FOV angle=73
+line_2=TargetFlyTo FarmHouse_Target2
+line_3=FlyTo FarmHouse_Cam2
+line_4=WaitForCue _CAMERA_4
+line_5=Sleep 1.0
+line_6=FOV angle=73
+line_7=TargetFlyTo FarmHouse_Target3 Time=8
+line_8=FlyTo FarmHouse_Cam4 Time=8
+line_9=WaitForCue _CAMERA_6
+line_10=sleep 0.5
+line_11=FOV angle=65
+line_12=TargetFlyTo rgpBed_CamTarget04
+line_13=FlyTo rgpBed_Cam04
+line_14=WaitForCue _CAMERA_7
+line_15=sleep 0.25
+line_16=FOV angle=54
+line_17=TargetFlyTo PIB z=10
+line_18=FlyTo rgpBed_Cam03 z=-20
+line_19=WaitForCue _CAMERA_8
+line_20=sleep 0.5
+line_21=FOV angle=75
+line_22=TargetFlyTo rgpBed_CamTarget04
+line_23=FlyTo rgpBed_Cam04
+line_24=WaitForCue _CAMERA_11
+line_25=Sleep 0.25
+line_26=FOV angle=54
+line_27=TargetFlyTo PIB z=10
+line_28=FlyTo rgpBed_Cam03 z=-20
+line_29=WaitForCue _CAMERA_12
+line_30=FOV angle=90
+line_31=TargetFlyTo FarmHouse_Target4
+line_32=FlyTo FarmHouse_Cam6
+line_33=FlyTo FarmHouse_Cam5 Time=22 *
+line_34=WaitForCue _CAMERA_17
+line_35=FadeTo Time=5
+line_36=Sleep 6
+line_37=Cue CutEnd
+line_38=WaitForCue _CAMERA_18
+line_39=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=SHREK
+line_0=WaitForCue _SHREK_1
+line_1=BanditsRunHome
+line_2=Teleport FarmHouse_ShrekTelLoc1
+line_3=WalkTo FarmHouse_ShrekLoc1 Direct
+line_4=TurnTo PIB
+line_5=WaitForCue _SHREK_9
+line_6=lookat PIB time=1
+line_7=WaitForCue _SHREK_10
+line_8=LookAt none
+line_9=PlayAnim CS_MostBeautiful rate=1
+line_10=WaitForAnim
+line_11=WaitForCue _SHREK_13
+line_12=Sleep 1.1
+line_13=LookAt none
+line_14=WaitForCue OkayForShrekToEnter
+line_15=WalkTo FarmHouse_PreEnter Direct
+line_16=WalkTo FarmHouse_Inside3 Direct
+line_17=Teleport FarmHouse_ShrekOUT
+line_18=WaitForCue _SHREK_16
+line_19=PlayAnim bored3 frame=30
+line_20=cue 2ndFart
+line_21=WaitForAnim
+line_22=WaitForCue _SHREK_19
+line_23=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=DONKEY
+line_0=WaitForCue _DONKEY_2
+line_1=TurnTo Shrek
+line_2=WaitForCue _DONKEY_5
+line_3=PlayAnim Lookright rate=1.5
+line_4=WaitForAnim
+line_5=PlayAnim ponder
+line_6=WaitForAnim
+line_7=WaitForCue _DONKEY_14
+line_8=Sleep 0.6
+line_9=WaitForCue OkayForDonkeyToEnter
+line_10=WalkTo FarmHouse_PreEnter Direct
+line_11=Cue OkayForShrekToEnter
+line_12=WalkTo FarmHouse_Inside2 Direct
+line_13=Teleport FarmHouse_DonkeyOUT
+line_14=WaitForCue _DONKEY_20
+line_15=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=PIB
+line_0=WaitForCue _PIB_3
+line_1=PlayAnim CS_CasualIdle loop
+line_2=TurnTo Shrek
+line_3=WaitForCue _PIB_15
+line_4=WalkTo FarmHouse_PreEnter Direct
+line_5=Cue OkayForDonkeyToEnter
+line_6=WalkTo FarmHouse_Inside1 Direct
+line_7=Teleport FarmHouse_PIBOUT
+line_8=WaitForCue _PIB_21
+line_9=WaitForCue CutEnd
+[Sequence_5]
+PawnTag=ONEXIT
+line_0=Shrek Trigger LoadNextLevel

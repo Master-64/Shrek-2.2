@@ -1,0 +1,382 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=StopMusic
+line_1=Cue _CAMERA_0
+line_2=Cue _BOSSPIB_1
+line_3=Cue _PIB_2
+line_4=WaitForCue ChangeView
+line_5=Cue _CAMERA_3
+line_6=Cue _BOSSPIB_4
+line_7=Cue _SHREK_5
+line_8=Cue _PIB_6
+line_9=Cue _DONKEY_7
+line_10=Sleep 0.5
+line_11=Cue _CAMERA_8
+line_12=Cue _SHREK_9
+line_13=WaitForCue PIBSwordInPicture
+line_14=Cue _PIB_10
+line_15=Sleep 1
+line_16=Say pc_pib_DefeatPIB_2
+line_17=Cue _CAMERA_11
+line_18=WaitForSay
+line_19=Say pc_pib_DefeatPIB_35
+line_20=PlayMusic 3_The_Hunt_Track_7 Loop=False
+line_21=Cue _CAMERA_12
+line_22=Cue _PIB_13
+line_23=Cue _DONKEY_14
+line_24=WaitForSay
+line_25=WaitForCue PibHackingDone
+line_26=Say pc_shk_DefeatPIB_6
+line_27=Cue _CAMERA_15
+line_28=Cue _SHREK_16
+line_29=Cue _DONKEY_17
+line_30=WaitForSay
+line_31=Cue _DONKEY_18
+line_32=Say pc_dnk_DefeatPIB_33
+line_33=Cue _CAMERA_19
+line_34=WaitForSay
+line_35=Cue _CAMERA_20
+line_36=Say pc_pib_DefeatPIB_83
+line_37=Cue _PIB_21
+line_38=WaitForSay
+line_39=Say pc_shk_DefeatPIB_85
+line_40=Cue _DONKEY_22
+line_41=Cue _SHREK_23
+line_42=Cue _PIB_24
+line_43=Cue _CAMERA_25
+line_44=WaitForSay
+line_45=Say pc_pib_DefeatPIB_86
+line_46=WaitForSay
+line_47=Cue _CAMERA_26
+line_48=Say pc_dnk_DefeatPIB_34
+line_49=WaitForSay
+line_50=Cue _CAMERA_27
+line_51=Say pc_shk_DefeatPIB_87
+line_52=Cue _SHREK_28
+line_53=WaitForSay
+line_54=Say pc_dnk_DefeatPIB_81
+line_55=WaitForSay
+line_56=Cue _DONKEY_29
+line_57=Say pc_dnk_DefeatPIB_75
+line_58=Cue _CAMERA_30
+line_59=Cue _DONKEY_31
+line_60=WaitForSay
+line_61=Say pc_dnk_DefeatPIB_77
+line_62=WaitForSay
+line_63=Say pc_dnk_DefeatPIB_79
+line_64=Cue _CAMERA_32
+line_65=Cue _SHREK_33
+line_66=Cue _PIB_34
+line_67=Cue _PIBLAST_35
+line_68=WaitForSay
+line_69=Say pc_shk_DefeatPIB_14
+line_70=Cue _CAMERA_36
+line_71=Cue _SHREK_37
+line_72=Cue _SHREK_38
+line_73=WaitForSay
+line_74=Cue _DONKEY_39
+line_75=Say pc_pib_DefeatPIB_21 Pawn=PIBLast
+line_76=WaitForSay
+line_77=Cue _CAMERA_40
+line_78=Cue _DONKEY_41
+line_79=Say pc_dnk_DefeatPIB_18
+line_80=WaitForSay
+line_81=Say pc_pib_DefeatPIB_20 Pawn=PIBLast
+line_82=Cue _PIBLAST_42
+line_83=Sleep 2.0
+line_84=Cue _CAMERA_43
+line_85=WaitForSay
+line_86=Say pc_shk_DefeatPIB_23
+line_87=Cue _CAMERA_44
+line_88=Cue _PIB_45
+line_89=WaitForSay
+line_90=Say pc_pib_DefeatPIB_25 Pawn=PIBLast
+line_91=WaitForSay
+line_92=Cue _DONKEY_46
+line_93=Say pc_dnk_DefeatPIB_36
+line_94=Cue _CAMERA_47
+line_95=WaitForSay
+line_96=Say pc_shk_DefeatPIB_45
+line_97=Cue _CAMERA_48
+line_98=Cue _PIBLAST_49
+line_99=WaitForSay
+line_100=Cue _CAMERA_50
+line_101=Say pc_pib_DefeatPIB_47 Pawn=PIBLast
+line_102=WaitForSay
+line_103=Say pc_pib_DefeatPIB_69 Pawn=PIBLast
+line_104=WaitForSay
+line_105=Cue _CAMERA_51
+line_106=Say pc_shk_DefeatPIB_88
+line_107=WaitForSay
+line_108=Say pc_pib_DefeatPIB_90 Pawn=PIBLast
+line_109=Cue _PIBLAST_52
+line_110=Cue _CAMERA_53
+line_111=WaitForSay
+line_112=StopMusic Fade=3
+line_113=Sleep 1.5
+line_114=Cue CutEnd
+line_115=Cue _CAMERA_54
+line_116=Cue _SHREK_55
+line_117=Cue _DONKEY_56
+line_118=Cue _PIB_57
+line_119=Cue _BOSSPIB_58
+line_120=Cue _PIBLAST_59
+[Sequence_1]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=FOV Angle=55
+line_2=TargetFlyTo BossPib
+line_3=FlyTo BossPib X=100 Y=100 Z=50
+line_4=Sleep 1.8
+line_5=Cue ChangeView
+line_6=WaitForCue _CAMERA_3
+line_7=FOV Angle=110
+line_8=TargetFlyTo DefeatedPIB_Target1
+line_9=FlyTo DefeatedPIB_Cam3
+line_10=Sleep 0.7
+line_11=WaitForCue _CAMERA_8
+line_12=FOV Angle=75 Time=4
+line_13=TargetFlyTo DefeatedPIB_Target2 Time=4
+line_14=FlyTo DefeatedPIB_Cam4 Time=4 *
+line_15=Sleep 1
+line_16=Cue Shreklookaround
+line_17=Trigger SpikesUp
+line_18=Shake Magnitude=110 Time=2
+line_19=Sleep 0.2
+line_20=Cue PIBSwordInPicture
+line_21=WaitForCue _CAMERA_11
+line_22=Sleep 1.5
+line_23=FOV Angle=95
+line_24=TargetFlyTo DefeatedPIB_Target3
+line_25=FlyTo DefeatedPIB_Cam2
+line_26=WaitForCue _CAMERA_12
+line_27=FOV Angle=52
+line_28=TargetFlyTo PIBCoughTarget z=-11
+line_29=FlyTo PIBCoughCAM0
+line_30=FlyTo PIBCoughCAM Time=6 *
+line_31=WaitForCue _CAMERA_15
+line_32=FOV Angle=55
+line_33=TargetFlyTo Shrek z=40
+line_34=FlyTo DefeatedPIB_Cam4
+line_35=WaitForCue _CAMERA_19
+line_36=FOV Angle=80
+line_37=TargetFlyTo DefeatedPIB_Target7
+line_38=FlyTo DefeatedPIB_Cam7
+line_39=WaitForCue _CAMERA_20
+line_40=FOV Angle=95
+line_41=TargetFlyTo DefeatedPIB_Target3
+line_42=FlyTo DefeatedPIB_Cam2
+line_43=WaitForCue _CAMERA_25
+line_44=FOV Angle=16
+line_45=TargetFlyTo Shrek z=40
+line_46=FlyTo DefeatedPIB_Cam6_2 z=25
+line_47=Sleep 1.0
+line_48=FOV Angle=70 Time=3.0
+line_49=TargetFlyTo Shrek z=30 Time=3
+line_50=FlyTo DefeatedPIB_Cam6_2 Time=3
+line_51=WaitForCue _CAMERA_26
+line_52=FOV Angle=55
+line_53=TargetFlyTo DefeatedPIB_Target7
+line_54=FlyTo DefeatedPIB_Cam7_2
+line_55=WaitForCue _CAMERA_27
+line_56=FOV Angle=75
+line_57=TargetFlyTo Shrek z=30
+line_58=FlyTo DefeatedPIB_Cam6
+line_59=WaitForCue _CAMERA_30
+line_60=Sleep 1
+line_61=FOV Angle=55
+line_62=TargetFlyTo DefeatedPIB_Target7
+line_63=FlyTo DefeatedPIB_Cam7_2
+line_64=WaitForCue _CAMERA_32
+line_65=Sleep 0.5
+line_66=FOV Angle=45
+line_67=TargetFlyTo DefeatedPIB_Target8 z=-15
+line_68=FlyTo DefeatedPIB_Cam8
+line_69=Cue DropThePIB
+line_70=Sleep 1
+line_71=Cue PIBDropped
+line_72=WaitForCue _CAMERA_36
+line_73=Sleep 0.5
+line_74=FOV Angle=95
+line_75=TargetFlyTo DefeatedPIB_Target3
+line_76=FlyTo DefeatedPIB_Cam2
+line_77=WaitForCue _CAMERA_40
+line_78=FOV Angle=55
+line_79=TargetFlyTo DefeatedPIB_Target7
+line_80=FlyTo DefeatedPIB_Cam7_2
+line_81=WaitForCue _CAMERA_43
+line_82=FOV Angle=95
+line_83=TargetFlyTo DefeatedPIB_Target3
+line_84=FlyTo DefeatedPIB_Cam2
+line_85=WaitForCue _CAMERA_44
+line_86=Sleep 0.3
+line_87=FOV Angle=55
+line_88=TargetFlyTo Shrek z=40
+line_89=FlyTo DefeatedPIB_Cam4 z=15
+line_90=WaitForCue _CAMERA_47
+line_91=FOV Angle=55
+line_92=TargetFlyTo DefeatedPIB_Target7
+line_93=FlyTo DefeatedPIB_Cam7_2
+line_94=WaitForCue _CAMERA_48
+line_95=Sleep 0.3
+line_96=FOV Angle=55
+line_97=TargetFlyTo Shrek z=40
+line_98=FlyTo DefeatedPIB_Cam4 z=15
+line_99=WaitForCue _CAMERA_50
+line_100=FOV Angle=47
+line_101=TargetFlyTo DefeatedPIB_Target8 z=-19
+line_102=FlyTo DefeatedPIB_Cam8
+line_103=WaitForCue _CAMERA_51
+line_104=FOV Angle=95
+line_105=TargetFlyTo DefeatedPIB_Target3
+line_106=FlyTo DefeatedPIB_Cam2
+line_107=WaitForCue _CAMERA_53
+line_108=Sleep 4
+line_109=FOV Angle=45
+line_110=TargetFlyTo DefeatedPIB_Target8 z=-15
+line_111=FlyTo DefeatedPIB_Cam8
+line_112=WaitForCue _CAMERA_54
+line_113=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=BOSSPIB
+line_0=WaitForCue _BOSSPIB_1
+line_1=PlayAnim Faint
+line_2=WaitForAnim
+line_3=PlayAnim DeadontheGroundidle loop
+line_4=WaitForCue _BOSSPIB_4
+line_5=Teleport PIBIntro_PIBBOSS_OUT
+line_6=WaitForCue _BOSSPIB_58
+line_7=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=PIB
+line_0=WaitForCue _PIB_2
+line_1=PlayAnim DeadontheGroundidle loop
+line_2=WaitForCue _PIB_6
+line_3=Teleport DefeatedPIB_PIBLoc1
+line_4=Face DefeatedPIB_FakeDeathLookHere
+line_5=PlayAnim DeadontheGroundidle loop
+line_6=WaitForCue _PIB_10
+line_7=Face Shrek
+line_8=PlaySound sheath
+line_9=PlayAnim DrawinghisSword
+line_10=WaitForAnim
+line_11=PlayAnim SwordonShrekidle loop
+line_12=WaitForCue _PIB_13
+line_13=PlayAnim CoughingUpHairball
+line_14=WaitForAnim
+line_15=Cue PibHackingDone
+line_16=WaitForCue _PIB_21
+line_17=PlayAnim CS_PutSwordBack
+line_18=WaitForAnim
+line_19=WaitForCue _PIB_24
+line_20=PlayAnim HeldBytheScruffidle loop Tween=1
+line_21=WaitForCue _PIB_34
+line_22=WaitForCue PibLetGo
+line_23=Teleport PIBGetOut
+line_24=WaitForCue _PIB_45
+line_25=Sleep 0.6
+line_26=PlayAnim CS_CasualIdle loop
+line_27=WaitForCue _PIB_57
+line_28=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=SHREK
+line_0=WaitForCue _SHREK_5
+line_1=Teleport DefeatedPIB_ShrekLoc1
+line_2=WalkTo DefeatedPIB_ShrekLoc2
+line_3=TurnTo DefeatedPIB_PIBLoc1
+line_4=LookAt DefeatedPIB_PIBLoc1
+line_5=WaitForCue _SHREK_9
+line_6=WaitForCue Shreklookaround
+line_7=LookAt none
+line_8=PlayAnim lookaround1
+line_9=WaitForAnim
+line_10=LookAt DefeatedPIB_PIBLoc1
+line_11=WaitForCue _SHREK_16
+line_12=PlayAnim LookAround2 Frame=38 Rate=0.8
+line_13=WaitForAnim
+line_14=WaitForCue _SHREK_23
+line_15=PlayAnim ShrekHoldingPIB loop Tween=1.5
+line_16=Trigger AttPIB
+line_17=LookAt PIBinTheAir
+line_18=Sleep 7
+line_19=LookAt none
+line_20=WaitForCue _SHREK_28
+line_21=LookAt Donkey z=-15
+line_22=WaitForCue _SHREK_33
+line_23=LookAt none
+line_24=SetIdle idle
+line_25=PlayAnim idle loop
+line_26=Trigger DetPIB
+line_27=Cue PibLetGo
+line_28=WaitForCue _SHREK_37
+line_29=WaitForCue _SHREK_38
+line_30=setidle idle
+line_31=TurnTo DefeatedPIB_PIBLoc1
+line_32=PlayAnim Dustoff
+line_33=WaitForAnim
+line_34=sleep 0.2
+line_35=PlayAnim CS_OurWhatReaction
+line_36=WaitForAnim
+line_37=PlayAnim idle loop
+line_38=WaitForCue _SHREK_55
+line_39=WaitForCue CutEnd
+[Sequence_5]
+PawnTag=DONKEY
+line_0=WaitForCue _DONKEY_7
+line_1=Teleport DefeatedPIB_DonkeyLoc1
+line_2=Sleep 0.4
+line_3=WalkTo DefeatedPIB_DonkeyLoc2
+line_4=WaitForCue _DONKEY_14
+line_5=Teleport DonkeyGetOut
+line_6=WaitForCue _DONKEY_17
+line_7=Teleport DefeatedPIB_DonkeyLoc2
+line_8=Face DefeatedPIB_PIBLoc1
+line_9=WaitForCue _DONKEY_18
+line_10=PlayAnim PointHoof
+line_11=WaitForAnim
+line_12=WaitForCue _DONKEY_22
+line_13=LookAt DefeatedPIB_Target5
+line_14=WaitForCue _DONKEY_29
+line_15=LookAt DefeatedPIB_FakeDeathLookHere
+line_16=WaitForCue _DONKEY_31
+line_17=LookAt none
+line_18=Sleep 1.0
+line_19=PlayAnim ShakeHeadNo
+line_20=WaitForAnim
+line_21=PlayAnim ShakeHeadNo
+line_22=WaitForAnim
+line_23=WaitForCue _DONKEY_39
+line_24=LookAt None
+line_25=Sleep 0.5
+line_26=WaitForCue _DONKEY_41
+line_27=PlayAnim IdleTalkNeg
+line_28=WaitForAnim
+line_29=WaitForCue _DONKEY_46
+line_30=PlayAnim LookAround1
+line_31=WaitForAnim
+line_32=WaitForCue _DONKEY_56
+line_33=WaitForCue CutEnd
+[Sequence_6]
+PawnTag=PIBLAST
+line_0=WaitForCue _PIBLAST_35
+line_1=WaitForCue DropThePIB
+line_2=sleep 0.5
+line_3=Teleport DefeatedPIB_PIBLoc1_DROP
+line_4=SetIdle idle
+line_5=Face Donkey
+line_6=WaitForCue _PIBLAST_42
+line_7=PlayAnim MeetPib
+line_8=WaitForAnim
+line_9=WaitForCue _PIBLAST_49
+line_10=Sleep 1
+line_11=TurnTo Shrek
+line_12=PlayAnim CS_CasualIdle loop
+line_13=WaitForCue _PIBLAST_52
+line_14=Sleep 3.2
+line_15=PlayAnim CS_Unfortunateform Tween=1
+line_16=WaitForAnim
+line_17=WaitForCue _PIBLAST_59
+line_18=WaitForCue CutEnd
+[Sequence_7]
+PawnTag=ONEXIT
+line_0=Shrek Trigger LoadFGMLevel

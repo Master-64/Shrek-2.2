@@ -1,0 +1,6 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Say pc_dnk_SwampMove_8
+line_1=LockCamTo SP_ClimbTarget
+line_2=WaitForSay
+line_3=UnLockCamTo SP_ClimbTarget

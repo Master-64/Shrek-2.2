@@ -1,0 +1,96 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=SetProp Actor=ZoneInfo bDistanceFog=True
+line_1=SetProp Actor=ZoneInfo DistanceFogColor=(B=98,G=81,R=79,A=0)
+line_2=SetProp Actor=ZoneInfo DistanceFogEnd=12000
+line_3=SetProp Actor=ZoneInfo DistanceFogStart=350
+line_4=StopMusic
+line_5=PlayMusic 7_Prison_Track_8 Fade=1 Loop=True
+line_6=Cue _CAMERA_0
+line_7=Cue _PIB_1
+line_8=Sleep 0.5
+line_9=Say pc_shk_PrisonBreak_31
+line_10=WaitForSay
+line_11=Sleep 1.0
+line_12=Say pc_dnk_PrisonBreak_33
+line_13=WaitForSay
+line_14=Say pc_dnk_PrisonBreak_35
+line_15=WaitForSay
+line_16=Say pc_dnk_PrisonBreak_39
+line_17=WaitForSay
+line_18=Sleep 0.8
+line_19=Say pc_dnk_PrisonBreak_40
+line_20=WaitForSay
+line_21=Say pc_dnk_PrisonBreak_42
+line_22=WaitForSay
+line_23=Say pc_dnk_PrisonBreak_44
+line_24=WaitForSay
+line_25=Sleep 0.8
+line_26=Say pc_dnk_PrisonBreak_46
+line_27=WaitForSay
+line_28=Sleep 1.0
+line_29=Say pc_shk_PrisonBreak_48
+line_30=WaitForSay
+line_31=WaitForCue EscapeRout
+line_32=Say pc_pib_PrisonBreak_50
+line_33=Cue _PIB_2
+line_34=Cue _CAMERA_3
+line_35=Cue _DONKEY_4
+line_36=Cue _SHREK_5
+line_37=WaitForSay
+line_38=Say pc_pib_PrisonBreak_52
+line_39=WaitForSay
+line_40=Sleep 0.5
+line_41=Say pc_dnk_PrisonBreak_56
+line_42=WaitForSay
+line_43=Cue _CAMERA_6
+line_44=Cue _SHREK_7
+line_45=Cue _DONKEY_8
+line_46=Cue _PIB_9
+[Sequence_1]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo Intro_Target1
+line_2=FlyTo Intro_Cam1
+line_3=FlyTo Intro_Cam2 Time=15 *
+line_4=WaitForCue _CAMERA_3
+line_5=TargetFlyTo Intro_Target2 Time=3
+line_6=FlyTo Intro_Cam3 Time=3
+line_7=Sleep 2.0
+line_8=Cue CutEnd
+line_9=WaitForCue _CAMERA_6
+line_10=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=PIB
+line_0=WaitForCue _PIB_1
+line_1=WalkTo Intro_PIBLoc1
+line_2=TurnTo Intro_Target3
+line_3=Sleep 3.0
+line_4=WalkTo Intro_PIBLoc2
+line_5=TurnTo Intro_Target2
+line_6=Sleep 1.0
+line_7=TurnTo Shrek
+line_8=Sleep 2.0
+line_9=Cue EscapeRout
+line_10=WaitForCue _PIB_2
+line_11=TurnTo Intro_Target2
+line_12=WaitForCue _PIB_9
+line_13=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=DONKEY
+line_0=WaitForCue _DONKEY_4
+line_1=TurnTo PIB
+line_2=WaitForCue _DONKEY_8
+line_3=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=SHREK
+line_0=WaitForCue _SHREK_5
+line_1=TurnTo PIB
+line_2=WaitForCue _SHREK_7
+line_3=WaitForCue CutEnd
+[Sequence_5]
+PawnTag=SHREKOGRE
+line_0=WaitForCue CutEnd
+[Sequence_6]
+PawnTag=ONEXIT
+line_0=SaveGame 1

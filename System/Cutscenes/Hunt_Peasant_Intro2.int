@@ -1,0 +1,58 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Cue _CAMERA_0
+line_1=Cue _DONKEY_1
+line_2=Cue _PEASANTMELEEWIMPINTRO_2
+line_3=Say pc_pst_HuntBridge_9
+line_4=WaitForSay
+line_5=Say pc_dnk_HuntBridge_8
+line_6=WaitForSay
+line_7=Cue _CAMERA_3
+line_8=Cue _DONKEY_4
+line_9=Say pc_dnk_HuntBridge_11
+line_10=WaitForSay
+line_11=Say pc_dnk_HuntBridge_13
+line_12=WaitForSay
+line_13=Say pc_dnk_HuntBridge_15
+line_14=WaitForSay
+line_15=Cue CutEnd
+line_16=Cue _CAMERA_5
+line_17=Cue _DONKEY_6
+line_18=Cue _SHREK_7
+line_19=Cue _PEASANTMELEEWIMPINTRO_8
+[Sequence_1]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo PeasantIntro2_Target1
+line_2=FlyTo PeasantIntro2_Cam1
+line_3=FOV Angle=65 Time=2
+line_4=FlyTo PeasantIntro2_Cam2 Time=2
+line_5=WaitForCue _CAMERA_3
+line_6=TargetFlyTo PeasantIntro2_Target2
+line_7=Flyto PeasantIntro2_Cam3
+line_8=WaitForCue _CAMERA_5
+line_9=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=DONKEY
+line_0=WaitForCue _DONKEY_1
+line_1=Sleep 1.0
+line_2=WalkTo PeasantIntro2_DonkeyLoc1
+line_3=Sleep 0.5
+line_4=TurnTo PeasantMeleeWimpIntro
+line_5=WaitForCue _DONKEY_4
+line_6=PlayAnim LookAround3
+line_7=WaitForAnim
+line_8=WaitForCue _DONKEY_6
+line_9=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=PEASANTMELEEWIMPINTRO
+line_0=WaitForCue _PEASANTMELEEWIMPINTRO_2
+line_1=WalkTo PeasantIntro2_PeasantLoc1
+line_2=Sleep 0.5
+line_3=TurnTo Donkey Follow
+line_4=WaitForCue _PEASANTMELEEWIMPINTRO_8
+line_5=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=SHREK
+line_0=WaitForCue _SHREK_7
+line_1=WaitForCue CutEnd

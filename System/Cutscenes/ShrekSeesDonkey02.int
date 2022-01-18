@@ -1,0 +1,60 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Cue _SHREK_0
+line_1=Say pc_dnk_PrisonDKYcSHK_2
+line_2=WaitForSay
+line_3=Cue DNKYsay01
+line_4=WaitForCue DNKYsay01
+line_5=Cue _CAMERA_1
+line_6=Cue _SHREK_2
+line_7=Cue _CAMERA_3
+line_8=WaitForCue CamToDnky
+line_9=Say pc_shk_PrisonDKYcSHK_4
+line_10=WaitForSay
+line_11=Say pc_dnk_PrisonDKYcSHK_6
+line_12=WaitForSay
+line_13=Say pc_dnk_PrisonDKYcSHK_8
+line_14=WaitForSay
+line_15=Cue _DONKEY_4
+line_16=Cue _SHREK_5
+line_17=sleep 1.5
+line_18=Cue CutEnd
+line_19=Cue _SHREK_6
+line_20=Cue _DONKEY_7
+line_21=Cue _CAMERA_8
+[Sequence_1]
+PawnTag=SHREK
+line_0=WaitForCue _SHREK_0
+line_1=turnTo Donkey
+line_2=playAnim lookaround2
+line_3=WaitForCue _SHREK_2
+line_4=Sleep 1.5
+line_5=LookAt ShrekseesDNKLookAT
+line_6=Sleep 1
+line_7=Cue CamToDnky
+line_8=WaitForCue _SHREK_5
+line_9=LookAt none
+line_10=WaitForCue _SHREK_6
+line_11=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_1
+line_1=TargetFlyTo Shrek z=30
+line_2=FlyTo Shrek x=60
+line_3=WaitForCue _CAMERA_3
+line_4=WaitForCue CamToDnky
+line_5=TargetFlyTo Shrek
+line_6=FlyTo Shrek z=100
+line_7=FlyTo SPrison_DnkyCam01 time=2.5
+line_8=FlyTo SPrison_DnkyCam02 time=14 *
+line_9=WaitForCue _CAMERA_8
+line_10=FOV angle=90
+line_11=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=DONKEY
+line_0=WaitForCue _DONKEY_4
+line_1=walkTo WalkDonkeyHere01
+line_2=Teleport MongoIntro_DonkeyLoc1
+line_3=LookAt None
+line_4=WaitForCue _DONKEY_7
+line_5=WaitForCue CutEnd

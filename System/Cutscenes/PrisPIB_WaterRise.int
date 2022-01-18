@@ -1,0 +1,27 @@
+[CutScene]
+line_0=NoBypass
+[Sequence_0]
+PawnTag=MAIN
+line_0=Cue _CAMERA_0
+line_1=Cue _PIB_1
+line_2=Cue _CAMERA_2
+line_3=Cue _PIB_3
+[Sequence_1]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo WaterRise_Target1
+line_2=FlyTo WaterRise_Cam1
+line_3=TargetFlyTo WaterRise_Target2 Time=2.5
+line_4=FlyTo WaterRise_Cam2 Time=2.5
+line_5=Trigger Barrel_Up
+line_6=Sleep 2.0
+line_7=Cue CutEnd
+line_8=WaitForCue _CAMERA_2
+line_9=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=PIB
+line_0=WaitForCue _PIB_1
+line_1=WalkTo WaterRise_PIBLoc1
+line_2=Face WaterRise_PIBFaceHere
+line_3=WaitForCue _PIB_3
+line_4=WaitForCue CutEnd

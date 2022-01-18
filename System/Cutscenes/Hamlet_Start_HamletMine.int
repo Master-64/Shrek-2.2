@@ -1,0 +1,27 @@
+[CutScene]
+line_0=NoBypass
+[Sequence_0]
+PawnTag=MAIN
+line_0=SetProp Actor=ZoneInfo0 bDistanceFog=True
+line_1=SetProp Actor=ZoneInfo0 DistanceFogColor=(B=128,G=128,R=128,A=0)
+line_2=SetProp Actor=ZoneInfo0 DistanceFogEnd=3500
+line_3=SetProp Actor=ZoneInfo0 DistanceFogStart=1000
+line_4=SetProp Actor=ZoneInfo1 bDistanceFog=True
+line_5=SetProp Actor=ZoneInfo1 DistanceFogColor=(B=128,G=128,R=128,A=0)
+line_6=SetProp Actor=ZoneInfo1 DistanceFogEnd=3500
+line_7=SetProp Actor=ZoneInfo1 DistanceFogStart=1000
+line_8=SetProp Actor=ZoneInfo2 bDistanceFog=True
+line_9=SetProp Actor=ZoneInfo2 DistanceFogColor=(B=128,G=128,R=128,A=0)
+line_10=SetProp Actor=ZoneInfo2 DistanceFogEnd=3500
+line_11=SetProp Actor=ZoneInfo2 DistanceFogStart=2000
+line_12=SetProp Actor=ZoneInfo3 bDistanceFog=True
+line_13=SetProp Actor=ZoneInfo3 DistanceFogColor=(B=128,G=128,R=128,A=0)
+line_14=SetProp Actor=ZoneInfo3 DistanceFogEnd=3500
+line_15=SetProp Actor=ZoneInfo3 DistanceFogStart=2000
+line_16=SetProp Actor=ZoneInfo4 bDistanceFog=True
+line_17=SetProp Actor=ZoneInfo4 DistanceFogColor=(B=128,G=128,R=128,A=0)
+line_18=SetProp Actor=ZoneInfo4 DistanceFogEnd=3500
+line_19=SetProp Actor=ZoneInfo4 DistanceFogStart=2000
+[Sequence_1]
+PawnTag=ONEXIT
+line_0=Shrek TriggerActor Hamlet_Start_Save

@@ -1,0 +1,439 @@
+**SHREK 2 PC TEAM CREDITS
+
+**KnowWonder
+*An Amaze Entertainment Studio
+
+*Executive Producer
+Lindsay Gupton
+
+*Designer & Senior Producer
+Elizabeth Walkey
+
+*Producer
+Liz Lehmans
+
+*Development Manager
+Melanie Locher
+
+*Technical Lead
+David Lawson
+
+*Lead Artist
+Peter King
+
+*Character Art & Animation Lead
+Andrew Brinkworth
+
+*Art & Animation
+Jamie Burton
+Nathan Hocken
+Tony Ravo
+Lynne Startup
+
+*Senior Engineer 
+Michael Lankerovich
+
+*Engineers
+Brian Elston
+Janet Weddle
+
+*Lead Level Designer
+Amanda Rubright
+
+*Level Designers
+Duncan
+Hayden Wilkinson
+
+*Cut Scene Designer
+Chad Verrall
+
+*Cut Scene Artists
+Ron Perry
+John Irick
+
+*Sound Designer
+Mark Yeend
+
+*Sound Effects
+Ian Rodia
+
+*Testing Manager
+Cheryl Penick
+
+*Testers
+Bill Schneider
+Jordan Shafer
+Elizabeth Cummins
+Joel McCone
+
+*Writers
+Kelly Wand 
+Susan O'Connor
+Liz Lehmans
+
+*Additional Art & Animation
+Clay Corbisier
+Tom Dougherty
+Keith Himebaugh
+Nathan Johnson
+Jeff Willis
+Max Woodring
+Jason Zayas
+
+*Additional Models & Textures
+Luxoflux
+
+*Additional Engineers
+James Beattie
+Jay Kint
+Darryl Mlinar
+
+*Engine and Tools Development
+Todd Gilbertsen
+Marshall Kunze
+R.J. Martin
+Chris Phillips
+Steve Reddoch
+Fraser Thompson
+&
+Daniel Berke
+Doug Brettin
+Jess Crable
+Vikki Zarkovich
+
+*IMS LIPGen Facial Animation Application
+Interactive Multimedia Solutions, Inc.
+Donovan Moxey, Ph.D.
+
+*Uses Bink Video. (c) 1997-2004 by RAD Game Tools, Inc.
+*Uses Pixomatic Processing Technology. (c) 2002-2004 by RAD Game Tools, Inc.
+
+
+**Amaze Entertainment
+
+*Executive Producers
+Dan Elenbaas
+David Mann
+
+*Creative Director
+Phil Trumbo
+
+*Director of Development Services
+Jack Brummet
+
+*Director of Design
+Kris Summers
+
+*Director of Operations and Finance
+Mike Dean
+
+*Director of Marketing
+Curtis Asplund
+
+*Executive Studio Director, KnowWonder
+Lindsay Gupton
+
+*Executive Studio Director, Adrenium Games
+Stephen Clarke-Willson, PhD.
+
+*Executive Studio Director, Griptonite Games
+Steve Ettinger
+
+*Studio Director, The Fizz Factor
+Rodney Gibbs
+
+*Executive Studio Director, Black Ship Games
+Scott K. Tsumura
+
+*Special Thanks
+Daryle Conners
+Tom Dougherty
+Todd Gilbertsen
+David Hunt
+Joby-Rome Otero
+Chris Phillips
+Steve Reddoch
+Bill Schneider
+
+*Amaze Entertainment Operations
+Kevin Burdick
+Susan DeMerit
+Stephanie Hjertager
+Christian Kimball
+Laura Robinson
+Paul Stokes
+
+
+**DreamWorks SKG
+
+Anne Globe
+Brad Globe
+Heather Manheim
+Meaghan Nix
+April Paradise
+Sonny Park
+Rick Rekedal
+Aron Warner
+
+
+**Activision Development Team
+
+*Producer
+Robert Berger
+
+*Associate Producer
+Matt Morton
+
+*Production Coordinator
+Kelly Byrd
+
+*Executive Producer
+Chris Hewish
+
+*Localization Producer
+Patrick Dwyer
+
+*VP, North American Studio
+Mark Lamia
+Murali Tegulapalle
+
+*President, Activision Publishing
+Kathy Vrabeck
+
+*Marketing and PR
+
+*Global Brand Manager
+Deanna Natzke
+
+*Associate Brand Manager
+Michelle Turk
+
+*Director, Global Brand Management
+Rachel Silverstein
+
+*Vice President, Global Brand Management
+Lisa Gaudio
+
+*Publicist
+Lisa Fields
+
+*Manager, Corporate Communications
+Ryh-Ming Poon
+
+*Legal
+Greg Deutsch
+Mike Larson
+David Kay
+Danielle Kim
+
+*Creative Services
+
+*Vice President, Creative Services
+Denise Walsh
+
+*Manager, Creative Services
+Jill Barry
+
+*Packaging and Manual
+Ignited Minds
+
+*Special Thanks
+Ryan Rucinski
+Lalie Fisher
+Andre Kinniebrew
+Kekoa Lee-Creel
+Jason Kim
+Shawn Capistrano
+Jay Gordon
+Juan Valdes
+Shack
+Steve Rosenthal
+Chris Archer
+Marc Turndorf
+Peaches
+Brian Clarke
+TQ Jefferson
+Peter Muravez
+Larry Goldberg
+Suzy Luko
+Ken Fox
+Brillo Passwater
+Ben DeGuzman
+Nick Falzon
+Brian Pass
+Alex Garcia
+Matt Geyer
+Melissa Huddleston
+Jim Desmond
+Laura Marceau
+Wade Pottinger
+
+*Writing
+Kelly Wand
+
+*Music
+Kevin Manthei and Kevin Riepl, kmmproductions.com
+
+*Additional Music
+Rob Berry, kmmproductions.com
+Mark Yeend, Amaze Entertainment
+Noel Gabriel, Amaze Entertainment
+
+*Voice Over
+MICHAEL GOUGH			Shrek, King Harold, Giant Gingy
+MARK MOSELEY			Donkey
+ANDRE SOGLIUZZO			Puss ‘n Boots, Bandit, Narrator
+JAMES ARNOLD TAYLOR		Gingerbread Man, Peasant, Leprechaun
+CLAUDIA CHRISTIAN		Fairy Godmother, Female Peasant
+HOLLY FIELDS			Fiona, Female Peasant
+DEE BAKER			Knight, Peasant, Bandit
+BILL SCHNEIDER			Tram Conductor, Fairy, Intercom Guy
+JAY GORDON			Bandit, Bandit Boss, Peasant Boy
+MELISSA WEBSTER			Peasant Girl
+CHARLES KLAUSMEYER		Peasant, Hazmat Elf, Bandit
+BILL HARPER			Hazmat Elf, Knight, Peasant
+
+*Casting
+Margaret Tang
+Womb Music
+
+*Voice Direction
+Liz Lehmans
+Kelly Byrd
+
+*VO Recording/Engineering/Editing
+Larry Forkner
+Point.360 Woodholly
+
+*Activision, Inc.
+*Quality Assurance/Customer Support
+
+*Project Lead
+Douglas Rothman
+
+*Senior Project Lead
+Matt McClure
+
+*QA Manager
+Marilena Rixford
+
+*Test Team
+
+*Floor Lead/Database Manager
+Douglas Todd
+
+*Testers
+James Norris
+Chris Neal
+Paul Edwards
+Avery Bennet
+Jeremiah Jones
+Henry Villanueva
+Jeff Grant
+Chris Puente
+Vanessa Schlais
+Michael Cook
+Stephen Whilden  
+
+*Senior Lead, Compatibility
+Neil Barizo
+
+*Lead, Compatibility
+Lawrence Wong
+
+*Compatibility Testers
+Francis Jimenez
+Robert Telmar
+
+*Sr. Lead, Technical Requirements Group
+Sion Rodriguez y Gibson
+
+*Testers, Technical Requirements Group
+Marc Villanueva 
+Aaron Camacho
+Robert Lara
+
+*Manager, Customer Support
+Bob McPherson
+
+*Customer Support Leads
+Gary Bolduc, Phone Support
+Michael Hill, Email Support
+
+*CS/QA Special Thanks
+Jim Summers
+Jason Wong
+Tim Vanlaw
+Adam Hartsfield
+Jason Levine
+Nadine Theuzillot
+Ed Clune
+Glenn Vistante
+John Rosser
+Jason Potter
+Indra Yee
+Joule Middleton
+Dr. Cornelius Smoochies
+Mike Beck
+Willie Bolton
+Chad Siedhoff
+Jennifer Vitiello
+Nick Favazza
+Mike Rixford
+Tyler Rivers
+
+**Activision UK
+
+*Senior VP European Publishing
+Scott Dodkins
+
+*General Manager, UK
+Roger Walkden
+
+*Marketing Director
+Alison Turner
+
+*Senior Brand Manager
+Alison Mitchell
+
+*Brand Manager
+Nerys Lukes
+
+*Head of Publishing Services
+Nathalie Ranson
+
+*Senior Localization Project Manager
+Tamsin Lucas
+
+*Localization Project Managers
+Simon Dawes
+Charlotte Harris
+Mark Nutt
+
+*Creative Services Manager
+Jackie Sutton
+
+*Creative Services Co-ordinator
+Philip Bagnall
+
+*Head of European Corporate Communications
+Tim Ponting
+
+*PR Manager UK/ROE
+Suzanne Panter
+
+*PR Executives
+Bo Eatwell
+Vicky Cayzer
+
+*European Operations Manager
+Heather Clarke
+
+*Production Planners
+Victoria Fisher
+Lynn Moss
+
+
+*(c) 2004 Activision Inc. All rights reserved
+
+

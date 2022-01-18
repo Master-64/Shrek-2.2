@@ -1,0 +1,4 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Say PC_DNK_BUMPLINE_1217
+line_1=WaitForSay

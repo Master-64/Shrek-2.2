@@ -1,0 +1,9 @@
+new TrueTypeFontFactory PACKAGE="SH_Fonts" Name=SHHugeInkFont FontName="Auptimagh" AntiAlias=1 Xpad=2 Height=24 CharactersPerPage=32 
+new TrueTypeFontFactory PACKAGE="SH_Fonts" Name=SHBigInkFont FontName="Auptimagh" AntiAlias=1 Height=18 CharactersPerPage=32 
+new TrueTypeFontFactory PACKAGE="SH_Fonts" Name=SHMedInkFont FontName="Auptimagh" AntiAlias=1 Height=14 CharactersPerPage=32 
+new TrueTypeFontFactory PACKAGE="SH_Fonts" Name=SHSmallInkFont FontName="Auptimagh" AntiAlias=1 Height=12  CharactersPerPage=32 
+new TrueTypeFontFactory PACKAGE="SH_Fonts" Name=SHTinyInkFont FontName="Auptimagh" AntiAlias=1 Height=10 CharactersPerPage=32 
+new TrueTypeFontFactory PACKAGE="SH_Fonts" Name=SHAuptimagh8Font FontName="Auptimagh" AntiAlias=1 Height=8 CharactersPerPage=32 
+OBJ SAVEPACKAGE PACKAGE="SH_Fonts" FILE="..\Textures\SH_Fonts.utx"
+
+

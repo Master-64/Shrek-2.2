@@ -1,0 +1,17 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Say pc_shk_MongoTutoral_14
+line_1=WaitForSay
+line_2=Say pc_shk_MongoTutoral_16
+line_3=WaitForSay
+line_4=Cue CutEnd
+line_5=Cue _MONGOPANICSPEAKERONE_0
+line_6=Cue _MONGOPANICSPEAKERTWO_1
+[Sequence_1]
+PawnTag=MONGOPANICSPEAKERONE
+line_0=WaitForCue _MONGOPANICSPEAKERONE_0
+line_1=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=MONGOPANICSPEAKERTWO
+line_0=WaitForCue _MONGOPANICSPEAKERTWO_1
+line_1=WaitForCue CutEnd

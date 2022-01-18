@@ -1,0 +1,26 @@
+[Sequence_0]
+PawnTag=ONEXIT
+line_0=Shrek GoHome
+line_1=Shrek Trigger HouseStraw
+[Sequence_1]
+PawnTag=MAIN
+line_0=Cue _CAMERA_0
+line_1=Cue _SHREK_1
+line_2=Cue _SHREK_2
+line_3=Cue _CAMERA_3
+[Sequence_2]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo Below1_Target1
+line_2=FlyTo BelowCut1_Cam1
+line_3=sleep 0.2
+line_4=FlyTo BelowCut1_Cam2 time=1
+line_5=Cue CutEnd
+line_6=WaitForCue _CAMERA_3
+line_7=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=SHREK
+line_0=WaitForCue _SHREK_1
+line_1=Face BelowCut1_Cam2
+line_2=WaitForCue _SHREK_2
+line_3=WaitForCue CutEnd

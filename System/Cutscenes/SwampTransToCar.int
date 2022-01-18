@@ -1,0 +1,229 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=StopMusic Fade=3
+line_1=PlayMusic 1_Shreks_Swamp_Track_4 Fade=1 Loop=True
+line_2=Cue _OPENCARRAIGE_0
+line_3=Cue _CAMERA_1
+line_4=Cue _SHREK_2
+line_5=Cue _DONKEY_3
+line_6=Cue _FIONA_4
+line_7=Say pc_dnk_TransToCar_3
+line_8=Cue _DONKEY_5
+line_9=WaitForSay
+line_10=Sleep 1
+line_11=Say pc_dnk_TransToCar_18
+line_12=Cue _CAMERA_6
+line_13=WaitForSay
+line_14=WaitForCue CarrZoom
+line_15=Say pc_fin_TransToCar_32
+line_16=Cue _CAMERA_7
+line_17=Cue _FIONA_8
+line_18=Cue _CAMERA_9
+line_19=Cue _SHREK_10
+line_20=Cue _DONKEY_11
+line_21=Cue _CAMERA_12
+line_22=Cue _DONKEY_13
+line_23=WaitForSay
+line_24=Cue _OPENCARRAIGE_14
+line_25=Sleep 0.9
+line_26=Say pc_fin_TransToCar_34
+line_27=Cue _FIONA_15
+line_28=Cue _SHREK_16
+line_29=Cue _CAMERA_17
+line_30=WaitForSay
+line_31=sleep 0.8
+line_32=Say pc_shk_TransToCar_22
+line_33=Cue _CAMERA_18
+line_34=Cue _SHREK_19
+line_35=Cue _FIONA_20
+line_36=WaitForSay
+line_37=sleep 0.8
+line_38=Say pc_fin_TransToCar_24
+line_39=Cue _OPENCARRAIGE_21
+line_40=Cue _CAMERA_22
+line_41=Cue _DONKEY_23
+line_42=WaitForSay
+line_43=Cue _FIONA_24
+line_44=Cue _DONKEY_25
+line_45=Say pc_dnk_TransToCar_26
+line_46=Cue _SHREK_26
+line_47=WaitForSay
+line_48=Say pc_shk_TransToCar_28
+line_49=Cue _DONKEY_27
+line_50=WaitForSay
+line_51=Say pc_dnk_TransToCar_44
+line_52=Cue _DONKEY_28
+line_53=WaitForSay
+line_54=Say pc_dnk_TransToCar_46
+line_55=Cue _DONKEY_29
+line_56=Cue _CAMERA_30
+line_57=Cue _DONKEY_31
+line_58=WaitForSay
+line_59=StopMusic Fade=9
+line_60=Say pc_shk_TransToCar_48
+line_61=Cue _CAMERA_32
+line_62=Cue _SHREK_33
+line_63=WaitForSay
+line_64=Cue _OPENCARRAIGE_34
+line_65=Cue _OPENCARRAIGE_35
+line_66=Cue _DONKEY_36
+line_67=Cue _FIONA_37
+line_68=Cue _SHREK_38
+line_69=Cue _CAMERA_39
+[Sequence_1]
+PawnTag=OPENCARRAIGE
+line_0=WaitForCue _OPENCARRAIGE_0
+line_1=Teleport TPT_Carriage01
+line_2=Face TPT_CarriageFace
+line_3=WaitForCue _OPENCARRAIGE_14
+line_4=Teleport TPT_CarriageOff
+line_5=WaitForCue _OPENCARRAIGE_21
+line_6=Teleport TPT_Carriage01
+line_7=Face TPT_CarriageFace
+line_8=WaitForCue _OPENCARRAIGE_34
+line_9=Teleport TPT_CarriageOff
+line_10=WaitForCue _OPENCARRAIGE_35
+line_11=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_1
+line_1=FOV Angle=73 Time=6
+line_2=TargetFlyTo TransToCar_Target1 x=-50 z=-5
+line_3=FlyTo TransToCar_Cam1 z=-25
+line_4=FlyTo TransToCar_Cam2 z=-25 Time=20 *
+line_5=WaitForCue _CAMERA_6
+line_6=Sleep 0.6
+line_7=FOV Angle=40 Time=1
+line_8=TargetFlyTo OpenCarraige z=80 y=40 Time=1
+line_9=Cue CarrZoom
+line_10=WaitForCue _CAMERA_7
+line_11=TargetFlyTo TransToCar_FionaTelLoc z=12 Time=3.5
+line_12=FOV Angle=20 Time=3.5
+line_13=WaitForCue _CAMERA_9
+line_14=WaitForCue WalkToGroup
+line_15=Sleep 1.9
+line_16=Cue PackedAndReady
+line_17=WaitForCue _CAMERA_12
+line_18=WaitForCue PackedAndReady
+line_19=FOV Angle=73
+line_20=TargetFlyTo TransToCar_Target1 z=-15
+line_21=FlyTo TransToCar_Cam2 z=-25
+line_22=FlyTo TransToCar_Cam1 z=-25 Time=20 *
+line_23=WaitForCue _CAMERA_17
+line_24=FOV Angle=60
+line_25=FOV Angle=54 Time=3
+line_26=TargetFlyTo Fiona z=44 y=-30
+line_27=FlyTo ShrekCAM
+line_28=WaitForCue _CAMERA_18
+line_29=FOV Angle=64
+line_30=FOV Angle=54 Time=4
+line_31=TargetFlyTo Shrek z=40
+line_32=FlyTo FionaCAM
+line_33=WaitForCue _CAMERA_22
+line_34=Sleep 0.8
+line_35=FOV Angle=72
+line_36=TargetFlyTo TransToCar_Target1 z=-20
+line_37=FlyTo TransToCar_Cam2 z=-25
+line_38=TargetFlyTo TransToCar_Target1 x=-50 z=-5 Time=10
+line_39=FlyTo TransToCar_Cam1 z=-25 Time=20 *
+line_40=WaitForCue _CAMERA_30
+line_41=Sleep 2.5
+line_42=FOV Angle=70 Time=3.2
+line_43=TargetFlyTo OpenCarraige z=80 y=40 Time=3.2
+line_44=FlyTo TransToCar_DonkeyLoc2_2 z=10 Time=3.2
+line_45=WaitForCue _CAMERA_32
+line_46=Sleep 1.0
+line_47=TargetFlyTo TransToCar_ShrekLoc1
+line_48=FlyTo TransToCar_DonkeyLoc2_2
+line_49=Sleep 2.0
+line_50=TargetFlyTo TransToCar_ShrekLoc1 z=800 Time=12
+line_51=FlyTo TransToCar_DonkeyLoc2 z=800 Time=12 *
+line_52=FadeTo Time=6
+line_53=Sleep 7
+line_54=Cue CutEnd
+line_55=WaitForCue _CAMERA_39
+line_56=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=SHREK
+line_0=WaitForCue _SHREK_2
+line_1=Teleport TransToCar_ShrekTelLoc
+line_2=WalkTo TransToCar_ShrekLoc1 Direct
+line_3=TurnTo Donkey
+line_4=PlayAnim lookaround1
+line_5=WaitForCue _SHREK_10
+line_6=TurnTo Fiona
+line_7=WaitForCue _SHREK_16
+line_8=Sleep 0.5
+line_9=TurnTo Fiona
+line_10=LookAt none
+line_11=WaitForCue _SHREK_19
+line_12=PlayAnim CS_EhSure
+line_13=WaitForCue _SHREK_26
+line_14=Sleep 0.5
+line_15=TurnTo Donkey
+line_16=PlayAnim disgusted frame=45 tween=1 rate=0.4
+line_17=WaitForAnim
+line_18=WaitForCue _SHREK_33
+line_19=Face TransToCar_FionaTelLoc
+line_20=Sleep 5
+line_21=WalkTo TransToCar_FionaTelLocShrek Direct
+line_22=WaitForCue _SHREK_38
+line_23=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=DONKEY
+line_0=WaitForCue _DONKEY_3
+line_1=Teleport TransToCar_DonkeyLoc1
+line_2=TurnTo TransToCar_DonkeyLoc1_2
+line_3=WaitForCue _DONKEY_5
+line_4=Sleep 1
+line_5=PlayAnim Lookaround3 rate=0.3
+line_6=WaitForCue _DONKEY_11
+line_7=Sleep 0.5
+line_8=TurnTo TransToCar_FionaLoc1
+line_9=WaitForCue _DONKEY_13
+line_10=LookAt Fiona z=-25
+line_11=WaitForCue _DONKEY_23
+line_12=LookAt Shrek z=-25
+line_13=WaitForCue _DONKEY_25
+line_14=TurnTo Shrek
+line_15=WaitForCue _DONKEY_27
+line_16=LookAt none
+line_17=WaitForCue _DONKEY_28
+line_18=PlayAnim Bounce
+line_19=WaitForAnim
+line_20=PlayAnim Bounce
+line_21=WaitForAnim
+line_22=PlayAnim Bounce
+line_23=WaitForAnim
+line_24=PlayAnim Bounce
+line_25=WaitForAnim
+line_26=WaitForCue _DONKEY_29
+line_27=Sleep 2
+line_28=WalkTo TransToCar_FionaTelLoc Direct
+line_29=WaitForCue _DONKEY_31
+line_30=PlayAnim lookaround3
+line_31=WaitForAnim
+line_32=WaitForCue _DONKEY_36
+line_33=WaitForCue CutEnd
+[Sequence_5]
+PawnTag=FIONA
+line_0=WaitForCue _FIONA_4
+line_1=Teleport TPT_CarriageFace
+line_2=WaitForCue _FIONA_8
+line_3=WalkTo TransToCar_FionaTelLoc Direct
+line_4=TurnTo TransToCar_FionaLoc1
+line_5=Sleep 0.8
+line_6=Cue WalkToGroup
+line_7=WalkTo TransToCar_FionaLoc1 Direct
+line_8=WaitForCue _FIONA_15
+line_9=Face FionasParents
+line_10=PlayAnim bow_reaction Frame=8 rate=0.7
+line_11=WaitForCue _FIONA_20
+line_12=Face Shrek
+line_13=WaitForCue _FIONA_24
+line_14=WalkTo SPIntro_FionaLoc2 Direct
+line_15=WaitForCue _FIONA_37
+line_16=WaitForCue CutEnd
+[Sequence_6]
+PawnTag=ONEXIT
+line_0=Shrek Trigger EndLevel

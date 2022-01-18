@@ -1,0 +1,19 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Cue _CAMERA_0
+line_1=Cue _CAMERA_1
+line_2=Cue _DONKEY_2
+[Sequence_1]
+PawnTag=CAMERA
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo DNKDoorUpTarget02 Time=1
+line_2=sleep 1
+line_3=Trigger Door_up_2
+line_4=sleep 1.5
+line_5=Cue CutEnd
+line_6=WaitForCue _CAMERA_1
+line_7=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=DONKEY
+line_0=WaitForCue _DONKEY_2
+line_1=WaitForCue CutEnd
