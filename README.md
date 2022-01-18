@@ -4,5 +4,5 @@ A major full-game mod designed to majorly improve the overall experience, as wel
 
 # To run yourself:
 - Unzip AllDialog.zip in ...\Sounds
-- Delete game.ini inside ...\Documents\Shrek 2
-- Run Game.exe in ...\System
+- If you've run this mod before, delete _Shrek_2_2.ini inside ...\Documents\Shrek 2
+- Run _Shrek_2_2.exe in ...\System
