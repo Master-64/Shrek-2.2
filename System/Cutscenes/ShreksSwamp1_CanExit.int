@@ -1,0 +1,7 @@
+[CutScene]
+line_0=NoBypass
+[Sequence_0]
+PawnTag=MAIN
+line_0=Trigger ExitGate
+line_1=Say CANLEAVENOW
+line_2=WaitForSay
