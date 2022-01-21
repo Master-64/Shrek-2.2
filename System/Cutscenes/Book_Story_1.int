@@ -224,4 +224,4 @@ line_0=WaitForCue _SHREK_27
 line_1=WaitForCue CutEnd
 [Sequence_9]
 PawnTag=ONEXIT
-line_0=Shrek Trigger LoadLevel
+line_0=ChangeLevel 1_Shreks_Swamp_1_CS.unr

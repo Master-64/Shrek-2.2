@@ -1,0 +1,172 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=SetProp Actor=ZoneInfo1 bDistanceFog=True
+line_1=SetProp Actor=ZoneInfo1 DistanceFogColor=(B=16,G=77,R=33,A=0)
+line_2=SetProp Actor=ZoneInfo1 DistanceFogEnd=8000
+line_3=SetProp Actor=ZoneInfo1 DistanceFogStart=3000
+line_4=PlayMusic 1_Shreks_Swamp_Track_2 Fade=0.0 Loop=True
+line_5=FadeTo Time=0
+line_6=Sleep 0.5
+line_7=FadeIn
+line_8=Say pc_dnk_SwampIntro3_45
+line_9=WaitForSay
+line_10=Cue _CAMERA_42
+line_11=Cue _FIONA_43
+line_12=Cue _SHREK_44
+line_13=Say pc_fin_SwampIntro3_72
+line_14=WaitForSay
+line_15=Sleep 2.0
+line_16=Cue _CAMERA_45
+line_17=Cue _DONKEY_46
+line_18=Say pc_dnk_SwampIntro3_49
+line_19=Sleep 3.3
+line_20=Cue _CAMERA_47
+line_21=WaitForSay
+line_22=Cue _DONKEY_48
+line_23=Say pc_dnk_SwampIntro3_51
+line_24=WaitForSay
+line_25=Say pc_dnk_SwampIntro3_53
+line_26=WaitForSay
+line_27=Cue _CAMERA_49
+line_28=Say pc_fin_SwampIntro3_55
+line_29=Cue _FIONA_50
+line_30=Cue _SHREK_51
+line_31=WaitForSay
+line_32=Cue _FIONA_52
+line_33=WaitForCue FionaGone
+line_34=Say pc_dnk_SwampIntro3_57
+line_35=WaitForSay
+line_36=Cue _CAMERA_53
+line_37=Sleep 0.5
+line_38=Cue _DONKEY_54
+line_39=Say pc_fin_SwampIntro3_59
+line_40=WaitForSay
+line_41=WaitForCue DonkeyStartTalking2
+line_42=Cue _DONKEY_55
+line_43=Say pc_dnk_SwampIntro3_61
+line_44=WaitForSay
+line_45=Cue _CAMERA_56
+line_46=Say pc_shk_SwampIntro3_63
+line_47=WaitForSay
+line_48=Sleep 1.0
+line_49=Cue _CAMERA_57
+line_50=Say pc_dnk_SwampIntro3_65
+line_51=Sleep 5.0
+line_52=Cue _SHREK_58
+line_53=Cue _DONKEY_59
+line_54=WaitForSay
+line_55=WaitForCue ChangeCameraAgain
+line_56=Cue _CAMERA_60
+line_57=Cue _DONKEY_61
+line_58=Cue _SHREK_62
+line_59=Say pc_dnk_SwampIntro3_74
+line_60=WaitForSay
+line_61=Cue CutEnd
+line_62=PlayMusic 1_Shreks_Swamp_Track_3 Fade=1.0 Loop=True
+line_63=FadeIn Time=0
+[Sequence_1]
+PawnTag=CAMERA
+line_0=FOV Angle=65 Time=0
+line_1=TargetFlyTo NewSPIntro_Target15
+line_2=FlyTo NewSPIntro_Cam23
+line_3=WaitForCue _CAMERA_42
+line_4=FOV Angle=73 Time=0
+line_5=TargetFlyTo SPIntro_Target4 Z=10 Y=-5
+line_6=FlyTo NewSPIntro_Cam67
+line_7=WaitForCue _CAMERA_45
+line_8=FOV Angle=75 Time=0
+line_9=TargetFlyTo SPIntro_Target3
+line_10=FlyTo SPIntro_DonkeyCam2
+line_11=FlyTo SPIntro_DonkeyCam3 Time=12 *
+line_12=WaitForCue _CAMERA_47
+line_13=FOV Angle=65 Time=0
+line_14=TargetFlyTo NewSPIntro_Target15
+line_15=FlyTo NewSPIntro_Cam66
+line_16=FlyTo NewSPIntro_Cam23 Time=13 *
+line_17=WaitForCue _CAMERA_49
+line_18=FOV Angle=80 Time=0
+line_19=TargetFlyTo SPIntro_Target4
+line_20=FlyTo NewSPIntro_Cam24
+line_21=WaitForCue _CAMERA_53
+line_22=FOV Angle=65 Time=0
+line_23=TargetFlyTo NewSPIntro_Target15
+line_24=FlyTo NewSPIntro_Cam23
+line_25=WaitForCue _CAMERA_56
+line_26=FOV Angle=80 Time=0
+line_27=TargetFlyTo SPIntro_Target4
+line_28=FlyTo NewSPIntro_Cam24
+line_29=WaitForCue _CAMERA_57
+line_30=FOV Angle=75 Time=0
+line_31=TargetFlyTo NewSPIntro_Target15
+line_32=FlyTo NewSPIntro_Cam25
+line_33=FOV Angle=55 Time=20 *
+line_34=WaitForCue _CAMERA_60
+line_35=FOV Angle=90 Time=0
+line_36=TargetFlyTo Shrek
+line_37=FlyTo NewSPIntro_Cam26 Z=-20
+line_38=FlyTo NewSPIntro_Cam27 Z=20 Time=10 *
+line_39=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=SHREK
+line_0=Teleport SPIntro_ShrekLoc6
+line_1=Face SPIntro_DonkeyLoc1
+line_2=LookAt Donkey
+line_3=WaitForCue _SHREK_44
+line_4=Sleep 0.5
+line_5=LookAt None
+line_6=PlayAnim CS_OurWhatReaction
+line_7=WaitForAnim
+line_8=WaitForCue _SHREK_51
+line_9=Sleep 0.5
+line_10=PlayAnim CS_SighAsFionaPacks
+line_11=WaitForAnim
+line_12=WaitForCue _SHREK_58
+line_13=TurnTo Donkey Follow
+line_14=WaitForCue _SHREK_62
+line_15=LookAt None
+line_16=Sleep 1.52
+line_17=PlayAnim UnhappyReaction
+line_18=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=FIONA
+line_0=Teleport SPIntro_FionaLoc3
+line_1=Face SPIntro_DonkeyLoc1
+line_2=LookAt Donkey
+line_3=WaitForCue _FIONA_43
+line_4=LookAt None
+line_5=PlayAnim CS_OurWhat
+line_6=WaitForAnim
+line_7=WaitForCue _FIONA_50
+line_8=LookAt None
+line_9=PlayAnim CS_NeedToGoPack Rate=1.5
+line_10=WaitForAnim
+line_11=WaitForCue _FIONA_52
+line_12=WalkTo SPIntro_FionaInHouse
+line_13=Teleport NewSPIntro_FionaOutOfWay
+line_14=Cue FionaGone
+line_15=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=DONKEY
+line_0=Cue DonkeyStartTalking
+line_1=WaitForCue _DONKEY_46
+line_2=PlayAnim CS_DidIForgetMyBad
+line_3=WaitForAnim
+line_4=WaitForCue _DONKEY_48
+line_5=PlayAnim TalkToShrekFiona
+line_6=WaitForAnim
+line_7=WaitForCue _DONKEY_54
+line_8=PlayAnim SheepishReaction
+line_9=WaitForAnim
+line_10=Cue DonkeyStartTalking2
+line_11=WaitForCue _DONKEY_55
+line_12=PlayAnim CS_TinklyDistractions
+line_13=WaitForAnim
+line_14=WaitForCue _DONKEY_59
+line_15=WalkTo NewSPIntro_DonkeyLoc2
+line_16=Cue ChangeCameraAgain
+line_17=WaitForCue _DONKEY_61
+line_18=PlayAnim Bored1
+line_19=WaitForCue CutEnd
+[Sequence_5]
+PawnTag=ONEXIT
+line_0=SaveGame 1
