@@ -41,7 +41,9 @@ line_37=Cue _CAMERA_17
 line_38=Cue _DONKEY_18
 line_39=Cue _SHREK_19
 line_40=Cue _FIONA_20
-line_41=Cue CutEnd
+line_41=FadeTo Time=0.3
+line_42=Sleep 0.3
+line_43=Cue CutEnd
 [Sequence_1]
 PawnTag=CAMERA
 line_0=WaitForCue Cam0
