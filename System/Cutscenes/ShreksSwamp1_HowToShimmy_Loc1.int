@@ -1,0 +1,20 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Trigger HowToShimmy_Loc2
+line_1=Say pc_dnk_SwampJShimmy_18
+line_2=WaitForSay
+line_3=Sleep 2
+line_4=Cue CutEnd
+[Sequence_1]
+PawnTag=CAMERA
+line_0=TargetFlyTo ShimmyTarget01 Time=1
+line_1=FlyTo ShimmyCam01 Time=1
+line_2=TargetFlyTo ShimmyTarget02 Time=3
+line_3=FlyTo ShimmyCam02 Time=3
+line_4=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=SHREK
+line_0=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=ONEXIT
+line_0=Shrek Trigger ExitGateCounter

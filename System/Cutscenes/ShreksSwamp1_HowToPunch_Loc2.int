@@ -1,0 +1,13 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Trigger HowToPunch_Loc1
+line_1=Cue _DONKEY_0
+line_2=Say pc_dnk_SwampPunch_10
+line_3=WaitForSay
+line_4=Say pc_dnk_SwampPunch_4
+line_5=WaitForSay
+line_6=Say pc_dnk_SwampPunch_6
+line_7=WaitForSay
+[Sequence_1]
+PawnTag=ONEXIT
+line_0=Shrek Trigger ExitGateCounter

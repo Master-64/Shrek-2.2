@@ -1,0 +1,22 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Say pc_roy_SwampSave_8
+line_1=Sleep 7.401
+line_2=Cue CamEnd
+line_3=WaitForCue CamEnded
+line_4=Cue CutEnd
+[Sequence_1]
+PawnTag=CAMERA
+line_0=FOV Angle=40 Time=6.5 *
+line_1=TargetFlyTo SavePointFairyTarget Time=1.5
+line_2=FlyTo FairyCam Time=3
+line_3=WaitForCue CamEnd
+line_4=FOV 110
+line_5=Cue CamEnded
+line_6=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=SHREK
+line_0=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=ONEXIT
+line_0=Shrek Trigger ExitGateCounter
