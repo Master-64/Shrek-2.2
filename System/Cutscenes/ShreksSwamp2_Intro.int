@@ -1,0 +1,46 @@
+[Sequence_0]
+PawnTag=MAIN
+line_0=Sleep 0.5
+line_1=Cue CutStart
+line_2=PlayMusic 1_Shreks_Swamp_Track_3 Loop=True
+line_3=Sleep 0.72
+line_4=Say pc_dnk_bumpline_128
+line_5=WaitForSay
+line_6=Cue SpeechDone
+line_7=WaitForCue CamEnd
+line_8=PlayMusic 1_Shreks_Swamp_Track_2 Fade=3 Loop=True
+line_9=Cue CutEnd
+[Sequence_1]
+PawnTag=CAMERA
+line_0=FadeTo Time=0
+line_1=FOV Angle=50 Time=0
+line_2=FlyTo IntroCam01
+line_3=TargetFlyTo IntroCamPoint01
+line_4=WaitForCue CutStart
+line_5=FadeIn Time=1
+line_6=FOV Angle=64 Time=2.5
+line_7=TargetFlyTo IntroCamPoint02 Time=2
+line_8=FlyTo IntroCam02 Time=3
+line_9=WaitForCue SpeechDone
+line_10=GoHome Shrek Time=1.5
+line_11=FOV Angle=110 Time=0
+line_12=Cue CamEnd
+line_13=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=SHREK
+line_0=WaitForCue CutStart
+line_1=WalkTo IntroShrekWalkPoint
+line_2=Sleep 0.64
+line_3=TurnTo Donkey
+line_4=Sleep 1
+line_5=TurnTo IntroShrekTurnPoint
+line_6=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=DONKEY
+line_0=WaitForCue CutStart
+line_1=WalkTo IntroDonkeyWalkPoint
+line_2=TurnTo Shrek
+line_3=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=ONEXIT
+line_0=SaveGame 1
