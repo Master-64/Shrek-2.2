@@ -70,4 +70,5 @@ ID_LogFileExit=E&xit
 [IDDIALOG_CrashBox]
 IDC_Copy=Copy
 IDC_BugReport=Submit Bug Report
-BugReportURL=http://mail1.epicgames.com/bugreport.php3
+IDC_CrashBox=Shrek 2.2 has crashed!
+BugReportURL=https://github.com/Master-64/Shrek-2.2/issues
