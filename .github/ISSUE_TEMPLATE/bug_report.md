@@ -2,7 +2,7 @@
 name: Bug report
 about: Create a bug report to help us improve Shrek 2.2
 title: "[Bug]"
-labels: bug, enhancement
+labels: bug
 assignees: Master-64
 
 ---
