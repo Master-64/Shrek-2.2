@@ -1,0 +1,314 @@
+[Sequence_0]
+PawnTag=Main
+line_0=StopMusic Fade=3.00
+line_1=FadeTo A=255 Time=0.00 R=0 G=0 B=0 bFlash=False EaseFrom
+line_2=Trigger HideTrigger_Wheel
+line_3=Cue _CS_WHEELSTAYANDFADE_0
+line_4=Cue _CAMERA_1
+line_5=Cue _SHREK_2
+line_6=Cue _FIONA_3
+line_7=PlayMusic cutscene_CarriageRide1 Fade=1.00 Loop=True
+line_8=PlaySound carriage_clops Volume=1.00 Pitch=1.00 Attenuate=True No3D=False
+line_9=Cue _CAMERA_4
+line_10=Cue _FIONA_5
+line_11=Cue _SHREK_6
+line_12=Sleep 1.00
+line_13=Cue _DONKEY_7
+line_14=Sleep 0.50
+line_15=Say PC_DNK_CARHIJACK_34
+line_16=WaitForSay
+line_17=Sleep 1.00
+line_18=Cue _CAMERA_8
+line_19=Sleep 1.50
+line_20=Cue _DONKEY_9
+line_21=Say PC_DNK_CARHIJACK_36
+line_22=WaitForSay
+line_23=Cue _SHREK_10
+line_24=WaitForCue Scene4
+line_25=Cue _CAMERA_11
+line_26=Sleep 1.00
+line_27=Cue _DONKEY_12
+line_28=Say PC_DNK_CARHIJACK_76
+line_29=WaitForSay
+line_30=Cue _CAMERA_13
+line_31=Cue _FIONA_14
+line_32=WaitForCue Scene3
+line_33=Cue _CAMERA_15
+line_34=Cue _SHREK_16
+line_35=WaitForCue SceneA
+line_36=Cue _CAMERA_17
+line_37=Say PC_DNK_CARHIJACK_78
+line_38=Cue _DONKEY_18
+line_39=WaitForCue CarriageStop
+line_40=Cue _CAMERA_19
+line_41=Sleep 0.30
+line_42=Cue _CAMERA_20
+line_43=Cue _DONKEY_21
+line_44=WaitForSay
+line_45=StopMusic Fade=3.00
+line_46=PlayMusic cutscene_CarriageAmbushWarning Fade=1.00 Loop=True
+line_47=Sleep 2.00
+line_48=Cue _CAMERA_22
+line_49=Cue _CS_BANDIT_23
+line_50=WaitForSay
+line_51=WaitForCue CameraDone
+line_52=Cue _CAMERA_24
+line_53=Cue _FIONA_25
+line_54=Cue _DONKEY_26
+line_55=Cue _SHREK_27
+line_56=Say pc_fin_CarHijack_38
+line_57=WaitForSay
+line_58=Cue _CAMERA_28
+line_59=Say PC_DNK_CARHIJACK_41
+line_60=WaitForSay
+line_61=Say pc_shk_CarHijack_43
+line_62=Cue _CAMERA_29
+line_63=Cue _SHREK_30
+line_64=WaitForSay
+line_65=Say PC_DNK_CARHIJACK_45
+line_66=WaitForSay
+line_67=Cue _CAMERA_31
+line_68=Cue _DONKEY_32
+line_69=Cue _CS_WHEELSTEALERWITHWHEEL_33
+line_70=Cue _CS_WHEEL_34
+line_71=Cue _CS_WHEELSTEALERWITHWHEEL_35
+line_72=Cue _CAMERA_36
+line_73=Sleep 1.00
+line_74=StopMusic Fade=3.00
+line_75=PlayMusic cutscene_CarriageTheyTookOurWheel Fade=1.00 Loop=True
+line_76=Say PC_DNK_CARHIJACK_82
+line_77=WaitForSay
+line_78=Sleep 1.00
+line_79=Say pc_shk_CarHijack_47
+line_80=WaitForSay
+line_81=Sleep 0.40
+line_82=Say PC_DNK_CARHIJACK_49
+line_83=Sleep 1.50
+line_84=Cue _SHREK_37
+line_85=Cue _DONKEY_38
+line_86=WaitForSay
+line_87=Cue _SHREK_39
+line_88=Say pc_shk_CarHijack_51
+line_89=Cue _CAMERA_40
+line_90=WaitForSay
+line_91=Sleep 0.50
+line_92=Say pc_shk_CarHijack_53
+line_93=WaitForSay
+line_94=Cue _SHREK_41
+line_95=Say PC_DNK_CARHIJACK_55
+line_96=WaitForSay
+line_97=Cue _DONKEY_42
+line_98=Cue _SHREK_43
+line_99=Cue _DONKEY_44
+line_100=Cue _FIONA_45
+line_101=Cue _CAMERA_46
+line_102=Cue _CS_BANDIT_47
+line_103=Cue _CS_WHEELSTEALER_48
+line_104=Cue _CS_WHEELSTEALERWITHWHEEL_49
+[Sequence_1]
+PawnTag=CS_WheelStayAndFade
+line_0=WaitForCue _CS_WHEELSTAYANDFADE_0
+line_1=FadeActor A=0 Time=0.00 R=128 G=128 B=128 bDestroy=False EaseBetween
+[Sequence_2]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_1
+line_1=SetProp Actor=None bDoTrainShake=true
+line_2=WaitForCue _CAMERA_4
+line_3=FOV Angle=45.00 Time=0.00 EaseBetween
+line_4=TargetFlyTo InsideCarriage_Target77 Time=0.00 X=0.00 Y=0.00 Z=20.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_5=FlyTo InsideCarriage_Cam77 Time=0.00 X=0.00 Y=0.00 Z=-5.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_6=FadeIn A=0 Time=1.00 R=0 G=0 B=0 bFlash=False EaseTo
+line_7=WaitForCue _CAMERA_8
+line_8=FOV Angle=85.00 Time=0.00 EaseBetween
+line_9=TargetFlyTo InsideCarriage_Target2 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_10=FlyTo InsideCarriage_Cam2 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_11=WaitForCue _CAMERA_11
+line_12=FOV Angle=80.00 Time=0.00 EaseBetween
+line_13=TargetFlyTo Donkey Time=0.00 X=0.00 Y=-5.00 Z=10.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_14=FlyTo InsideCarriage_Cam1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_15=Sleep 1.50
+line_16=FlyTo InsideCarriage_Cam55 Time=0.00 X=0.00 Y=0.00 Z=10.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_17=WaitForCue _CAMERA_13
+line_18=FOV Angle=73.00 Time=0.00 EaseBetween
+line_19=TargetFlyTo InsideCarriage_TargetFiona Time=0.00 X=0.00 Y=0.00 Z=25.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_20=FlyTo InsideCarriage_Cam4 Time=0.00 X=0.00 Y=0.00 Z=25.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_21=WaitForCue _CAMERA_15
+line_22=FOV Angle=73.00 Time=0.00 EaseBetween
+line_23=TargetFlyTo InsideCarriage_Target3 Time=0.00 X=0.00 Y=0.00 Z=25.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_24=FlyTo InsideCarriage_Cam4 Time=0.00 X=0.00 Y=0.00 Z=25.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_25=WaitForCue _CAMERA_17
+line_26=FOV Angle=80.00 Time=0.00 EaseBetween
+line_27=TargetFlyTo InsideCarriage_Target4 Time=0.00 X=0.00 Y=0.00 Z=-5.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_28=FlyTo InsideCarriage_Cam5 Time=0.00 X=0.00 Y=0.00 Z=-5.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_29=FlyTo InsideCarriage_Cam5 Time=10.00 X=-20.00 Y=-10.00 Z=-5.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked *
+line_30=WaitForCue _CAMERA_19
+line_31=SetProp Actor=None bDoTrainShake=false
+line_32=Shake Magnitude=130.00 Time=1.00 Decay=0.00
+line_33=Trigger StopRocks_MaterialTrigger
+line_34=WaitForCue _CAMERA_20
+line_35=FOV Angle=80.00 Time=0.00 EaseBetween
+line_36=TargetFlyTo InsideCarriage_Target4 Time=1.00 X=0.00 Y=0.00 Z=-20.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_37=FlyTo InsideCarriage_Cam5 Time=1.00 X=-18.00 Y=0.00 Z=-20.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_38=WaitForCue _CAMERA_22
+line_39=TargetFlyTo Carriage_Target2 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_40=FlyTo Carriage_Cam2 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_41=Trigger EmitterHideTrigger
+line_42=Cue CamOutSideOkayMoveDonkey
+line_43=FlyTo Carriage_Cam3 Time=3.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked *
+line_44=Sleep 1.00
+line_45=Trigger TreeFall1
+line_46=Sleep 0.50
+line_47=Trigger TreeFall3
+line_48=Sleep 1.00
+line_49=Shake Magnitude=150.00 Time=1.40 Decay=0.00
+line_50=Sleep 1.00
+line_51=Cue CameraDone
+line_52=WaitForCue _CAMERA_24
+line_53=FOV Angle=45.00 Time=0.00 EaseBetween
+line_54=TargetFlyTo InsideCarriage_Target5 Time=0.00 X=0.00 Y=30.00 Z=10.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_55=FlyTo InsideCarriage_Cam7 Time=0.00 X=0.00 Y=0.00 Z=10.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_56=WaitForCue _CAMERA_28
+line_57=FOV Angle=80.00 Time=0.00 EaseBetween
+line_58=TargetFlyTo InsideCarriage_Target4 Time=0.00 X=0.00 Y=0.00 Z=-5.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_59=FlyTo InsideCarriage_Cam5 Time=0.00 X=0.00 Y=0.00 Z=-5.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_60=FlyTo InsideCarriage_Cam5 Time=10.00 X=-20.00 Y=-10.00 Z=-5.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked *
+line_61=WaitForCue _CAMERA_29
+line_62=FOV Angle=73.00 Time=0.00 EaseBetween
+line_63=TargetFlyTo InsideCarriage_Target3 Time=0.00 X=0.00 Y=0.00 Z=25.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_64=FlyTo InsideCarriage_Cam4 Time=0.00 X=0.00 Y=0.00 Z=25.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_65=WaitForCue _CAMERA_31
+line_66=FOV Angle=80.00 Time=0.00 EaseBetween
+line_67=TargetFlyTo Carriage_Target3 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_68=FlyTo Carriage_Cam4 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_69=TargetFlyTo Carriage_Target3 Time=1.50 X=0.00 Y=0.00 Z=-20.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_70=FlyTo Carriage_Cam5 Time=1.50 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_71=WaitForCue _CAMERA_36
+line_72=FOV Angle=80.00 Time=0.00 EaseBetween
+line_73=TargetFlyTo Carriage_Target4 Time=2.50 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_74=FlyTo Carriage_Cam6 Time=3.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_75=Cue ShrekOn
+line_76=WaitForCue _CAMERA_40
+line_77=FOV Angle=80.00 Time=0.00 EaseBetween
+line_78=TargetFlyTo Shrek Time=5.50 X=0.00 Y=0.00 Z=48.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_79=FlyTo Carriage_Cam66 Time=5.50 X=-20.00 Y=0.00 Z=-15.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_80=WaitForCue _CAMERA_46
+line_81=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=Shrek
+line_0=WaitForCue _SHREK_2
+line_1=Teleport BugFix_ShrekStartLocation
+line_2=Face InsideCarriage_Cam8
+line_3=WaitForCue _SHREK_6
+line_4=PlayAnim bored1 Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_5=WaitForAnim
+line_6=WaitForCue _SHREK_10
+line_7=PlayAnim flinch Rate=1.30 Tween=0.20 Frame=0.00 Channel=0
+line_8=WaitForAnim
+line_9=Cue Scene4
+line_10=PlayAnim flinchtoidle Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_11=WaitForAnim
+line_12=WaitForCue _SHREK_16
+line_13=PlayAnim disgusted Rate=1.40 Tween=0.20 Frame=0.00 Channel=0
+line_14=WaitForAnim
+line_15=Cue SceneA
+line_16=WaitForCue _SHREK_27
+line_17=PlayAnim lookaround2 Rate=0.70 Tween=0.20 Frame=0.00 Channel=0
+line_18=WaitForAnim
+line_19=WaitForCue _SHREK_30
+line_20=PlayAnim flinch Rate=0.70 Tween=0.20 Frame=0.00 Channel=0
+line_21=WaitForAnim
+line_22=WaitForCue _SHREK_37
+line_23=Teleport Carriage_ShrekLoc1
+line_24=WalkTo Carriage_ShrekLoc2
+line_25=WaitForCue _SHREK_39
+line_26=PlayAnim cs_carraigelookback Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_27=WaitForAnim
+line_28=WaitForCue _SHREK_41
+line_29=TurnTo EstablishWheel_Target1 Rate=1.00
+line_30=Sleep 0.50
+line_31=Cue CutEnd
+line_32=WaitForCue _SHREK_43
+line_33=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=Fiona
+line_0=WaitForCue _FIONA_3
+line_1=Face LOOKHERE Follow
+line_2=WaitForCue _FIONA_5
+line_3=PlayAnim carraigeidle Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_4=WaitForAnim
+line_5=WaitForCue _FIONA_14
+line_6=PlayAnim rolleyes Rate=1.40 Tween=0.20 Frame=0.00 Channel=0
+line_7=WaitForAnim
+line_8=Cue Scene3
+line_9=WaitForCue _FIONA_25
+line_10=Face InsideCarriage_Cam7
+line_11=PlayAnim worried Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_12=WaitForAnim
+line_13=WaitForCue _FIONA_45
+line_14=WaitForCue CutEnd
+[Sequence_5]
+PawnTag=Donkey
+line_0=WaitForCue _DONKEY_7
+line_1=PlayAnim lookaround1 Rate=0.80 Tween=0.20 Frame=0.00 Channel=0
+line_2=WaitForAnim
+line_3=WaitForCue _DONKEY_9
+line_4=PlayAnim pointhead Rate=0.70 Tween=0.20 Frame=0.00 Channel=0
+line_5=WaitForAnim
+line_6=WaitForCue _DONKEY_12
+line_7=PlayAnim talktoShrekFiona Rate=0.70 Tween=0.20 Frame=0.00 Channel=0
+line_8=WaitForAnim
+line_9=WaitForCue _DONKEY_18
+line_10=PlayAnim lookaround1 Rate=0.70 Tween=0.20 Frame=0.00 Channel=0
+line_11=WaitForAnim
+line_12=Cue CarriageStop
+line_13=WaitForCue _DONKEY_21
+line_14=PlayAnim conspiracy Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_15=WaitForAnim
+line_16=WaitForCue _DONKEY_26
+line_17=PlayAnim lookright Rate=0.60 Tween=0.20 Frame=0.00 Channel=0
+line_18=WaitForAnim
+line_19=WaitForCue _DONKEY_32
+line_20=Teleport Carriage_DonkeyLoc1
+line_21=Face Carriage_ShrekLoc2
+line_22=WaitForCue _DONKEY_38
+line_23=TurnTo Carriage_DonkeyLookhere Rate=1.00
+line_24=WaitForCue _DONKEY_42
+line_25=TurnTo Shrek Rate=1.00
+line_26=WaitForCue _DONKEY_44
+line_27=WaitForCue CutEnd
+[Sequence_6]
+PawnTag=CS_Bandit
+line_0=WaitForCue _CS_BANDIT_23
+line_1=Teleport BanditCut_Loc1
+line_2=RunTo BanditCut_Loc2 Direct
+line_3=Teleport Carriage_BanditOUT
+line_4=WaitForCue _CS_BANDIT_47
+line_5=WaitForCue CutEnd
+[Sequence_7]
+PawnTag=CS_WheelStealerWithWheel
+line_0=WaitForCue _CS_WHEELSTEALERWITHWHEEL_33
+line_1=Teleport Carriage_WheelTheifLoc1
+line_2=WaitForCue _CS_WHEELSTEALERWITHWHEEL_35
+line_3=PlaySound wheel_pop_off Volume=1.00 Pitch=1.00 Attenuate=True No3D=True
+line_4=PlayAnim catch Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_5=WaitForAnim
+line_6=SetIdle wheelidle
+line_7=RunTo Carriage_WheelTheifLoc2
+line_8=RunTo Carriage_WheelTheifLoc3
+line_9=RunTo Carriage_WheelTheifLoc4
+line_10=Teleport Carriage_WheelTheifOUT
+line_11=WaitForCue _CS_WHEELSTEALERWITHWHEEL_49
+line_12=WaitForCue CutEnd
+[Sequence_8]
+PawnTag=CS_Wheel
+line_0=WaitForCue _CS_WHEEL_34
+line_1=Teleport Carriage_WheelTheifOUT
+[Sequence_9]
+PawnTag=CS_WheelStealer
+line_0=WaitForCue _CS_WHEELSTEALER_48
+line_1=WaitForCue CutEnd
+[Sequence_10]
+PawnTag=OnExit
+line_0=Shrek TriggerActor bandits_director
+line_1=Shrek TriggerActor FightBanditsMusic
+line_2=SaveGame 1

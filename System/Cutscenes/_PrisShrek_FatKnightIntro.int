@@ -1,0 +1,46 @@
+[CutScene]
+line_0=NoBypass
+[Sequence_0]
+PawnTag=Main
+line_0=StopMusic Fade=4.00
+line_1=Cue _CAMERA_0
+line_2=Cue _FATKNIGHT1_1
+line_3=Cue _SHREK_2
+line_4=Say PC_KNT_SHREKMEETKNIGH_2
+line_5=PlayMusic PrisDonkey_FatKnightBattle Fade=0.00 Loop=True
+line_6=Cue _SHREK_3
+line_7=WaitForSay
+line_8=Cue CutEnd
+line_9=Sleep 0.60
+line_10=Cue _FATKNIGHT1_4
+line_11=Cue _SHREK_5
+line_12=Cue _CAMERA_6
+[Sequence_1]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo FatKnight1 Time=1.00 X=0.00 Y=0.00 Z=40.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_2=FlyTo FatKnight1 Time=2.00 X=300.00 Y=0.00 Z=50.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None Linear Relative TurnWithActor StayLocked
+line_3=FlyTo FatKnight1 Time=6.50 X=150.00 Y=0.00 Z=50.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked *
+line_4=WaitForCue _CAMERA_6
+line_5=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=FatKnight1
+line_0=WaitForCue _FATKNIGHT1_1
+line_1=TurnTo Shrek Rate=1.00
+line_2=PlayAnim alert Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_3=WaitForCue _FATKNIGHT1_4
+line_4=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=Shrek
+line_0=WaitForCue _SHREK_2
+line_1=TurnTo FatKnight1 Rate=1.00
+line_2=WaitForCue _SHREK_3
+line_3=Teleport TPTShrekRGP
+line_4=Sleep 0.50
+line_5=Trigger FatKnightStepGate
+line_6=PlaySound CS_FatKnight_gaterise Volume=1.00 Pitch=1.00 Attenuate=True No3D=False
+line_7=WaitForCue _SHREK_5
+line_8=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=OnExit
+line_0=Shrek Trigger startBossEncounterTrigger

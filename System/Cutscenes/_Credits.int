@@ -1,0 +1,40 @@
+[CutScene]
+line_0=NoBypass
+[Sequence_0]
+PawnTag=Main
+line_0=Cue _CAMERA_0
+line_1=Sleep 0.50
+line_2=Trigger StartCreditsTrigger
+line_3=Cue _MONGO_1
+line_4=Cue _FIONA_2
+line_5=Cue _PIB_3
+line_6=Cue _DONKEY_4
+line_7=Cue _SHREK_5
+line_8=Cue _CAMERA_6
+[Sequence_1]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo Credits_Target1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_2=FlyTo Credits_Cam1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_3=WaitForCue _CAMERA_6
+line_4=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=Mongo
+line_0=WaitForCue _MONGO_1
+line_1=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=Fiona
+line_0=WaitForCue _FIONA_2
+line_1=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=PIB
+line_0=WaitForCue _PIB_3
+line_1=WaitForCue CutEnd
+[Sequence_5]
+PawnTag=Donkey
+line_0=WaitForCue _DONKEY_4
+line_1=WaitForCue CutEnd
+[Sequence_6]
+PawnTag=Shrek
+line_0=WaitForCue _SHREK_5
+line_1=WaitForCue CutEnd

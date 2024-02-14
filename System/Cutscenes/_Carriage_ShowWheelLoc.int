@@ -1,0 +1,26 @@
+[Sequence_0]
+PawnTag=Main
+line_0=Cue _CAMERA_0
+line_1=Sleep 1.00
+line_2=Say PC_DNK_CARHIJACK_72
+line_3=WaitForSay
+line_4=Cue _SHREK_1
+line_5=Cue _SHREK_2
+line_6=Cue _CAMERA_3
+[Sequence_1]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo PickupWheel Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_2=FlyTo EstablishWheel_Cam2 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_3=Sleep 1.50
+line_4=FlyTo PickupWheel Time=2.50 X=100.00 Y=100.00 Z=50.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_5=Sleep 1.00
+line_6=Cue CutEnd
+line_7=WaitForCue _CAMERA_3
+line_8=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=Shrek
+line_0=WaitForCue _SHREK_1
+line_1=TurnTo PickupWheel Rate=1.00
+line_2=WaitForCue _SHREK_2
+line_3=WaitForCue CutEnd

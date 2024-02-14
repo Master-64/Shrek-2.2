@@ -1,0 +1,222 @@
+[Sequence_0]
+PawnTag=Main
+line_0=Cue _CAMERA_0
+line_1=Say pc_dnk_PIBPotion_38
+line_2=WaitForSay
+line_3=Say pc_shk_PIBPotion_40
+line_4=WaitForCue CameraMoveDone1
+line_5=Cue _SHREK_1
+line_6=Cue _DONKEY_2
+line_7=Cue _PIB_3
+line_8=Cue _CAMERA_4
+line_9=WaitForCue CamLookAtPotionRoom
+line_10=Sleep 0.50
+line_11=WaitForSay
+line_12=Say pc_pib_PIBPotion_16
+line_13=Sleep 4.50
+line_14=Cue _CAMERA_5
+line_15=WaitForSay
+line_16=Sleep 2.00
+line_17=Say pc_pib_PIBPotion_18
+line_18=WaitForCue PotionViewDone
+line_19=Sleep 0.50
+line_20=Cue _CAMERA_6
+line_21=Cue _PIB_7
+line_22=Cue _SHREK_8
+line_23=Cue _DONKEY_9
+line_24=WaitForCue LowPIBCam
+line_25=WaitForSay
+line_26=Cue _CAMERA_10
+line_27=Cue _DONKEY_11
+line_28=Cue _SHREK_12
+line_29=Cue _CAMERA_13
+line_30=WaitForCue ShotOnVent
+line_31=Say PC_SHK_PIBPOTION_22
+line_32=Cue _DONKEY_14
+line_33=Cue _SHREK_15
+line_34=Sleep 4.80
+line_35=Cue _SHREK_16
+line_36=Cue _DONKEY_17
+line_37=Cue _PIB_18
+line_38=Cue _CAMERA_19
+line_39=WaitForSay
+line_40=Sleep 1.00
+line_41=Say pc_shk_PIBPotion_42
+line_42=Cue _DONKEY_20
+line_43=Sleep 2.50
+line_44=Cue _CAMERA_21
+line_45=WaitForSay
+line_46=Say pc_pib_PIBPotion_24
+line_47=WaitForSay
+line_48=Cue _DONKEY_22
+line_49=Cue _SHREK_23
+line_50=Say PC_SHK_PIBPOTION_36
+line_51=WaitForSay
+line_52=Say pc_pib_PIBPotion_28
+line_53=WaitForSay
+line_54=Say PC_SHK_PIBPOTION_30
+line_55=WaitForSay
+line_56=Say pc_pib_PIBPotion_32
+line_57=WaitForSay
+line_58=Say PC_DNK_PIBPOTION_34
+line_59=Cue _CAMERA_24
+line_60=Cue _DONKEY_25
+line_61=WaitForSay
+line_62=Sleep 0.30
+line_63=Cue _SHREK_26
+line_64=Cue _PIB_27
+line_65=Sleep 1.50
+line_66=Cue _CAMERA_28
+line_67=Cue _CAMERA_29
+line_68=Cue _SHREK_30
+line_69=Cue _DONKEY_31
+line_70=Cue _PIB_32
+[Sequence_1]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_0
+line_1=FadeTo A=255 Time=0.00 R=0 G=0 B=0 bFlash=False EaseFrom
+line_2=FadeIn A=0 Time=3.00 R=0 G=0 B=0 bFlash=False EaseTo
+line_3=FOV Angle=74.00 Time=0.00 EaseBetween
+line_4=TargetFlyTo FGMIntro_Target1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_5=FlyTo FGMIntro_Cam1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_6=TargetFlyTo FGMIntro_Target1 Time=3.00 X=0.00 Y=0.00 Z=-130.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_7=FlyTo FGMIntro_Cam1 Time=3.00 X=0.00 Y=0.00 Z=-130.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_8=Cue CameraMoveDone1
+line_9=WaitForCue _CAMERA_4
+line_10=FOV Angle=73.00 Time=0.00 EaseBetween
+line_11=TargetFlyTo roomCAMFocusPt Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_12=FlyTo FGMIntro_Cam2 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_13=FOV Angle=54.00 Time=8.00 EaseBetween
+line_14=TargetFlyTo roomCAMFocusPt2 Time=8.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked *
+line_15=FlyTo FGMIntro_Cam2Drift Time=8.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked *
+line_16=WaitForCue _CAMERA_5
+line_17=FOV Angle=82.00 Time=2.00 EaseBetween
+line_18=TargetFlyTo FGMIntro_Target2 Time=1.50 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_19=FlyTo FGMIntro_Cam3 Time=2.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=FGMIntro_PullPoint1 EaseBetween Relative TurnWithActor StayLocked
+line_20=TargetFlyTo QuickCut6_Target2 Time=2.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_21=FlyTo DEscape_Cam1 Time=2.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=FGMIntro_PullPoint1Potion EaseBetween Relative TurnWithActor StayLocked
+line_22=Cue PotionViewDone
+line_23=WaitForCue _CAMERA_6
+line_24=FOV Angle=73.00 Time=0.00 EaseBetween
+line_25=TargetFlyTo roomCAMFocusPt2 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_26=FlyTo FGMIntro_Cam2Drift Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_27=WaitForCue _CAMERA_10
+line_28=FOV Angle=36.00 Time=1.00 EaseBetween
+line_29=TargetFlyTo FGMIntro_Target4 Time=1.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked *
+line_30=FlyTo FGMIntro_Cam6 Time=2.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_31=Sleep 0.50
+line_32=WaitForCue _CAMERA_13
+line_33=FOV Angle=65.00 Time=0.00 EaseBetween
+line_34=TargetFlyTo FGMIntro_ShrekLoc1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_35=FlyTo FGMIntro_Cam2 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_36=Cue ShotOnVent
+line_37=WaitForCue _CAMERA_19
+line_38=TargetFlyTo FGMIntro_Target3 Time=1.80 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_39=Sleep 1.80
+line_40=TargetFlyTo FGMIntro_Target3 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_41=FlyTo FGMIntro_Cam4 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_42=WaitForCue _CAMERA_21
+line_43=FOV Angle=36.00 Time=2.00 EaseBetween
+line_44=TargetFlyTo leverTarget Time=2.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_45=Sleep 4.00
+line_46=FOV Angle=65.00 Time=0.00 EaseBetween
+line_47=TargetFlyTo FGMIntro_Target3 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_48=WaitForCue _CAMERA_24
+line_49=TargetFlyTo Donkey Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_50=FOV Angle=20.00 Time=0.00 EaseBetween
+line_51=Sleep 1.50
+line_52=FOV Angle=73.00 Time=4.50 EaseBetween
+line_53=WaitForCue _CAMERA_28
+line_54=WaitForCue TrigDone
+line_55=GoHome PIB Time=1.00
+line_56=Sleep 1.20
+line_57=Cue CutEnd
+line_58=WaitForCue _CAMERA_29
+line_59=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=Shrek
+line_0=WaitForCue _SHREK_1
+line_1=WalkTo FGMIntro_ShrekLoc1 Direct
+line_2=WaitForCue _SHREK_8
+line_3=WaitForCue WatchPIB
+line_4=TurnTo PIB Rate=1.00
+line_5=WaitForCue _SHREK_12
+line_6=TurnTo FGMIntro_Target4 Rate=1.00
+line_7=WaitForCue _SHREK_15
+line_8=TurnTo PIB Rate=1.00
+line_9=WaitForCue _SHREK_16
+line_10=Sleep 0.40
+line_11=RunTo FGMIntro_ShrekLoc2 Direct
+line_12=TurnTo PIB Rate=1.00
+line_13=WaitForCue _SHREK_23
+line_14=Sleep 0.50
+line_15=WalkTo FGMIntro_DonkeyLoc3 Direct
+line_16=WalkTo FGMIntro_ShrekLoc3 Direct
+line_17=TurnTo FGMIntro_ShrekLoc2 Rate=1.00
+line_18=Sleep 0.50
+line_19=Cue ShrekIn
+line_20=WaitForCue _SHREK_26
+line_21=WaitForCue ShrekIn
+line_22=WaitForCue DNKin
+line_23=Sleep 0.20
+line_24=Trigger FGM_CS_Door1
+line_25=Sleep 3.00
+line_26=Cue TrigDone
+line_27=WaitForCue _SHREK_30
+line_28=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=Donkey
+line_0=WaitForCue _DONKEY_2
+line_1=Sleep 0.30
+line_2=WalkTo FGMIntro_DonkeyLoc1 Direct
+line_3=TurnTo FGMIntro_LookPotionRoom Rate=1.00
+line_4=Sleep 2.00
+line_5=PlayAnim lookaround1 Rate=0.30 Tween=0.20 Frame=0.00 Channel=0
+line_6=Cue CamLookAtPotionRoom
+line_7=WaitForCue _DONKEY_9
+line_8=WaitForCue WatchPIB
+line_9=WaitForCue _DONKEY_11
+line_10=TurnTo FGMIntro_Target4 Rate=1.00
+line_11=WaitForCue _DONKEY_14
+line_12=TurnTo PIB Rate=1.00
+line_13=WaitForCue _DONKEY_17
+line_14=Sleep 0.60
+line_15=RunTo FGMIntro_DonkeyLoc2 Direct
+line_16=TurnTo PIB Rate=1.00
+line_17=WaitForCue _DONKEY_20
+line_18=Sleep 2.50
+line_19=PlayAnim lookright Rate=0.50 Tween=0.20 Frame=0.00 Channel=0
+line_20=Sleep 2.00
+line_21=PlayAnim lookright Rate=0.50 Tween=0.20 Frame=0.00 Channel=0
+line_22=WaitForCue _DONKEY_22
+line_23=WalkTo FGMIntro_DonkeyLoc3 Direct
+line_24=WalkTo FGMIntro_DonkeyLoc4 Direct
+line_25=TurnTo FGMIntro_DonkeyLoc2 Rate=1.00
+line_26=Sleep 0.50
+line_27=Cue DNKin
+line_28=WaitForCue _DONKEY_25
+line_29=PlayAnim pointhoof Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_30=WaitForCue _DONKEY_31
+line_31=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=PIB
+line_0=WaitForCue _PIB_3
+line_1=Sleep 0.50
+line_2=WalkTo FGMIntro_PIBLoc1 Direct
+line_3=TurnTo FGMIntro_Target1 Rate=1.00
+line_4=WaitForCue _PIB_7
+line_5=WalkTo FGMIntro_PIBLoc3 Direct
+line_6=Cue WatchPIB
+line_7=TurnTo FGMIntro_Target4 Rate=1.00
+line_8=Sleep 1.50
+line_9=Cue LowPIBCam
+line_10=WaitForCue _PIB_18
+line_11=RunTo FGMIntro_PIBLoc2 Direct
+line_12=TurnTo Shrek Rate=1.00
+line_13=WaitForCue _PIB_27
+line_14=TurnTo FGMIntro_LookPotionRoom Rate=1.00
+line_15=WaitForCue _PIB_32
+line_16=WaitForCue CutEnd
+[Sequence_5]
+PawnTag=OnExit
+line_0=SaveGame 1

@@ -1,0 +1,46 @@
+[CutScene]
+line_0=NoBypass
+[Sequence_0]
+PawnTag=Main
+line_0=Cue _CAMERA_0
+line_1=Cue _MAINPLAYER_1
+line_2=WaitForCue CameraPanNow
+line_3=Cue _CAMERA_2
+line_4=Say pc_nar_bumpline_2464
+line_5=WaitForSay
+line_6=Cue _CAMERA_3
+line_7=WaitForCue GoHomeDone
+line_8=Cue CutEnd
+line_9=Trigger DoorBlocker
+line_10=PlayMusic Beanstalk_Coin Fade=0.00 Loop=True
+line_11=Cue _CAMERA_4
+line_12=Cue _MAINPLAYER_5
+[Sequence_1]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo Intro_Target1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_2=FlyTo Intro_Cam1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_3=WaitForCue _CAMERA_2
+line_4=Sleep 1.00
+line_5=TargetFlyTo Intro_Target2 Time=3.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_6=FlyTo Intro_Cam2 Time=3.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_7=WaitForCue _CAMERA_3
+line_8=GoHome MainPlayer Time=1.00
+line_9=Sleep 1.00
+line_10=Cue GoHomeDone
+line_11=WaitForCue _CAMERA_4
+line_12=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=MainPlayer
+line_0=WaitForCue _MAINPLAYER_1
+line_1=Teleport Intro_PlayerLoc1
+line_2=Face Intro_PlayerLoc2
+line_3=Trigger OpenGate
+line_4=Sleep 1.50
+line_5=Cue CameraPanNow
+line_6=WalkTo Intro_PlayerLoc2 Direct
+line_7=WalkTo Intro_PlayerLoc3 Direct
+line_8=TurnTo Intro_Target2 Rate=1.00
+line_9=Trigger OpenGate
+line_10=WaitForCue _MAINPLAYER_5
+line_11=WaitForCue CutEnd

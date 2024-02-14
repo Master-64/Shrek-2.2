@@ -1,0 +1,27 @@
+[Sequence_0]
+PawnTag=Main
+line_0=Cue _CAMERA_0
+line_1=Cue _DONKEY_1
+line_2=Cue _DONKEY_2
+line_3=Cue _CAMERA_3
+[Sequence_1]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo QuickCut6_Target1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_2=FlyTo QuickCut6_Cam1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_3=Sleep 0.50
+line_4=TargetFlyTo QuickCut6_Target2 Time=3.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_5=FlyTo QuickCut6_Cam2 Time=2.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_6=Trigger SteedGrateDoor
+line_7=Sleep 1.00
+line_8=TargetFlyTo QuickCut6_Target3 Time=3.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_9=FlyTo QuickCut6_Cam3 Time=3.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_10=Cue CutEnd
+line_11=WaitForCue _CAMERA_3
+line_12=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=Donkey
+line_0=WaitForCue _DONKEY_1
+line_1=TurnTo QuickCut6_Target2 Rate=1.00
+line_2=WaitForCue _DONKEY_2
+line_3=WaitForCue CutEnd

@@ -1,0 +1,18 @@
+[Sequence_0]
+PawnTag=Main
+line_0=Say PC_SHK_MONGOTUTORAL_8
+line_1=LockCamTo CastleS_TreesTarget1 Yaw=2000 Pitch=2000 Roll=0 Speed=7.00 Tightness=10.00
+line_2=Sleep 2.00
+line_3=UnLockCamTo CastleS_TreesTarget1
+line_4=WaitForSay
+line_5=Cue CutEnd
+line_6=Cue _MONGOPANICSPEAKERONE_0
+line_7=Cue _MONGOPANICSPEAKERTWO_1
+[Sequence_1]
+PawnTag=MongoPanicSpeakerOne
+line_0=WaitForCue _MONGOPANICSPEAKERONE_0
+line_1=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=MongoPanicSpeakerTwo
+line_0=WaitForCue _MONGOPANICSPEAKERTWO_1
+line_1=WaitForCue CutEnd

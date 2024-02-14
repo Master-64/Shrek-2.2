@@ -1,0 +1,38 @@
+[Sequence_0]
+PawnTag=Main
+line_0=Cue _CAMERA_0
+line_1=Cue _DONKEY_1
+line_2=Cue _SHREK_2
+line_3=Say pc_dnk_bumpline_2579
+line_4=WaitForSay
+line_5=Cue CutEnd
+line_6=Cue _CAMERA_3
+line_7=Cue _DONKEY_4
+line_8=Cue _SHREK_5
+[Sequence_1]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo BearTrapIntro_Target1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_2=FlyTo BearTrapIntro_Cam1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_3=FlyTo BearTrapIntro_Cam2 Time=5.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked *
+line_4=WaitForCue _CAMERA_3
+line_5=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=Donkey
+line_0=WaitForCue _DONKEY_1
+line_1=Teleport BearTrapIntro_DonkeyLoc1
+line_2=WalkTo BearTrapIntro_DonkeyLoc2
+line_3=Face BearTrapIntro_Target1
+line_4=WaitForCue _DONKEY_4
+line_5=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=Shrek
+line_0=WaitForCue _SHREK_2
+line_1=Teleport BearTrapIntro_ShrekLoc1
+line_2=WalkTo BearTrapIntro_ShrekLoc2
+line_3=Face BearTrapIntro_Target1
+line_4=WaitForCue _SHREK_5
+line_5=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=OnExit
+line_0=Donkey Follow Shrek

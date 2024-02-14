@@ -1,0 +1,50 @@
+[Sequence_0]
+PawnTag=Main
+line_0=Cue _CAMERA_0
+line_1=Cue _SHREK_1
+line_2=Cue _DONKEY_2
+line_3=Say PC_DNK_CARRAFTERLOG_8
+line_4=WaitForSay
+line_5=StopMusic Fade=8.00
+line_6=Sleep 1.00
+line_7=Say PC_DNK_CARRAFTERLOG_10
+line_8=WaitForSay
+line_9=Sleep 0.50
+line_10=Say pc_shk_CarrAfterLog_12
+line_11=Cue _DONKEY_3
+line_12=Sleep 1.00
+line_13=Cue _SHREK_4
+line_14=FadeTo A=255 Time=2.00 R=0 G=0 B=0 bFlash=False EaseFrom
+line_15=Sleep 2.00
+line_16=WaitForSay
+line_17=Cue CutEnd
+line_18=Cue _CAMERA_5
+line_19=Cue _SHREK_6
+line_20=Cue _DONKEY_7
+[Sequence_1]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo AfterLogs_Target1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_2=FlyTo AfterLog_Cam1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_3=WaitForCue _CAMERA_5
+line_4=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=Shrek
+line_0=WaitForCue _SHREK_1
+line_1=TurnTo Donkey Rate=1.00
+line_2=WaitForCue _SHREK_4
+line_3=RunTo WheelBack_ShrekLoc2
+line_4=WaitForCue _SHREK_6
+line_5=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=Donkey
+line_0=WaitForCue _DONKEY_2
+line_1=RunTo AfterLog_DonkeyLoc1
+line_2=TurnTo Shrek Rate=1.00
+line_3=WaitForCue _DONKEY_3
+line_4=RunTo WheelBack_DonkeyLoc3
+line_5=WaitForCue _DONKEY_7
+line_6=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=OnExit
+line_0=Shrek Trigger LoadNextLevel

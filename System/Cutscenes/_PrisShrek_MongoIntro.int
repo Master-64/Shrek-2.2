@@ -1,0 +1,267 @@
+[CutScene]
+line_0=NoBypass
+[Sequence_0]
+PawnTag=Main
+line_0=Trigger FatKnightStepGate
+line_1=PlaySound CS_FatKnight_gatelower Volume=1.00 Pitch=1.00 Attenuate=True No3D=False
+line_2=Sleep 1.00
+line_3=Cue _CAMERA_0
+line_4=Say PC_SHK_SHREKBEATKNIG_2
+line_5=Cue _CAMERA_1
+line_6=Cue _SHREK_2
+line_7=WaitForSay
+line_8=StopMusic Fade=4.00
+line_9=WaitForCue OutSidePrisonNow
+line_10=Cue _CAMERA_3
+line_11=Cue _SHREK_4
+line_12=Cue _DONKEY_5
+line_13=Cue _PIB_6
+line_14=Cue _MONGOWITHOUTSHREK_7
+line_15=WaitForCue ShrekArrive
+line_16=Say pc_shk_shrekescprison_2
+line_17=PlayMusic 10_Castle_Siege Fade=0.00 Loop=True
+line_18=WaitForSay
+line_19=Cue _CAMERA_8
+line_20=Cue _MONGOWITHOUTSHREK_9
+line_21=WaitForCue MongoComeCloser
+line_22=Say PC_DNK_SHREKESCPRISON_4
+line_23=Cue _DONKEY_10
+line_24=Cue _CAMERA_11
+line_25=WaitForSay
+line_26=Sleep 0.20
+line_27=Say PC_DNK_SHREKESCPRISON_6
+line_28=Cue _GINGER_12
+line_29=WaitForSay
+line_30=Sleep 0.50
+line_31=Say PC_DNK_SHREKESCPRISON_8
+line_32=WaitForSay
+line_33=StopMusic Fade=5.00
+line_34=Sleep 0.50
+line_35=Cue _PIB_13
+line_36=Cue _DONKEY_14
+line_37=Say pc_pib_ShrekEscPrison_10
+line_38=Sleep 2.00
+line_39=Cue _CAMERA_15
+line_40=WaitForSay
+line_41=Say PC_DNK_SHREKESCPRISON_12
+line_42=WaitForSay
+line_43=Say pc_pib_ShrekEscPrison_14
+line_44=Cue _DONKEY_16
+line_45=WaitForSay
+line_46=Say PC_GBM_SHREKESCPRISON_16
+line_47=Cue _CAMERA_17
+line_48=Cue _DONKEY_18
+line_49=WaitForSay
+line_50=Say PC_DNK_SHREKESCPRISON_19
+line_51=Cue _CAMERA_19
+line_52=WaitForSay
+line_53=Say pc_pib_ShrekEscPrison_21
+line_54=Cue _PIB_20
+line_55=WaitForSay
+line_56=Say PC_SHK_SHREKESCPRISON_24
+line_57=WaitForSay
+line_58=Say PC_DNK_SHREKESCPRISON_26
+line_59=Cue _DONKEY_21
+line_60=WaitForSay
+line_61=Sleep 0.20
+line_62=Say PC_SHK_SHREKESCPRISON_28
+line_63=Cue _CAMERA_22
+line_64=WaitForSay
+line_65=Sleep 1.00
+line_66=WaitForCue AfraidOfHim
+line_67=Cue _CAMERA_23
+line_68=Cue _DONKEY_24
+line_69=Cue _SHREK_25
+line_70=Cue _PIB_26
+line_71=Cue _MONGOWITHOUTSHREK_27
+line_72=WaitForCue BackToLowCam
+line_73=Cue _CAMERA_28
+line_74=Say PC_SHK_SHREKESCPRISON_30
+line_75=WaitForSay
+line_76=Sleep 0.50
+line_77=Cue _DONKEY_29
+line_78=Say PC_DNK_SHREKESCPRISON_32
+line_79=Sleep 3.00
+line_80=Cue _CAMERA_30
+line_81=WaitForSay
+line_82=FadeTo A=255 Time=1.00 R=0 G=0 B=0 bFlash=False EaseFrom
+line_83=Sleep 2.00
+line_84=Cue CutEnd
+line_85=Cue _CAMERA_31
+line_86=Cue _SHREK_32
+line_87=Cue _DONKEY_33
+line_88=Cue _PIB_34
+line_89=Cue _MONGOWITHOUTSHREK_35
+line_90=Cue _GINGER_36
+[Sequence_1]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo PreMongoIntro_Target1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_2=FlyTo PreMongoIntro_Cam2 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_3=FlyTo PreMongoIntro_Cam1 Time=8.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked *
+line_4=WaitForCue _CAMERA_1
+line_5=Sleep 1.00
+line_6=FadeTo A=255 Time=3.00 R=0 G=0 B=0 bFlash=False EaseFrom
+line_7=WaitForCue _CAMERA_3
+line_8=FOV Angle=40.00 Time=0.00 EaseBetween
+line_9=FOV Angle=30.00 Time=4.00 EaseBetween
+line_10=TargetFlyTo MongoIntro_Target6 Time=0.00 X=0.00 Y=0.00 Z=-20.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_11=FlyTo MongoIntro_Cam1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_12=FadeIn A=0 Time=1.00 R=0 G=0 B=0 bFlash=False EaseTo
+line_13=Sleep 1.30
+line_14=Shake Magnitude=90.00 Time=4.00 Decay=1.00
+line_15=WaitForCue _CAMERA_8
+line_16=FOV Angle=36.00 Time=0.00 EaseBetween
+line_17=TargetFlyTo MongoIntro_Target2 Time=0.00 X=0.00 Y=0.00 Z=10.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_18=FlyTo MongoIntro_Cam2 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_19=Sleep 1.50
+line_20=Cue MongoComeCloser
+line_21=WaitForCue _CAMERA_11
+line_22=Sleep 0.60
+line_23=TargetFlyTo MongoIntro_Target3 Time=7.00 X=0.00 Y=0.00 Z=240.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_24=Sleep 7.00
+line_25=TargetFlyTo MongoIntro_Target3 Time=2.00 X=0.00 Y=0.00 Z=-10.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_26=FOV Angle=100.00 Time=2.00 EaseBetween
+line_27=FlyTo UpAtMongoCAM Time=2.00 X=0.00 Y=0.00 Z=-10.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_28=WaitForCue _CAMERA_15
+line_29=FOV Angle=54.00 Time=0.00 EaseBetween
+line_30=FOV Angle=34.00 Time=10.00 EaseBetween
+line_31=TargetFlyTo MongoIntro_Target6 Time=0.00 X=0.00 Y=0.00 Z=-20.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_32=FlyTo MongoIntro_Cam1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_33=WaitForCue _CAMERA_17
+line_34=Sleep 0.60
+line_35=FOV Angle=54.00 Time=0.00 EaseBetween
+line_36=TargetFlyTo MongoIntro_GingerLoc1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_37=FlyTo MongoIntro_Cam6 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_38=WaitForCue _CAMERA_19
+line_39=Sleep 0.60
+line_40=FOV Angle=34.00 Time=0.00 EaseBetween
+line_41=FOV Angle=24.00 Time=10.00 EaseBetween
+line_42=TargetFlyTo MongoIntro_Target6 Time=0.00 X=0.00 Y=0.00 Z=-30.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_43=FlyTo MongoIntro_Cam1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_44=WaitForCue _CAMERA_22
+line_45=Sleep 0.70
+line_46=FOV Angle=85.00 Time=2.00 EaseBetween
+line_47=TargetFlyTo MongoWithoutShrek Time=2.00 X=0.00 Y=0.00 Z=200.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_48=FlyTo MongoIntro_Cam3 Time=2.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_49=Cue AfraidOfHim
+line_50=WaitForCue _CAMERA_23
+line_51=Sleep 0.50
+line_52=FOV Angle=90.00 Time=0.00 EaseBetween
+line_53=TargetFlyTo MongoIntro_Target5 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_54=FlyTo MongoIntro_Cam7 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_55=Sleep 2.00
+line_56=FOV Angle=54.00 Time=0.00 EaseBetween
+line_57=TargetFlyTo MongoIntro_Target1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_58=FlyTo TowerCam Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_59=Sleep 0.30
+line_60=Shake Magnitude=100.00 Time=2.00 Decay=1.50
+line_61=WaitForCue _CAMERA_28
+line_62=FOV Angle=34.00 Time=0.00 EaseBetween
+line_63=FOV Angle=73.00 Time=8.00 EaseBetween
+line_64=TargetFlyTo MongoIntro_Target6 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_65=FlyTo MongoIntro_Cam1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_66=WaitForCue _CAMERA_30
+line_67=FOV Angle=90.00 Time=0.00 EaseBetween
+line_68=TargetFlyTo MongoIntro_Target3 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_69=FlyTo MongoIntro_Cam3 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_70=Cue DonkeyDialog1
+line_71=WaitForCue _CAMERA_31
+line_72=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=Shrek
+line_0=WaitForCue _SHREK_2
+line_1=Sleep 0.80
+line_2=PlayMusic ShrekPrison_FALChicken Fade=1.00 Loop=True
+line_3=Teleport PreMongoIntro_ShrekLoc1
+line_4=RunTo PreMongoIntro_ShrekLoc3
+line_5=Cue OutSidePrisonNow
+line_6=WaitForCue _SHREK_4
+line_7=Teleport MongoIntro_ShrekLoc1
+line_8=Sleep 0.50
+line_9=Trigger PrisOutSideDoors
+line_10=Sleep 0.60
+line_11=RunTo MongoIntro_ShrekLoc2
+line_12=Face MongoIntro_MongoLoc1
+line_13=Trigger PrisOutSideDoors
+line_14=Sleep 1.00
+line_15=Cue ShrekArrive
+line_16=WaitForCue _SHREK_25
+line_17=Face LookAtTowerTarget
+line_18=WaitForCue _SHREK_32
+line_19=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=Donkey
+line_0=WaitForCue _DONKEY_5
+line_1=Teleport MongoIntro_DonkeyLoc1
+line_2=WalkTo MongoIntro_DonkeyLoc2
+line_3=Face MongoIntro_MongoLoc1
+line_4=WaitForCue _DONKEY_10
+line_5=PlayAnim CS_LookUp Rate=1.20 Tween=0.20 Frame=0.00 Channel=0
+line_6=WaitForCue _DONKEY_14
+line_7=TurnTo PIB Rate=1.00
+line_8=WaitForCue _DONKEY_16
+line_9=LookAt None
+line_10=WaitForCue _DONKEY_18
+line_11=Sleep 0.70
+line_12=LookAt MongoIntro_GingerLoc1
+line_13=Sleep 1.60
+line_14=LookAt None
+line_15=WaitForCue _DONKEY_21
+line_16=LookAt MongoWithoutShrek
+line_17=WaitForCue _DONKEY_24
+line_18=Face LookAtTowerTarget
+line_19=WaitForCue _DONKEY_29
+line_20=TurnTo MongoWithoutShrek Rate=1.00
+line_21=WaitForCue _DONKEY_33
+line_22=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=PIB
+line_0=WaitForCue _PIB_6
+line_1=Teleport MongoIntro_PIBLoc1
+line_2=Sleep 0.30
+line_3=WalkTo MongoIntro_PIBLoc2
+line_4=Face MongoIntro_MongoLoc1
+line_5=WaitForCue _PIB_13
+line_6=TurnTo Donkey Rate=1.00
+line_7=WaitForCue _PIB_20
+line_8=Face MongoWithoutShrek
+line_9=WaitForCue _PIB_26
+line_10=Face LookAtTowerTarget
+line_11=WaitForCue _PIB_34
+line_12=WaitForCue CutEnd
+[Sequence_5]
+PawnTag=MongoWithoutShrek
+line_0=WaitForCue _MONGOWITHOUTSHREK_7
+line_1=WalkTo MongoIntro_MongoLoc1
+line_2=Face MongoIntro_ShrekLoc2
+line_3=WaitForCue _MONGOWITHOUTSHREK_9
+line_4=WalkTo MongoIntro_MongoLoc1
+line_5=Face MongoIntro_Target1
+line_6=WaitForCue _MONGOWITHOUTSHREK_27
+line_7=TurnTo MongoIntro_TurnHere Rate=1.00
+line_8=Sleep 0.50
+line_9=PlayAnim throw2 Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_10=Sleep 1.00
+line_11=Trigger MiddleFall
+line_12=Sleep 0.30
+line_13=Trigger TopFall
+line_14=PlaySound building_smash03 Volume=1.00 Pitch=1.00 Attenuate=True No3D=False
+line_15=WaitForAnim
+line_16=Sleep 1.00
+line_17=TurnTo MongoIntro_Target2 Rate=1.00
+line_18=Sleep 1.00
+line_19=Cue BackToLowCam
+line_20=WaitForCue _MONGOWITHOUTSHREK_35
+line_21=WaitForCue CutEnd
+[Sequence_6]
+PawnTag=Ginger
+line_0=WaitForCue _GINGER_12
+line_1=Sleep 2.00
+line_2=WalkTo MongoIntro_GingerLoc1 Direct
+line_3=Face Shrek
+line_4=WaitForCue _GINGER_36
+line_5=WaitForCue CutEnd
+[Sequence_7]
+PawnTag=OnExit
+line_0=Shrek Trigger EndLevel

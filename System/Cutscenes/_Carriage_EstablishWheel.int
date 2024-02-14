@@ -1,0 +1,36 @@
+[Sequence_0]
+PawnTag=Main
+line_0=StopMusic Fade=2.00
+line_1=Cue _CAMERA_0
+line_2=Cue _SHREK_1
+line_3=WaitForCue CameraDone
+line_4=Cue CutEnd
+line_5=Cue _CAMERA_2
+line_6=Cue _SHREK_3
+line_7=Cue _DONKEY_4
+[Sequence_1]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo EstablishWheel_Target1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_2=FlyTo EstablishWheel_Cam1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_3=TargetFlyTo EstablishWheel_Target2 Time=9.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_4=FlyTo EstablishWheel_Cam2 Time=9.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_5=Cue CameraDone
+line_6=WaitForCue _CAMERA_2
+line_7=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=Shrek
+line_0=WaitForCue _SHREK_1
+line_1=RunTo EstablishWheel_ShrekLoc1
+line_2=Sleep 3.00
+line_3=TurnTo GamePlayWheel Rate=1.00 Follow
+line_4=PlayMusic 2_Carriage_Hijack Fade=0.00 Loop=True
+line_5=WaitForCue _SHREK_3
+line_6=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=Donkey
+line_0=WaitForCue _DONKEY_4
+line_1=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=OnExit
+line_0=Shrek GoHome

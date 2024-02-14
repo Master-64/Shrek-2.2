@@ -1,0 +1,19 @@
+[Sequence_0]
+PawnTag=Main
+line_0=Cue _CAMERA_0
+line_1=Cue _CAMERA_1
+line_2=Cue _DONKEY_2
+[Sequence_1]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo DNKDoorUpTarget01 Time=1.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_2=Sleep 1.00
+line_3=Trigger Door_up_1
+line_4=Sleep 1.50
+line_5=Cue CutEnd
+line_6=WaitForCue _CAMERA_1
+line_7=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=Donkey
+line_0=WaitForCue _DONKEY_2
+line_1=WaitForCue CutEnd

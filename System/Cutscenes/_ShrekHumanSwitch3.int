@@ -1,0 +1,23 @@
+[Sequence_0]
+PawnTag=Main
+line_0=Cue _SHREK_0
+line_1=Cue _CAMERA_1
+line_2=Cue _SHREK_2
+line_3=Cue _CAMERA_3
+[Sequence_1]
+PawnTag=Shrek
+line_0=WaitForCue _SHREK_0
+line_1=TurnTo PrisShrek_TurnToTarget3 Rate=1.00
+line_2=WaitForCue _SHREK_2
+line_3=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_1
+line_1=TargetFlyTo PrisShrek_SwtchTarget3 Time=2.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_2=FlyTo PrisShrek_SwtchCAM3_1 Time=2.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_3=Trigger Doors_Open_3
+line_4=FlyTo PrisShrek_SwtchCAM3_2 Time=2.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_5=Sleep 1.50
+line_6=Cue CutEnd
+line_7=WaitForCue _CAMERA_3
+line_8=WaitForCue CutEnd

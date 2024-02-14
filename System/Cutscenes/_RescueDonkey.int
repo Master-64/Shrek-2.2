@@ -1,0 +1,101 @@
+[Sequence_0]
+PawnTag=Main
+line_0=Trigger SpawnHealth1
+line_1=Trigger SpawnHealth2
+line_2=Cue _CAMERA_0
+line_3=Cue _SHREK_1
+line_4=Cue _DONKEY_2
+line_5=WaitForCue DonkeyFree
+line_6=Say PC_DNK_DONKEYRESCUE_15
+line_7=WaitForSay
+line_8=Cue _CAMERA_3
+line_9=Cue _SHREK_4
+line_10=Say pc_shk_Donkeyrescue_16
+line_11=WaitForSay
+line_12=Cue _CAMERA_5
+line_13=Say PC_DNK_DONKEYRESCUE_17
+line_14=Cue _DONKEY_6
+line_15=WaitForSay
+line_16=Say pc_shk_Donkeyrescue_10
+line_17=Cue _CAMERA_7
+line_18=Cue _DONKEY_8
+line_19=Cue _SHREK_9
+line_20=WaitForCue DonkeyBitDone
+line_21=Sleep 1.00
+line_22=Cue _DONKEY_10
+line_23=WaitForSay
+line_24=Cue _SHREK_11
+line_25=Cue _CAMERA_12
+line_26=Cue _CAMERA_13
+line_27=Cue _SHREK_14
+line_28=Cue _DONKEY_15
+[Sequence_1]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo Rescue_Target2 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_2=FlyTo Rescue_Cam2 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_3=Trigger donkeycage_boulder
+line_4=Trigger DonkeyCage
+line_5=Cue DonkeyFree
+line_6=TargetFlyTo Rescue_Target3 Time=3.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_7=FlyTo Rescue_Cam3 Time=3.00 X=-50.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_8=Trigger TrapDonkeyGate
+line_9=WaitForCue _CAMERA_3
+line_10=TargetFlyTo Rescue_Target4 Time=0.00 X=0.00 Y=0.00 Z=-25.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_11=FlyTo Rescue_Cam4 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_12=WaitForCue _CAMERA_5
+line_13=TargetFlyTo Rescue_Target5 Time=3.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_14=FlyTo Rescue_Cam5 Time=3.00 X=-50.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_15=WaitForCue _CAMERA_7
+line_16=Sleep 1.00
+line_17=FOV Angle=75.00 Time=4.00 EaseBetween
+line_18=FlyTo Rescue_Cam5 Time=4.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_19=WaitForCue _CAMERA_12
+line_20=GoHome Shrek Time=3.00
+line_21=Sleep 3.00
+line_22=Cue CutEnd
+line_23=WaitForCue _CAMERA_13
+line_24=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=Shrek
+line_0=WaitForCue _SHREK_1
+line_1=WalkTo Rescue_ShrekLoc1
+line_2=WaitForCue _SHREK_4
+line_3=LookAt Donkey
+line_4=WaitForCue _SHREK_9
+line_5=LookAt None
+line_6=WalkTo Rescue_ShrekLoc2
+line_7=Face Rescue_ShrekLookHereEnd
+line_8=PlayAnim CS_rescuelookback Rate=1.10 Tween=0.20 Frame=0.00 Channel=0
+line_9=WaitForAnim
+line_10=WaitForCue _SHREK_11
+line_11=LookAt None
+line_12=WalkTo Rescue_ShrekLoc3
+line_13=WaitForCue _SHREK_14
+line_14=LookAt None
+line_15=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=Donkey
+line_0=WaitForCue _DONKEY_2
+line_1=WaitForCue DonkeyFree
+line_2=Sleep 1.00
+line_3=WalkTo Rescue_DonkeyLoc1
+line_4=Sleep 0.50
+line_5=TurnTo Shrek Rate=1.00
+line_6=WaitForCue _DONKEY_6
+line_7=PlayAnim idletalkpos Rate=0.70 Tween=0.20 Frame=0.00 Channel=0
+line_8=WaitForAnim
+line_9=WaitForCue _DONKEY_8
+line_10=LookAt None
+line_11=WalkTo Rescue_DonkeyLoc2
+line_12=Cue DonkeyBitDone
+line_13=WaitForCue _DONKEY_10
+line_14=PlayAnim lookright Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_15=WaitForAnim
+line_16=WalkTo Rescue_DonkeyLoc3
+line_17=WaitForCue _DONKEY_15
+line_18=LookAt None
+line_19=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=OnExit
+line_0=Donkey Follow Shrek

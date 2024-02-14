@@ -1,0 +1,231 @@
+[Sequence_0]
+PawnTag=Main
+line_0=Cue _CAMERA_0
+line_1=WaitForCue LetsGetOutOfHere
+line_2=Cue _PIB_1
+line_3=Cue _SHREK_2
+line_4=Cue _DONKEY_3
+line_5=WaitForCue DonkeyTalk1
+line_6=StopMusic Fade=3.00
+line_7=Say PC_DNK_PIBESCAPEPRISON_18
+line_8=Sleep 2.50
+line_9=Trigger ShrekMainDoors1
+line_10=PlayMusic CS_PrisonDonkeyIntroKnights Fade=0.00 Loop=True
+line_11=Cue KnightsGOGOGO
+line_12=Cue _CAMERA_4
+line_13=Cue _SHREK_5
+line_14=Cue _DONKEY_6
+line_15=Cue _CAMERA_7
+line_16=WaitForCue KnightsGOGOGO
+line_17=Cue _KNIGHTMELEE1_8
+line_18=Cue _KNIGHTMELEE2_9
+line_19=Cue _KNIGHTMELEE3_10
+line_20=Cue _KNIGHTMELEE4_11
+line_21=Cue _KNIGHTMELEE5_12
+line_22=Cue _KNIGHTMELEE6_13
+line_23=WaitForSay
+line_24=Sleep 3.00
+line_25=Say pc_shk_PIBEscapePrison_2
+line_26=Cue _CAMERA_14
+line_27=Cue _SHREK_15
+line_28=Cue _DONKEY_16
+line_29=WaitForSay
+line_30=Say pc_shk_PIBEscapePrison_4
+line_31=WaitForSay
+line_32=Say pc_pib_PIBEscapePrison_6
+line_33=Cue _CAMERA_17
+line_34=WaitForSay
+line_35=Sleep 0.30
+line_36=Say pc_shk_PIBEscapePrison_8
+line_37=Cue _CAMERA_18
+line_38=WaitForSay
+line_39=Say pc_pib_PIBEscapePrison_10
+line_40=Cue _PIB_19
+line_41=Cue _SHREK_20
+line_42=WaitForCue CameraChange3
+line_43=Cue DonkeyPIBReaction
+line_44=WaitForCue DonkeyPIBReaction
+line_45=Cue _PIB_21
+line_46=Cue _DONKEY_22
+line_47=WaitForSay
+line_48=Say pc_pib_PIBEscapePrison_12
+line_49=Cue _CAMERA_23
+line_50=WaitForSay
+line_51=Sleep 0.50
+line_52=Say PC_DNK_PIBESCAPEPRISON_14
+line_53=Cue _PIB_24
+line_54=Cue _CAMERA_25
+line_55=WaitForCue LastPIBLineNow
+line_56=WaitForSay
+line_57=Say pc_pib_PIBEscapePrison_16
+line_58=StopMusic Fade=10.00
+line_59=WaitForSay
+line_60=Cue _PIB_26
+line_61=Cue _PIB_27
+line_62=Cue _DONKEY_28
+line_63=Cue _SHREK_29
+line_64=Cue _CAMERA_30
+line_65=Cue _KNIGHTMELEE1_31
+line_66=Cue _KNIGHTMELEE2_32
+line_67=Cue _KNIGHTMELEE3_33
+line_68=Cue _KNIGHTMELEE4_34
+line_69=Cue _KNIGHTMELEE5_35
+line_70=Cue _KNIGHTMELEE6_36
+[Sequence_1]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_0
+line_1=FOV Angle=65.00 Time=6.00 EaseBetween
+line_2=TargetFlyTo PIB Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_3=FlyTo LeverCAM Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_4=Sleep 0.50
+line_5=TargetFlyTo Escape_Target2 Time=2.00 X=0.00 Y=0.00 Z=60.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_6=Sleep 0.50
+line_7=Trigger GrateCellDoor
+line_8=Cue LetsGetOutOfHere
+line_9=WaitForCue _CAMERA_4
+line_10=FOV Angle=35.00 Time=3.00 EaseBetween
+line_11=TargetFlyTo Escape_Target5 Time=3.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_12=WaitForCue _CAMERA_7
+line_13=WaitForCue ShrekTurned
+line_14=Sleep 1.00
+line_15=FOV Angle=65.00 Time=0.00 EaseBetween
+line_16=TargetFlyTo Escape_Target5 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_17=FlyTo Escape_Cam3 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_18=FOV Angle=20.00 Time=5.00 EaseBetween
+line_19=WaitForCue _CAMERA_14
+line_20=FOV Angle=35.00 Time=0.00 EaseBetween
+line_21=TargetFlyTo Escape_Target5 Time=0.00 X=350.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_22=FlyTo LeverCAM Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_23=FOV Angle=50.00 Time=3.00 EaseBetween
+line_24=WaitForCue _CAMERA_17
+line_25=Sleep 0.40
+line_26=FOV Angle=73.00 Time=0.00 EaseBetween
+line_27=TargetFlyTo Escape_Target6PIB Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_28=FlyTo Escape_Cam1PIBCU Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_29=WaitForCue _CAMERA_18
+line_30=Sleep 0.50
+line_31=FOV Angle=50.00 Time=0.00 EaseBetween
+line_32=TargetFlyTo Escape_Target2 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_33=FlyTo LeverCAM Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_34=Sleep 2.50
+line_35=Cue ShrekStartRunning
+line_36=WaitForCue _CAMERA_23
+line_37=Sleep 3.00
+line_38=FOV Angle=73.00 Time=0.00 EaseBetween
+line_39=TargetFlyTo Escape_Target3 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_40=FlyTo Escape_Cam1 Time=0.00 X=0.00 Y=25.00 Z=-30.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_41=WaitForCue _CAMERA_25
+line_42=TargetFlyTo Escape_Target6 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_43=FlyTo Escape_Cam1 Time=0.00 X=100.00 Y=0.00 Z=-30.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_44=WaitForCue _CAMERA_30
+line_45=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=PIB
+line_0=WaitForCue _PIB_1
+line_1=WalkTo Escape_PIBLoc1
+line_2=PlayAnim CS_CasualIdle Rate=1.00 Tween=0.20 Frame=0.00 Channel=0 Loop
+line_3=TurnTo Shrek Rate=1.00
+line_4=WaitForCue _PIB_19
+line_5=PlayAnim CS_UnfortunateForm Rate=1.50 Tween=0.20 Frame=0.00 Channel=0
+line_6=WaitForAnim
+line_7=PlayAnim CS_CasualIdle Rate=1.00 Tween=0.20 Frame=0.00 Channel=0 Loop
+line_8=Sleep 1.00
+line_9=Cue CameraChange3
+line_10=WaitForCue _PIB_21
+line_11=TurnTo Donkey Rate=1.00
+line_12=WaitForCue _PIB_24
+line_13=RunTo Escape_PIBLoc2
+line_14=TurnTo Donkey Rate=1.00
+line_15=Cue LastPIBLineNow
+line_16=WaitForCue _PIB_26
+line_17=RunTo Escape_PIBLoc3
+line_18=Sleep 0.10
+line_19=Cue CutEnd
+line_20=Teleport Escape_PIBLoc4
+line_21=WaitForCue _PIB_27
+line_22=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=Shrek
+line_0=WaitForCue _SHREK_2
+line_1=RunTo Escape_ShrekLoc1
+line_2=RunTo Escape_ShrekLoc2
+line_3=TurnTo PIB Rate=1.00
+line_4=WaitForCue _SHREK_5
+line_5=Sleep 0.50
+line_6=TurnTo Escape_Target5 Rate=1.00
+line_7=Cue ShrekTurned
+line_8=WaitForCue _SHREK_15
+line_9=Sleep 1.50
+line_10=TurnTo Donkey Rate=1.00
+line_11=WaitForCue _SHREK_20
+line_12=WaitForCue ShrekStartRunning
+line_13=Sleep 0.50
+line_14=RunTo Escape_ShrekLoc4
+line_15=RunTo Escape_ShrekLoc5
+line_16=Trigger ShrekMainDoors1
+line_17=WaitForCue _SHREK_29
+line_18=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=Donkey
+line_0=WaitForCue _DONKEY_3
+line_1=RunTo Escape_DonkeyLoc1
+line_2=TurnTo Shrek Rate=1.00
+line_3=Cue DonkeyTalk1
+line_4=WaitForCue _DONKEY_6
+line_5=Sleep 0.50
+line_6=LookAt Escape_Target5
+line_7=WaitForCue _DONKEY_16
+line_8=LookAt None
+line_9=WaitForCue _DONKEY_22
+line_10=Sleep 0.20
+line_11=TurnTo PIB Rate=1.00
+line_12=WaitForCue _DONKEY_28
+line_13=WaitForCue CutEnd
+[Sequence_5]
+PawnTag=KnightMelee1
+line_0=WaitForCue _KNIGHTMELEE1_8
+line_1=RunTo Escape_KnightLoc1
+line_2=WaitForCue _KNIGHTMELEE1_31
+line_3=WaitForCue CutEnd
+line_4=FadeActor A=0 Time=0.00 R=128 G=128 B=128 bDestroy=True EaseBetween
+[Sequence_6]
+PawnTag=KnightMelee2
+line_0=WaitForCue _KNIGHTMELEE2_9
+line_1=Sleep 0.30
+line_2=RunTo Escape_KnightLoc2
+line_3=WaitForCue _KNIGHTMELEE2_32
+line_4=WaitForCue CutEnd
+line_5=FadeActor A=0 Time=0.00 R=128 G=128 B=128 bDestroy=True EaseBetween
+[Sequence_7]
+PawnTag=KnightMelee3
+line_0=WaitForCue _KNIGHTMELEE3_10
+line_1=RunTo Escape_KnightLoc3
+line_2=WaitForCue _KNIGHTMELEE3_33
+line_3=WaitForCue CutEnd
+line_4=FadeActor A=0 Time=0.00 R=128 G=128 B=128 bDestroy=True EaseBetween
+[Sequence_8]
+PawnTag=KnightMelee4
+line_0=WaitForCue _KNIGHTMELEE4_11
+line_1=Sleep 0.40
+line_2=RunTo Escape_KnightLoc4
+line_3=WaitForCue _KNIGHTMELEE4_34
+line_4=WaitForCue CutEnd
+line_5=FadeActor A=0 Time=0.00 R=128 G=128 B=128 bDestroy=True EaseBetween
+[Sequence_9]
+PawnTag=KnightMelee5
+line_0=WaitForCue _KNIGHTMELEE5_12
+line_1=RunTo Escape_KnightLoc5
+line_2=WaitForCue _KNIGHTMELEE5_35
+line_3=WaitForCue CutEnd
+line_4=FadeActor A=0 Time=0.00 R=128 G=128 B=128 bDestroy=True EaseBetween
+[Sequence_10]
+PawnTag=KnightMelee6
+line_0=WaitForCue _KNIGHTMELEE6_13
+line_1=Sleep 0.40
+line_2=RunTo Escape_KnightLoc6
+line_3=WaitForCue _KNIGHTMELEE6_36
+line_4=WaitForCue CutEnd
+line_5=FadeActor A=0 Time=0.00 R=128 G=128 B=128 bDestroy=True EaseBetween
+[Sequence_11]
+PawnTag=OnExit
+line_0=Donkey SwitchControlToMe

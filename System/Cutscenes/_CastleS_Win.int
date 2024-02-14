@@ -1,0 +1,115 @@
+[Sequence_0]
+PawnTag=Main
+line_0=Cue _MONGO_0
+line_1=Cue _MONGOWITHOUTSHREK_1
+line_2=Cue _CAMERA_2
+line_3=Cue _SHREK_3
+line_4=Cue _PIB_4
+line_5=Cue _DONKEY_5
+line_6=WaitForCue ShrekSay01
+line_7=Say PC_SHK_OPENCASTLE_2
+line_8=Cue _PIB_6
+line_9=Cue _DONKEY_7
+line_10=Cue _CAMERA_8
+line_11=WaitForSay
+line_12=WaitForCue BackToShrek
+line_13=Cue _PIB_9
+line_14=Cue _DONKEY_10
+line_15=Cue _CAMERA_11
+line_16=Cue _SHREK_12
+line_17=Cue _CAMERA_13
+line_18=Cue _CAMERA_14
+line_19=Cue _MONGO_15
+line_20=Cue _SHREK_16
+line_21=Cue _PIB_17
+line_22=Cue _DONKEY_18
+line_23=Cue _MONGOPANICSPEAKERONE_19
+line_24=Cue _MONGOPANICSPEAKERTWO_20
+line_25=Cue _MONGOWITHOUTSHREK_21
+[Sequence_1]
+PawnTag=Mongo
+line_0=WaitForCue _MONGO_0
+line_1=MMKnightsRunHome
+line_2=Teleport MongoOut
+line_3=WaitForCue _MONGO_15
+line_4=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=MongoWithoutShrek
+line_0=WaitForCue _MONGOWITHOUTSHREK_1
+line_1=Teleport Win_MongoLoc1
+line_2=Face CastleS_DNKrunTo01
+line_3=WaitForCue _MONGOWITHOUTSHREK_21
+line_4=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_2
+line_1=FOV Angle=64.00 Time=0.00 EaseBetween
+line_2=FOV Angle=20.00 Time=3.00 EaseBetween
+line_3=TargetFlyTo CastleS_ShrekDropTarget Time=0.00 X=0.00 Y=0.00 Z=100.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_4=TargetFlyTo CastleS_ShrekDropTarget Time=3.00 X=0.00 Y=0.00 Z=30.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_5=FlyTo CastleS_ShrekDropCAM Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_6=WaitForCue _CAMERA_8
+line_7=FOV Angle=74.00 Time=0.00 EaseBetween
+line_8=TargetFlyTo CastleS_PIBnDBKtarget02 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_9=FlyTo CasleS_PIBnDNKCAM01 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_10=Cue BackToShrek
+line_11=WaitForCue _CAMERA_11
+line_12=Sleep 0.50
+line_13=FOV Angle=80.00 Time=0.00 EaseBetween
+line_14=TargetFlyTo CastleS_RunThroughTarget Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_15=FlyTo CastleS_RunThroughCAM Time=2.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_16=FlyTo CastleS_RunThroughCAM Time=8.00 X=0.00 Y=0.00 Z=100.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked *
+line_17=WaitForCue _CAMERA_13
+line_18=FadeTo A=255 Time=5.00 R=0 G=0 B=0 bFlash=False EaseFrom
+line_19=Sleep 5.00
+line_20=Cue CutEnd
+line_21=WaitForCue _CAMERA_14
+line_22=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=Shrek
+line_0=WaitForCue _SHREK_3
+line_1=Teleport CastleS_DropShrecLoc
+line_2=Sleep 1.00
+line_3=Cue TeleportDNKnPIB
+line_4=TurnTo DonkeyLoc01 Rate=1.00
+line_5=Sleep 0.50
+line_6=Cue ShrekSay01
+line_7=WaitForCue _SHREK_12
+line_8=Sleep 1.00
+line_9=RunTo Win_MiniLoc2 Direct
+line_10=WaitForCue _SHREK_16
+line_11=WaitForCue CutEnd
+[Sequence_5]
+PawnTag=PIB
+line_0=WaitForCue _PIB_4
+line_1=WaitForCue TeleportDNKnPIB
+line_2=Teleport PIBLoc01
+line_3=WaitForCue _PIB_6
+line_4=Sleep 0.50
+line_5=RunTo PIBLoc02 Direct
+line_6=WaitForCue _PIB_9
+line_7=RunTo CastleS_PIBrunTo01 Direct
+line_8=WaitForCue _PIB_17
+line_9=WaitForCue CutEnd
+[Sequence_6]
+PawnTag=Donkey
+line_0=WaitForCue _DONKEY_5
+line_1=WaitForCue TeleportDNKnPIB
+line_2=Teleport DonkeyLoc01
+line_3=WaitForCue _DONKEY_7
+line_4=RunTo DonkeyLoc02 Direct
+line_5=WaitForCue _DONKEY_10
+line_6=RunTo CastleS_DNKrunTo01 Direct
+line_7=WaitForCue _DONKEY_18
+line_8=WaitForCue CutEnd
+[Sequence_7]
+PawnTag=MongoPanicSpeakerOne
+line_0=WaitForCue _MONGOPANICSPEAKERONE_19
+line_1=WaitForCue CutEnd
+[Sequence_8]
+PawnTag=MongoPanicSpeakerTwo
+line_0=WaitForCue _MONGOPANICSPEAKERTWO_20
+line_1=WaitForCue CutEnd
+[Sequence_9]
+PawnTag=OnExit
+line_0=Mongo Trigger EndLevel

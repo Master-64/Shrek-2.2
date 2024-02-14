@@ -1,0 +1,225 @@
+[Sequence_0]
+PawnTag=Main
+line_0=StopMusic Fade=5.00
+line_1=Cue _CAMERA_0
+line_2=Cue _SHREK_1
+line_3=Cue _CSFGM_2
+line_4=Cue _FIONA_3
+line_5=Cue _KING_4
+line_6=Cue _PRINCECHARMING_5
+line_7=WaitForCue Scene2
+line_8=Cue _CAMERA_6
+line_9=Cue _FIONA_7
+line_10=Cue _PRINCECHARMING_8
+line_11=Say pc_fin_BURSTBALL_7
+line_12=Sleep 2.00
+line_13=Cue _CAMERA_9
+line_14=Cue _FIONA_10
+line_15=Cue _PRINCECHARMING_11
+line_16=WaitForCue CharmingFallDown
+line_17=Cue _CAMERA_12
+line_18=Cue _PRINCECHARMING_13
+line_19=WaitForSay
+line_20=Cue _FIONA_14
+line_21=Say pc_fin_BURSTBALL_9
+line_22=WaitForCue Scene3
+line_23=Cue _CAMERA_15
+line_24=Cue _DONKEY_16
+line_25=Cue _PIB_17
+line_26=WaitForCue FriendsHere
+line_27=Cue _CSFGM_18
+line_28=WaitForSay
+line_29=Cue _CAMERA_19
+line_30=Say pc_fgm_BurstBall_2 Pawn=CSFGM
+line_31=StopMusic Fade=1.00
+line_32=PlayMusic 11_FGM_Battle Fade=3.00 Loop=True
+line_33=Cue _DONKEY_20
+line_34=Cue _PIB_21
+line_35=Cue _CSFGM_22
+line_36=Sleep 1.00
+line_37=WaitForCue Scene4
+line_38=Cue _CAMERA_23
+line_39=WaitForSay
+line_40=Say pc_shk_BurstBall_4
+line_41=Cue _SHREK_24
+line_42=Cue _FIONA_25
+line_43=Cue _KING_26
+line_44=WaitForSay
+line_45=WaitForCue CameraMoveDone
+line_46=Cue _CSFGM_27
+line_47=Cue _BOSSFGM_28
+line_48=Sleep 1.00
+line_49=Cue CutEnd
+line_50=Cue _BOSSFGM_29
+line_51=Cue _KING_30
+line_52=Cue _PRINCECHARMING_31
+line_53=Cue _FIONA_32
+line_54=Cue _PIB_33
+line_55=Cue _SHREK_34
+line_56=Cue _DONKEY_35
+line_57=Cue _CSFGM_36
+line_58=Cue _CAMERA_37
+[Sequence_1]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_0
+line_1=FOV Angle=65.00 Time=0.00 EaseBetween
+line_2=TargetFlyTo FGMPreBattle_Target1 Time=0.00 X=0.00 Y=0.00 Z=-35.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_3=FlyTo FGMPreBattle_Cam1 Time=0.00 X=0.00 Y=0.00 Z=-35.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_4=WaitForCue _CAMERA_6
+line_5=Sleep 0.80
+line_6=FOV Angle=36.00 Time=0.00 EaseBetween
+line_7=TargetFlyTo FGMPreBattle_Target7 Time=0.00 X=0.00 Y=0.00 Z=5.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_8=FlyTo FGMPreBattle_Cam6 Time=0.00 X=0.00 Y=0.00 Z=5.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_9=WaitForCue _CAMERA_9
+line_10=FOV Angle=36.00 Time=0.00 EaseBetween
+line_11=TargetFlyTo FGMPreBattle_Target8 Time=0.00 X=0.00 Y=-5.00 Z=4.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_12=FlyTo FGMPreBattle_Cam8 Time=0.00 X=0.00 Y=0.00 Z=25.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_13=WaitForCue _CAMERA_12
+line_14=FOV Angle=54.00 Time=0.00 EaseBetween
+line_15=TargetFlyTo FGMPreBattle_Target2 Time=0.00 X=0.00 Y=0.00 Z=10.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_16=FlyTo FGMPreBattle_Cam2 Time=0.00 X=0.00 Y=0.00 Z=10.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_17=WaitForCue _CAMERA_15
+line_18=FOV Angle=73.00 Time=1.50 EaseBetween
+line_19=TargetFlyTo FGMPreBattle_Target3 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_20=FlyTo FGMPreBattle_Cam3 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_21=TargetFlyTo FGMPreBattle_Target6 Time=3.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_22=FlyTo FGMPreBattle_Cam4 Time=3.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_23=WaitForCue _CAMERA_19
+line_24=FOV Angle=54.00 Time=0.00 EaseBetween
+line_25=TargetFlyTo CSFGM Time=0.00 X=0.00 Y=0.00 Z=60.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_26=FlyTo FGMPreBattle_Cam5 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_27=WaitForCue _CAMERA_23
+line_28=FOV Angle=73.00 Time=0.00 EaseBetween
+line_29=TargetFlyTo Shrek Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_30=FlyTo FGMPreBattle_Cam11 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_31=Sleep 1.00
+line_32=FOV Angle=65.00 Time=5.00 EaseBetween
+line_33=TargetFlyTo Shrek Time=7.00 X=0.00 Y=0.00 Z=15.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_34=FlyTo FGMPreBattle_Cam12 Time=7.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_35=Cue CameraMoveDone
+line_36=WaitForCue _CAMERA_37
+line_37=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=Shrek
+line_0=WaitForCue _SHREK_1
+line_1=Teleport FGMPreBattle_ShrekLoc1
+line_2=WalkTo FGMPreBattle_ShrekLoc2
+line_3=Face FGMPreBattle_Target1
+line_4=Sleep 1.00
+line_5=Cue Scene2
+line_6=RunTo FGMPreBattle_ShrekLoc3
+line_7=Face Fiona
+line_8=WaitForCue _SHREK_24
+line_9=RunTo FGMPreBattle_ShrekLoc4
+line_10=TurnTo FGMPreBattle_FGMLoc1 Rate=1.00
+line_11=WalkTo FGMPreBattle_ShrekLoc5
+line_12=Face FGMPreBattle_FGMLoc1
+line_13=WaitForCue _SHREK_34
+line_14=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=CSFGM
+line_0=WaitForCue _CSFGM_2
+line_1=Face Fiona
+line_2=WaitForCue _CSFGM_18
+line_3=TurnTo Shrek Rate=1.00
+line_4=WaitForCue _CSFGM_22
+line_5=PlayAnim spell1 Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_6=WaitForAnim
+line_7=Sleep 0.70
+line_8=Cue Scene4
+line_9=WaitForCue _CSFGM_27
+line_10=Teleport FGMPreBattle_FGMOutOfWay1
+line_11=Cue OutOfWay
+line_12=WaitForCue _CSFGM_36
+line_13=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=Fiona
+line_0=WaitForCue _FIONA_3
+line_1=Face PrinceCharming
+line_2=WaitForCue _FIONA_7
+line_3=PlayAnim CS_AvoidingCharmingKiss Rate=0.90 Tween=0.20 Frame=0.00 Channel=0
+line_4=WaitForAnim
+line_5=WaitForCue _FIONA_10
+line_6=PlayAnim CS_PunchCharming Rate=0.90 Tween=0.20 Frame=0.00 Channel=0
+line_7=Sleep 0.60
+line_8=PlaySound PreFGMBattleIntro_punch Volume=1.00 Pitch=1.00 Attenuate=True No3D=False
+line_9=WaitForAnim
+line_10=WaitForCue _FIONA_14
+line_11=WalkTo FGMPreBattle_FionaLoc1
+line_12=Face Shrek
+line_13=PlayAnim CS_YellingShrek Rate=0.90 Tween=0.20 Frame=0.00 Channel=0
+line_14=WaitForAnim
+line_15=Cue Scene3
+line_16=WaitForCue _FIONA_25
+line_17=Sleep 1.50
+line_18=RunTo FGMPreBattle_FionaLoc2
+line_19=TurnTo Shrek Rate=1.00
+line_20=WaitForCue _FIONA_32
+line_21=WaitForCue CutEnd
+[Sequence_5]
+PawnTag=King
+line_0=WaitForCue _KING_4
+line_1=Face FGMPreBattle_FionaLoc1
+line_2=WaitForCue _KING_26
+line_3=Sleep 0.50
+line_4=RunTo FGMPreBattle_KingLoc2
+line_5=RunTo FGMPreBattle_KingLoc3
+line_6=TurnTo Shrek Rate=1.00
+line_7=WaitForCue _KING_30
+line_8=WaitForCue CutEnd
+[Sequence_6]
+PawnTag=PrinceCharming
+line_0=WaitForCue _PRINCECHARMING_5
+line_1=Face Fiona
+line_2=WaitForCue _PRINCECHARMING_8
+line_3=PlayAnim CS_LeanInToKissFiona Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_4=WaitForAnim
+line_5=WaitForCue _PRINCECHARMING_11
+line_6=PlayAnim CS_GettingKnockedOut Rate=1.10 Tween=2.00 Frame=0.00 Channel=0 HoldLastFrame
+line_7=WaitForAnim
+line_8=SetIdle Walk
+line_9=Cue CharmingFallDown
+line_10=WaitForCue _PRINCECHARMING_13
+line_11=PlayAnim Walk Rate=1.00 Tween=0.20 Frame=0.00 Channel=0 Loop
+line_12=WalkTo FGMPreBattle_CharmingLoc2
+line_13=Teleport FGMPreBattle_CharmingLoc3
+line_14=WaitForCue _PRINCECHARMING_31
+line_15=WaitForCue CutEnd
+[Sequence_7]
+PawnTag=Donkey
+line_0=WaitForCue _DONKEY_16
+line_1=Sleep 0.30
+line_2=Teleport FGMPreBattle_DonkeyLoc1
+line_3=Sleep 0.30
+line_4=WalkTo FGMPreBattle_DonkeyLoc2
+line_5=TurnTo Fiona Rate=1.00
+line_6=WaitForCue _DONKEY_20
+line_7=TurnTo Shrek Rate=1.00
+line_8=WaitForCue _DONKEY_35
+line_9=WaitForCue CutEnd
+[Sequence_8]
+PawnTag=PIB
+line_0=WaitForCue _PIB_17
+line_1=Sleep 0.40
+line_2=Teleport FGMPreBattle_PIBLoc1
+line_3=Sleep 0.30
+line_4=WalkTo FGMPreBattle_PIBLoc2
+line_5=TurnTo Fiona Rate=1.00
+line_6=Sleep 0.80
+line_7=Cue FriendsHere
+line_8=WaitForCue _PIB_21
+line_9=TurnTo Shrek Rate=1.00
+line_10=WaitForCue _PIB_33
+line_11=WaitForCue CutEnd
+[Sequence_9]
+PawnTag=BossFGM
+line_0=WaitForCue _BOSSFGM_28
+line_1=WaitForCue OutOfWay
+line_2=Teleport FGMPreBattle_FGMLoc1
+line_3=Face Shrek
+line_4=WaitForCue _BOSSFGM_29
+line_5=WaitForCue CutEnd
+[Sequence_10]
+PawnTag=OnExit
+line_0=PIB TriggerActor ShrekBossEncounterTrigger
+line_1=SaveGame 1

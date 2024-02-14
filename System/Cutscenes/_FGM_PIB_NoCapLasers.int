@@ -1,0 +1,6 @@
+[Sequence_0]
+PawnTag=Main
+line_0=LockCamTo NoCapLasers_Target1 Yaw=2000 Pitch=2000 Roll=0 Speed=7.00 Tightness=10.00
+line_1=Say pc_pib_IntroLasers_4
+line_2=WaitForSay
+line_3=UnLockCamTo NoCapLasers_Target1

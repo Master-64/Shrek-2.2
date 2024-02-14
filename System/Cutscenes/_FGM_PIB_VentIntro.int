@@ -1,0 +1,25 @@
+[Sequence_0]
+PawnTag=Main
+line_0=Cue _CAMERA_0
+line_1=Cue _PIB_1
+line_2=Say pc_pib_bumpline_2780
+line_3=WaitForSay
+line_4=Sleep 0.50
+line_5=Cue CutEnd
+line_6=Cue _CAMERA_2
+line_7=Cue _PIB_3
+[Sequence_1]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_0
+line_1=TargetFlyTo VentIntro_Target1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_2=FlyTo VentIntro_Cam1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_3=FlyTo VentIntro_Cam2 Time=8.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked *
+line_4=WaitForCue _CAMERA_2
+line_5=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=PIB
+line_0=WaitForCue _PIB_1
+line_1=WalkTo VentIntro_PIBLoc1
+line_2=TurnTo VentIntro_Target1 Rate=1.00
+line_3=WaitForCue _PIB_3
+line_4=WaitForCue CutEnd

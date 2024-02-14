@@ -1,0 +1,7 @@
+[Sequence_0]
+PawnTag=Main
+line_0=Cue _FATKNIGHT1_0
+[Sequence_1]
+PawnTag=FatKnight1
+line_0=WaitForCue _FATKNIGHT1_0
+line_1=PlayAnim patrol Rate=1.00 Tween=0.20 Frame=0.00 Channel=0 Loop

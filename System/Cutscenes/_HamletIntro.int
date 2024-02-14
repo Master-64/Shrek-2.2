@@ -1,0 +1,422 @@
+[Sequence_0]
+PawnTag=Main
+line_0=Cue _CAMERA_0
+line_1=Cue StartDialog
+line_2=Cue _SHREK_1
+line_3=Cue _DONKEY_2
+line_4=Cue _PIB_3
+line_5=WaitForCue StartDialog
+line_6=Sleep 1.00
+line_7=Say pc_pib_PotionFail_35
+line_8=WaitForSay
+line_9=Sleep 0.10
+line_10=Say PC_DNK_POTIONFAIL_37
+line_11=WaitForSay
+line_12=Say PC_SHK_POTIONFAIL_87
+line_13=WaitForSay
+line_14=Cue TelePtGroup
+line_15=Cue _SHREK_4
+line_16=Cue _DONKEY_5
+line_17=Cue _PIB_6
+line_18=WaitForCue ShrekOut
+line_19=WaitForCue DonkeyOut
+line_20=WaitForCue PIBOut
+line_21=Cue _CAMERA_7
+line_22=Cue _SHREK_8
+line_23=Cue _DONKEY_9
+line_24=Cue _PIB_10
+line_25=WaitForCue PerhapsNow
+line_26=Say pc_pib_PotionFail_88
+line_27=WaitForSay
+line_28=Say PC_DNK_POTIONFAIL_89
+line_29=Cue _DONKEY_11
+line_30=WaitForSay
+line_31=Cue _PIB_12
+line_32=Say pc_pib_PotionFail_50
+line_33=WaitForSay
+line_34=Say PC_DNK_POTIONFAIL_52
+line_35=Cue DonkeyScales
+line_36=Cue _CAMERA_13
+line_37=WaitForSay
+line_38=Say pc_pib_PotionFail_58
+line_39=Cue _PIB_14
+line_40=Cue _SHREK_15
+line_41=Cue _SHREKWITHBOTTLEHEA_16
+line_42=Cue InYourCase
+line_43=Cue _CAMERA_17
+line_44=WaitForSay
+line_45=Sleep 0.50
+line_46=Say PC_SHK_POTIONFAIL_90
+line_47=Cue ShrekDrink
+line_48=Cue _CAMERA_18
+line_49=Cue _SHREKWITHBOTTLEHEA_19
+line_50=Cue _PIB_20
+line_51=WaitForSay
+line_52=WaitForCue ShrekDoneDrinking
+line_53=Sleep 0.50
+line_54=Say PC_SHK_POTIONFAIL_70 Pawn=SHrekWithBottleHEA
+line_55=Cue _SHREKWITHBOTTLEHEA_21
+line_56=WaitForSay
+line_57=Say pc_pib_PotionFail_72
+line_58=Cue _CAMERA_22
+line_59=Cue _SHREKWITHBOTTLEHEA_23
+line_60=WaitForSay
+line_61=Say pc_pib_PotionFail_91
+line_62=Sleep 2.00
+line_63=Cue _PIB_24
+line_64=WaitForSay
+line_65=Say PC_DNK_POTIONFAIL_92
+line_66=Cue _CAMERA_25
+line_67=Cue _PIB_26
+line_68=Cue _DONKEY_27
+line_69=WaitForSay
+line_70=Cue _SHREKWITHBOTTLEHEA_28
+line_71=Cue _SHREK_29
+line_72=Say pc_pib_PotionFail_93
+line_73=Cue PIBScared
+line_74=Cue _CAMERA_30
+line_75=WaitForSay
+line_76=Cue _DONKEY_31
+line_77=Cue _DONKEYWITHBOTTLEHEA_32
+line_78=Say PC_DNK_POTIONFAIL_94
+line_79=Cue _CAMERA_33
+line_80=WaitForSay
+line_81=Cue _DONKEYWITHBOTTLEHEA_34
+line_82=Cue _PIB_35
+line_83=WaitForCue DNKDoneDrinking
+line_84=Say pc_pib_PotionFail_83
+line_85=Cue _CAMERA_36
+line_86=Cue _DONKEYWITHBOTTLEHEA_37
+line_87=Cue _DONKEY_38
+line_88=Cue _PIB_39
+line_89=WaitForSay
+line_90=Say PC_SHK_POTIONFAIL_95
+line_91=Cue didntWork
+line_92=Cue _SHREK_40
+line_93=Cue _DONKEY_41
+line_94=Cue _PIB_42
+line_95=WaitForSay
+line_96=Cue _CAMERA_43
+line_97=Sleep 0.30
+line_98=Say pc_pib_PotionFail_96
+line_99=WaitForSay
+line_100=Cue DnkLookAtPIB
+line_101=Cue _DONKEY_44
+line_102=Say PC_DNK_POTIONFAIL_98
+line_103=Cue _PIB_45
+line_104=WaitForSay
+line_105=Say pc_pib_PotionFail_100
+line_106=Cue _CAMERA_46
+line_107=WaitForSay
+line_108=Say PC_DNK_POTIONFAIL_102
+line_109=Cue _DONKEY_47
+line_110=WaitForSay
+line_111=Say pc_pib_PotionFail_104
+line_112=Cue _PIB_48
+line_113=WaitForSay
+line_114=Say pc_pib_PotionFail_106
+line_115=WaitForSay
+line_116=Say PC_DNK_POTIONFAIL_108
+line_117=Cue DonkeyRun
+line_118=Cue _DONKEY_49
+line_119=WaitForSay
+line_120=Say pc_dnk_PotionFail_118
+line_121=Cue EatMyDust
+line_122=Cue _CAMERA_50
+line_123=Cue _DONKEY_51
+line_124=WaitForSay
+line_125=Cue _PIB_52
+line_126=WaitForCue DonkeyFacePIB
+line_127=Cue _SHREK_53
+line_128=Cue _DONKEY_54
+line_129=WaitForCue ThanksGuys
+line_130=Say pc_shk_PotionFail_110
+line_131=Cue _SHREK_55
+line_132=WaitForSay
+line_133=Sleep 2.00
+line_134=Cue CutEnd
+line_135=Cue _DONKEYWITHBOTTLEHEA_56
+line_136=Cue _SHREKWITHBOTTLEHEA_57
+line_137=Cue _SHREK_58
+line_138=Cue _DONKEY_59
+line_139=Cue _PIB_60
+line_140=Cue _CAMERA_61
+[Sequence_1]
+PawnTag=Camera
+line_0=WaitForCue _CAMERA_0
+line_1=FOV Angle=20.00 Time=0.00 EaseBetween
+line_2=TargetFlyTo HamIntro_Target1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_3=FlyTo HamIntro_Cam1 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_4=FOV Angle=87.00 Time=13.00 EaseBetween
+line_5=FlyTo HamIntro_DriftCam1 Time=13.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=HamIntro_Cam2 Linear Relative TurnWithActor StayLocked *
+line_6=WaitForCue _CAMERA_7
+line_7=Sleep 0.10
+line_8=FOV Angle=100.00 Time=0.00 EaseBetween
+line_9=TargetFlyTo HamIntro_Target2 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_10=FlyTo HamIntro_PotionCam01_DollyFrom Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_11=Cue Camreset
+line_12=FlyTo HamIntro_PotionCam01 Time=7.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None Linear Relative TurnWithActor StayLocked *
+line_13=FOV Angle=70.00 Time=7.00 EaseBetween
+line_14=WaitForCue _CAMERA_13
+line_15=WaitForCue DonkeyScales
+line_16=Sleep 0.60
+line_17=FOV Angle=70.00 Time=0.00 EaseBetween
+line_18=TargetFlyTo HamIntro_PotionDNKTarget01 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_19=FlyTo HamIntro_PotionDNKCam01 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_20=FlyTo HamIntro_PotionDNKCam02 Time=8.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked *
+line_21=WaitForCue _CAMERA_17
+line_22=WaitForCue InYourCase
+line_23=Sleep 1.20
+line_24=TargetFlyTo HamIntro_Target2_PIB Time=0.00 X=0.00 Y=0.00 Z=10.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_25=FOV Angle=70.00 Time=0.00 EaseBetween
+line_26=FlyTo HamIntro_PotionPIBCam02 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_27=FOV Angle=65.00 Time=6.00 EaseBetween
+line_28=WaitForCue _CAMERA_18
+line_29=WaitForCue ShrekDrink
+line_30=Sleep 1.00
+line_31=Cue PIBlook01
+line_32=FOV Angle=85.00 Time=3.00 EaseBetween
+line_33=TargetFlyTo HamIntro_PotionShrekTarget01 Time=2.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_34=FlyTo HamIntro_PotionPIBCam02_2 Time=2.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_35=WaitForCue _CAMERA_22
+line_36=TargetFlyTo HamIntro_Target2 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_37=FOV Angle=70.00 Time=0.00 EaseBetween
+line_38=FlyTo HamIntro_PotionCam01 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_39=WaitForCue _CAMERA_25
+line_40=Sleep 0.60
+line_41=FOV Angle=70.00 Time=0.00 EaseBetween
+line_42=TargetFlyTo HamIntro_PotionDNKTarget01 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_43=FlyTo HamIntro_PotionDNKCam01 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_44=FlyTo HamIntro_PotionDNKCam02 Time=6.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked *
+line_45=WaitForCue _CAMERA_30
+line_46=WaitForCue PIBScared
+line_47=Sleep 0.30
+line_48=FOV Angle=50.00 Time=0.00 EaseBetween
+line_49=TargetFlyTo HamIntro_Target2_PIB Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_50=FlyTo HamIntro_PotionPIBCam02 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_51=FOV Angle=60.00 Time=6.00 EaseBetween
+line_52=WaitForCue _CAMERA_33
+line_53=Sleep 2.00
+line_54=FOV Angle=70.00 Time=0.00 EaseBetween
+line_55=TargetFlyTo HamIntro_PotionDNKTarget01 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_56=FlyTo HamIntro_PotionDNKCam01 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_57=FlyTo HamIntro_PotionDNKCam02 Time=9.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked *
+line_58=WaitForCue _CAMERA_36
+line_59=Sleep 0.50
+line_60=FOV Angle=20.00 Time=0.00 EaseBetween
+line_61=TargetFlyTo HamIntro_Target2 Time=0.00 X=0.00 Y=0.00 Z=-20.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_62=FlyTo HamIntro_PotionCam01 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_63=Sleep 1.00
+line_64=TargetFlyTo HamIntro_Target2 Time=8.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked *
+line_65=FOV Angle=70.00 Time=5.00 EaseBetween
+line_66=WaitForCue _CAMERA_43
+line_67=Sleep 2.00
+line_68=FOV Angle=80.00 Time=0.00 EaseBetween
+line_69=TargetFlyTo HamIntro_Target3_2 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_70=FlyTo HamIntro_SleepDNKCam01_3 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_71=WaitForCue _CAMERA_46
+line_72=FOV Angle=75.00 Time=0.00 EaseBetween
+line_73=TargetFlyTo PIBmineTarget01 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_74=FlyTo HamIntro_SleepDNKCam01_2 Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_75=WaitForCue _CAMERA_50
+line_76=WaitForCue EatMyDust
+line_77=FOV Angle=80.00 Time=17.00 EaseBetween
+line_78=FlyTo HamIntro_Cam3 Time=17.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked *
+line_79=WaitForCue _CAMERA_61
+line_80=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=Shrek
+line_0=WaitForCue _SHREK_1
+line_1=RunTo HamIntro_ShrekLoc1
+line_2=WalkTo HamIntro_ShrekLoc2 Direct
+line_3=WaitForCue _SHREK_4
+line_4=WaitForCue TelePtGroup
+line_5=Teleport HamIntro_ShrekOUT
+line_6=Cue ShrekOut
+line_7=WaitForCue _SHREK_8
+line_8=WaitForCue Camreset
+line_9=Teleport HamIntro_ShrekLoc1_2
+line_10=WalkTo HamIntro_ShrekPotionLoc1 Direct
+line_11=TurnTo Donkey Rate=1.00
+line_12=Sleep 1.50
+line_13=PlayAnim lookaround1 Rate=0.50 Tween=0.20 Frame=0.00 Channel=0
+line_14=WaitForCue _SHREK_15
+line_15=Teleport HamIntro_ShrekOUT
+line_16=WaitForCue _SHREK_29
+line_17=WaitForCue returnShrek
+line_18=Sleep 0.50
+line_19=Teleport HamIntro_ShrekPotionLoc1
+line_20=TurnTo Donkey Rate=1.00
+line_21=WaitForCue _SHREK_40
+line_22=WaitForCue didntWork
+line_23=Sleep 4.20
+line_24=WalkTo HamIntro_ShrekLoc4 Direct
+line_25=WaitForCue _SHREK_53
+line_26=TurnTo PIB Rate=1.00
+line_27=WaitForCue _SHREK_55
+line_28=TurnTo HamIntro_ShrekLoc2 Rate=1.00
+line_29=Sleep 0.50
+line_30=PlayAnim wave Rate=0.80 Tween=0.20 Frame=0.00 Channel=0
+line_31=WaitForCue _SHREK_58
+line_32=WaitForCue CutEnd
+[Sequence_3]
+PawnTag=Donkey
+line_0=WaitForCue _DONKEY_2
+line_1=RunTo HamIntro_DonkeyLoc1
+line_2=WalkTo HamIntro_DonkeyLoc2 Direct
+line_3=WaitForCue _DONKEY_5
+line_4=WaitForCue TelePtGroup
+line_5=Teleport HamIntro_DonkeyOUT
+line_6=Cue DonkeyOut
+line_7=WaitForCue _DONKEY_9
+line_8=WaitForCue Camreset
+line_9=Teleport HamIntro_DonkeyLoc1_2
+line_10=WalkTo HamIntro_DonkeyPotionLoc1 Direct
+line_11=LookAt PIB
+line_12=WaitForCue _DONKEY_11
+line_13=TurnTo PIB Rate=1.00
+line_14=WaitForCue _DONKEY_27
+line_15=PlayAnim Scaredsurprise Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_16=WaitForCue _DONKEY_31
+line_17=Teleport HamIntro_DonkeyOUT
+line_18=Cue DNKOut
+line_19=WaitForCue _DONKEY_38
+line_20=WaitForCue DNKoff2
+line_21=Sleep 0.20
+line_22=Teleport HamIntro_DonkeyPotionLoc1
+line_23=Sleep 1.00
+line_24=TurnTo PIB Rate=1.00
+line_25=WaitForCue _DONKEY_41
+line_26=WaitForCue didntWork
+line_27=Sleep 4.00
+line_28=WalkTo HamIntro_DonkeyLoc4 Direct
+line_29=TurnTo PIB Rate=1.00
+line_30=WaitForCue _DONKEY_44
+line_31=WaitForCue DnkLookAtPIB
+line_32=Sleep 0.30
+line_33=LookAt PIB
+line_34=WaitForCue _DONKEY_47
+line_35=LookAt None
+line_36=PlayAnim ShakeHeadNo Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_37=WaitForAnim
+line_38=PlayAnim sitdown Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_39=WaitForAnim
+line_40=PlayAnim idle_sit Rate=1.00 Tween=0.20 Frame=0.00 Channel=0 Loop
+line_41=WaitForCue _DONKEY_49
+line_42=WaitForCue DonkeyRun
+line_43=Sleep 1.00
+line_44=PlayAnim standup Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_45=WaitForAnim
+line_46=PlayAnim Idle Rate=1.00 Tween=0.20 Frame=0.00 Channel=0 Loop
+line_47=TurnTo PIB Rate=1.00
+line_48=WaitForCue _DONKEY_51
+line_49=RunTo HamIntro_DonkeyLoc5
+line_50=TurnTo PIB Rate=1.00
+line_51=WaitForCue _DONKEY_54
+line_52=TurnTo PIB Rate=1.00
+line_53=WaitForCue FollowPIB
+line_54=RunTo HamIntro_DonkeyLoc6 Direct
+line_55=Teleport HamIntro_DonkeyOUT
+line_56=Sleep 0.80
+line_57=WaitForCue _DONKEY_59
+line_58=WaitForCue CutEnd
+[Sequence_4]
+PawnTag=PIB
+line_0=WaitForCue _PIB_3
+line_1=RunTo HamIntro_PIBLoc1
+line_2=WalkTo HamIntro_PIBLoc2 Direct
+line_3=WaitForCue _PIB_6
+line_4=WaitForCue TelePtGroup
+line_5=Teleport HamIntro_PIBOUT
+line_6=Cue PIBOut
+line_7=WaitForCue _PIB_10
+line_8=WaitForCue Camreset
+line_9=Teleport HamIntro_PIBLoc1_2
+line_10=WalkTo HamIntro_PIBPotionLoc1 Direct
+line_11=PlayAnim CS_CasualIdle Rate=1.00 Tween=0.20 Frame=0.00 Channel=0 Loop
+line_12=Cue PerhapsNow
+line_13=TurnTo Shrek Rate=1.00
+line_14=WaitForCue _PIB_12
+line_15=TurnTo Donkey Rate=1.00
+line_16=WaitForCue _PIB_14
+line_17=PlayAnim CS_UnfortunateForm Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_18=WaitForAnim
+line_19=PlayAnim CS_CasualIdle Rate=1.00 Tween=0.40 Frame=0.00 Channel=0 Loop
+line_20=WaitForCue _PIB_20
+line_21=WaitForCue PIBlook01
+line_22=Sleep 0.60
+line_23=TurnTo HamIntro_PotionShrekTarget01 Rate=1.00
+line_24=WaitForCue _PIB_24
+line_25=TurnTo Donkey Rate=1.00
+line_26=WaitForCue _PIB_26
+line_27=Sleep 0.50
+line_28=PlayAnim Idle Rate=1.00 Tween=0.20 Frame=0.00 Channel=0 Loop
+line_29=WaitForCue _PIB_35
+line_30=PlayAnim CS_CasualIdle Rate=1.00 Tween=0.20 Frame=0.00 Channel=0 Loop
+line_31=WaitForCue _PIB_39
+line_32=Sleep 1.00
+line_33=TurnTo Shrek Rate=1.00
+line_34=WaitForCue _PIB_42
+line_35=WaitForCue didntWork
+line_36=Sleep 3.80
+line_37=LookAt None
+line_38=WalkTo HamIntro_PIBLoc5_1 Direct
+line_39=WaitForCue _PIB_45
+line_40=Sleep 1.50
+line_41=TurnTo Donkey Rate=1.00
+line_42=WaitForCue _PIB_48
+line_43=WalkTo HamIntro_PIBLoc4 Direct
+line_44=PlayAnim CS_CasualIdle Rate=1.00 Tween=0.20 Frame=0.00 Channel=0 Loop
+line_45=TurnTo Donkey Rate=1.00
+line_46=WaitForCue _PIB_52
+line_47=TurnTo Donkey Rate=1.00
+line_48=Cue DonkeyFacePIB
+line_49=Cue FollowPIB
+line_50=RunTo HamIntro_PIBLoc5 Direct
+line_51=Cue ThanksGuys
+line_52=RunTo HamIntro_PIBLoc6 Direct
+line_53=Teleport HamIntro_PIBOUT
+line_54=WaitForCue _PIB_60
+line_55=WaitForCue CutEnd
+[Sequence_5]
+PawnTag=SHrekWithBottleHEA
+line_0=WaitForCue _SHREKWITHBOTTLEHEA_16
+line_1=Teleport HamIntro_ShrekPotionLoc1
+line_2=TurnTo Donkey Rate=1.00
+line_3=WaitForCue _SHREKWITHBOTTLEHEA_19
+line_4=WaitForCue ShrekDrink
+line_5=Sleep 2.00
+line_6=PlayAnim DrinkPotion Rate=0.40 Tween=0.20 Frame=0.00 Channel=0
+line_7=WaitForAnim
+line_8=Cue ShrekDoneDrinking
+line_9=WaitForCue _SHREKWITHBOTTLEHEA_21
+line_10=PlayAnim unhappyreaction Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_11=WaitForCue _SHREKWITHBOTTLEHEA_23
+line_12=Sleep 1.00
+line_13=PlayAnim CS_OurWhatReaction Rate=0.50 Tween=0.20 Frame=0.00 Channel=0
+line_14=WaitForCue _SHREKWITHBOTTLEHEA_28
+line_15=Teleport SHKbottleOff
+line_16=Cue returnShrek
+line_17=WaitForCue _SHREKWITHBOTTLEHEA_57
+line_18=WaitForCue CutEnd
+[Sequence_6]
+PawnTag=DonkeyWithBottleHEA
+line_0=WaitForCue _DONKEYWITHBOTTLEHEA_32
+line_1=WaitForCue DNKOut
+line_2=Sleep 0.50
+line_3=Teleport HamIntro_DonkeyPotionLoc1
+line_4=Face PIB
+line_5=WaitForCue _DONKEYWITHBOTTLEHEA_34
+line_6=PlayAnim drinkpotion_nosound Rate=1.00 Tween=0.20 Frame=0.00 Channel=0
+line_7=PlaySound donkey_drink_potion2 Volume=1.00 Pitch=1.00 Attenuate=True No3D=False
+line_8=Sleep 1.50
+line_9=Cue DNKDoneDrinking
+line_10=WaitForCue _DONKEYWITHBOTTLEHEA_37
+line_11=Sleep 1.00
+line_12=Teleport DNKbottleOff
+line_13=Cue DNKoff2
+line_14=WaitForCue _DONKEYWITHBOTTLEHEA_56
+line_15=WaitForCue CutEnd
+[Sequence_7]
+PawnTag=OnExit
+line_0=SaveGame 1
