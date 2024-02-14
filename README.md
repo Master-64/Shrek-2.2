@@ -7,8 +7,8 @@ This mod is majorly in alpha and is not considered to be anywhere close to finis
 - Download the entire project, then make a new game directory and use this project as the directory
 - Unzip AllDialog.zip in ...\Sounds
 - Delete your Shrek 2 documents folder (...\Documents\Shrek 2)
-- Run _Shrek_2_2.exe in ...\System
-- Have fun :) -- If the game crashes, report it as an issue with the crash report
+- Run game.exe in ...\System
+- Have fun :) -- If you run into any issues, report it as an issue on the issues board
 
 
 # How to help contribute to the project
