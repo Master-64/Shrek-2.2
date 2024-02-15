@@ -7,12 +7,12 @@ This mod is majorly in alpha and is not considered to be anywhere close to finis
 - Download the entire project, then make a new game directory and use this project as the directory
 - Unzip AllDialog.zip in ...\Sounds
 - Delete your Shrek 2 documents folder (...\Documents\Shrek 2)
-- Run _Shrek_2_2.exe in ...\System
-- Have fun :) -- If the game crashes, report it as an issue with the crash report
+- Run game.exe in ...\System
+- Have fun :) -- If you run into any issues, report it as an issue on the issues board
 
 
 # How to help contribute to the project
-If you think you're capable of creating content for Shrek 2.2, whether it be maps, graphics, sounds or scripts. you are needed! You can get started by download GitHub Desktop, then cloning this repository with the software. From this point, you can modify the game however you like, then you can submit a pull request with your code changes, which can then be reviewed and then pushed into the main branch for Shrek 2.2, therefore adding it to the project. If you are unsure how to help but want to help, please contact Master_64 in the Shrekciety Discord: https://discord.com/invite/0VEIly8qa8WUZAzV
+If you think you're capable of creating content for Shrek 2.2, whether it be maps, graphics, sounds, scripts or animations, you are needed! You can get started by download GitHub Desktop, then cloning this repository with the software. From this point, you can modify the game however you like, then you can submit a pull request with your code changes, which can then be reviewed and then pushed into the main branch for Shrek 2.2, therefore adding it to the project. If you are unsure how to help but want to help, please contact Master_64 in the Shrekciety Discord: https://discord.com/invite/0VEIly8qa8WUZAzV
 
 If you do not want to modify game files but you still want to provide suggestions for how Shrek 2.2 could be improved, please fill out feature suggestions or bug reports seen on the issue board!
 
