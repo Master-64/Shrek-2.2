@@ -18,7 +18,7 @@ event PostBeginPlay()
 defaultproperties
 {
 	HUDType="SH22Game.SH22HUD"
-    GameName="Shrek 2.2"
+	GameName="Shrek 2.2"
 	DefaultPlayerClassName="SHGame.Shrek"
 	PlayerControllerClassName="SHGame.ShrekController"
 	MapPrefix="SH22"

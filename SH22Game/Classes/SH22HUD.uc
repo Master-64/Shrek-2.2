@@ -6,7 +6,7 @@
 
 
 class SH22HUD extends SHHud
-	Config(MPak);
+	Config(SH22);
 
 
 function InitHudItems()
@@ -17,5 +17,5 @@ function InitHudItems()
 	AddHudItem(class'SHHudGameTimer', self);
 	AddHudItem(class'SHHudPotionTimer', self);
 	AddHudItem(class'SH22HUDItem_Potions', self);
-	AddHudItem(class'HudItemTimesUp', self);
+	AddHudItem(class'SH22HUDItem_TimesUp', self);
 }
