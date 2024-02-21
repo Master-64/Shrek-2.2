@@ -2,8 +2,8 @@
 PawnTag=MAIN
 line_0=SetProp Actor=ZoneInfo1 bDistanceFog=True
 line_1=SetProp Actor=ZoneInfo1 DistanceFogColor=(B=16,G=77,R=33,A=0)
-line_2=SetProp Actor=ZoneInfo1 DistanceFogEnd=8000
-line_3=SetProp Actor=ZoneInfo1 DistanceFogStart=3000
+line_2=SetProp Actor=ZoneInfo1 DistanceFogEnd=3000
+line_3=SetProp Actor=ZoneInfo1 DistanceFogStart=1500
 line_4=PlayMusic 1_Shreks_Swamp_Track_2 Fade=0.0 Loop=True
 line_5=FadeTo Time=0
 line_6=Sleep 0.5
