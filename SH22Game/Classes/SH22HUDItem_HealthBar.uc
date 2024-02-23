@@ -155,4 +155,13 @@ state DoGlow
 defaultproperties
 {
 	fHUDItemScale=1.0
+	BarIcons(0)="SH_Hud.lifemeter_bar.lifebar_container150"
+	BarIcons(1)="SH_Hud.lifemeter_bar.lifebar_container180"
+	BarIcons(2)="SH_Hud.lifemeter_bar.lifebar_container210"
+	BarIcons(3)="SH_Hud.lifemeter_bar.lifebar_container240"
+	BarIcons(4)="SH_Hud.lifemeter_bar.lifebar_container270"
+	BarIcons(5)="SH_Hud.lifemeter_bar.lifebar_container300"
+	BarIcons(6)="SH_Hud.lifemeter_bar.lifebar_container330"
+	BarIcons(7)="SH_Hud.lifemeter_bar.lifebar_container360"
+	BarIcons(8)="SH_Hud.lifemeter_bar.lifebar_container390"
 }
