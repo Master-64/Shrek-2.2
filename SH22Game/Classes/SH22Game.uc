@@ -14,13 +14,18 @@ event PostBeginPlay()
 	super.PostBeginPlay();
 }
 
+event PlayerController Login(string Portal, string Options, out string Error)
+{
+	return super.Login(Portal, Options, Error);
+}
+
 
 defaultproperties
 {
 	HUDType="SH22Game.SH22HUD"
 	GameName="Shrek 2.2"
-	DefaultPlayerClassName="SHGame.Shrek"
-	PlayerControllerClassName="SHGame.ShrekController"
+	DefaultPlayerClassName="MPak.MShrek"
+	PlayerControllerClassName="MPak.MController"
 	MapPrefix="SH22"
 	BeaconName="SH22"
 	MaxPlayers=64

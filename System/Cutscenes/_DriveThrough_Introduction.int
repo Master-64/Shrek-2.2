@@ -1,0 +1,16 @@
+[Sequence_0]
+PawnTag=None
+line_0=Cue CutEnd
+[Sequence_1]
+PawnTag=Camera
+line_0=FlyTo PotionCam Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_1=TargetFlyTo PotionLookAt Time=0.00 X=0.00 Y=0.00 Z=0.00 YawStep=0 PitchStep=0 RollStep=0 SplinePoint=None EaseBetween Relative TurnWithActor StayLocked
+line_2=WaitForCue CutEnd
+[Sequence_2]
+PawnTag=Shrek
+line_0=WalkTo PotionPoint
+line_1=TurnTo PotionLookAt1 Rate=1.00
+line_2=Say pc_shk_FGMDRIVETHRU1_4 Pawn=Shrek
+line_3=WaitForSay
+line_4=Say pc_shk_FGMDRIVETHR1_8 Pawn=Shrek
+line_5=WaitForSay
