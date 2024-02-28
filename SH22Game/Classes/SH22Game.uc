@@ -24,7 +24,7 @@ defaultproperties
 {
 	HUDType="SH22Game.SH22HUD"
 	GameName="Shrek 2.2"
-	DefaultPlayerClassName="MPak.MShrek"
+	DefaultPlayerClassName="SH22Game.SH22Shrek"
 	PlayerControllerClassName="MPak.MController"
 	MapPrefix="SH22"
 	BeaconName="SH22"
