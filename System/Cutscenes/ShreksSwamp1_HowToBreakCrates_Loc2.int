@@ -1,8 +1,0 @@
-[Sequence_0]
-PawnTag=MAIN
-line_0=Trigger HowToBreakCrates_Loc1
-line_1=Say pc_dnk_SwampPunch_2
-line_2=WaitForSay
-[Sequence_1]
-PawnTag=ONEXIT
-line_0=Shrek Trigger ExitGateCounter

@@ -1,6 +1,0 @@
-[Sequence_0]
-PawnTag=MAIN
-line_0=LockCamTo ExplosiveMush_Target1
-line_1=Say dnk_bumpline_2072
-line_2=WaitForSay
-line_3=UnLockCamTo ExplosiveMush_Target1

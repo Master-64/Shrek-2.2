@@ -1,9 +1,0 @@
-[Sequence_0]
-PawnTag=MAIN
-line_0=Trigger HowToMount_Loc1
-line_1=Trigger HowToMount_Loc2
-line_2=Say pc_dnk_SwampMove_8
-line_3=WaitForSay
-[Sequence_1]
-PawnTag=ONEXIT
-line_0=Shrek Trigger ExitGateCounter

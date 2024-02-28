@@ -1,8 +1,0 @@
-[CutScene]
-line_0=NoBypass
-[Sequence_0]
-PawnTag=MAIN
-line_0=Sleep 1
-[Sequence_1]
-PawnTag=ONEXIT
-line_0=SaveGame 1

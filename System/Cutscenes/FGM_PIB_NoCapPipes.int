@@ -1,6 +1,0 @@
-[Sequence_0]
-PawnTag=MAIN
-line_0=LockCamTo NoCapPipes_Target1
-line_1=Say pc_pib_IntroPIBClimb_2
-line_2=WaitForSay
-line_3=UnLockCamTo NoCapPipes_Target1

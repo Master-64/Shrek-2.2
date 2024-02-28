@@ -1,4 +1,0 @@
-[Sequence_0]
-PawnTag=MAIN
-line_0=Say pc_shk_bumpline_1239
-line_1=WaitForSay

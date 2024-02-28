@@ -1,5 +1,0 @@
-[Sequence_0]
-PawnTag=MAIN
-line_0=LockCamTo punchLookAtTarget
-line_1=sleep 1.2
-line_2=UnlockCamTo punchLookAtTarget

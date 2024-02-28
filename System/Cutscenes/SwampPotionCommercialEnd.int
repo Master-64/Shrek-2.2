@@ -1,5 +1,0 @@
-[Sequence_0]
-PawnTag=MAIN
-line_0=Say PC_SHK_FGMDRIVETHR1_8
-line_1=WaitForSay
-line_2=PlayMusic 1_Shreks_Swamp_Track_1a Fade=0.0 Loop=True

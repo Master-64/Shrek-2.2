@@ -1,8 +1,0 @@
-[Sequence_0]
-PawnTag=MAIN
-line_0=Cue _DONKEY_0
-[Sequence_1]
-PawnTag=DONKEY
-line_0=WaitForCue _DONKEY_0
-line_1=teleport SP_DNK_bridgeTarget
-line_2=lookat camera

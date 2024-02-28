@@ -1,7 +1,0 @@
-[Sequence_0]
-PawnTag=SHREK
-line_0=Teleport Ambush_ShrekCheat
-[Sequence_1]
-PawnTag=DONKEY
-line_0=Teleport Ambush_DonkeyCheat
-line_1=Cue CutEnd

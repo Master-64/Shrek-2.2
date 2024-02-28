@@ -1,7 +1,0 @@
-[Sequence_0]
-PawnTag=MAIN
-line_0=Say pc_dnk_SwampMove_22
-line_1=sleep 0.5
-line_2=LockCamTo SP_leverTarget
-line_3=WaitForSay
-line_4=UnlockCamTo SP_leverTarget
