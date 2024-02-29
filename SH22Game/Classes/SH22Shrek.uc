@@ -61,6 +61,7 @@ function PostBeginPlay()
 	BottleHEA.SetRelativeRotation(BottleAttachRotation);
 	BottleHEA.SetOwner(self);
 	BottleHEA.bHidden = !bShowBottle;
+	BottleHEA.bCanBePickedUp = false;
 }
 
 event Tick(float DeltaTime)

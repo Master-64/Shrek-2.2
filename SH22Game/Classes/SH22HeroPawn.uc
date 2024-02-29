@@ -498,7 +498,7 @@ event PreSaveGame()
 
 event PostLoadGame(bool bLoadFromSaveGame)
 {
-	local int bonuslevelcoins;
+	local int bonuslevelcoins, bonuslevelHealth;
 	local bonusLevelTransferTimer bt;
 	local SaveTimer ST;
 	
@@ -545,11 +545,20 @@ event PostLoadGame(bool bLoadFromSaveGame)
 		if(bLoadFromSaveGame)
 		{
 			bonuslevelcoins = class'SHHeroController'.default.bonuscoins;
+			bonuslevelHealth = class'SHHeroController'.default.bonusHealth;
 			
 			if(bonuslevelcoins > 0)
 			{
 				U.AddInventory(class'CoinCollection', bonuslevelcoins);
 				SHHeroController(PC).bonuscoins = 0;
+				SHHeroController(PC).SaveConfig();
+				bNeedToSave = true;
+			}
+			
+			if(bonuslevelHealth > 0)
+			{
+				U.AddHealth(self, bonuslevelHealth);
+				SHHeroController(PC).bonusHealth = 0;
 				SHHeroController(PC).SaveConfig();
 				bNeedToSave = true;
 			}
