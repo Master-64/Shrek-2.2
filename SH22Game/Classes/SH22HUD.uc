@@ -18,4 +18,5 @@ function InitHudItems()
 	AddHudItem(class'SHHudPotionTimer', self);
 	AddHudItem(class'SH22HUDItem_Potions', self);
 	AddHudItem(class'SH22HUDItem_TimesUp', self);
+	AddHudItem(class'SH22HUDItem_Info', self);
 }
