@@ -3,7 +3,7 @@ line_0=NoBypass
 [Sequence_0]
 PawnTag=Main
 line_0=FadeTo A=255 Time=0.00 R=0 G=0 B=0 bFlash=False EaseFrom
-line_1=PlayMusic temp_storybook_intro_music Fade=0.00 Loop=True
+line_1=PlayMusic 0_Story_Book_Track_Beginning Fade=0.00 Loop=True
 line_2=Trigger LightMover1
 line_3=FadeIn A=0 Time=5.00 R=0 G=0 B=0 bFlash=False EaseTo
 line_4=Cue _CAMERA_0
