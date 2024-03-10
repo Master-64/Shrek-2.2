@@ -1,7 +1,7 @@
 [Sequence_0]
 PawnTag=Main
 line_0=Cue _CAMERA_0
-line_1=PlayMusic temp_storybook_intro_music Fade=0.00 Loop=True
+line_1=PlayMusic 0_Story_Book_Track_Beginning Fade=0.00 Loop=True
 line_2=Trigger LightMover1
 line_3=Sleep 1.00
 line_4=Cue _CAMERA_1
