@@ -14,7 +14,7 @@ var string sInfoString;
 
 event PreBeginPlay()
 {
-	sInfoString = Localize("All", "menuitems_165", "HPMenu");
+	sInfoString = Localize("General", "Product", "game");
 	
 	super.PreBeginPlay();
 }

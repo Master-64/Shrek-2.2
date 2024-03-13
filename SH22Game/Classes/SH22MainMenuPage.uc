@@ -93,13 +93,23 @@ function UpdateSaveIcons()
 	{
 		Image = SHHeroController(PC).Save0Image;
 		SaveSlots[0].Caption = "1";
-		SaveSlots[0].Hint = class'savegameinfo'.default.Save0Name @ "--" @ class'savegameinfo'.default.Save0Date;
+		
+		if(class'savegameinfo'.default.Save0Name != "")
+		{
+			SaveSlots[0].Hint = class'savegameinfo'.default.Save0Name @ "--" @ class'savegameinfo'.default.Save0Date;
+		}
+		else
+		{
+			SaveSlots[0].Hint = lhStartGame;
+		}
 	}
 	else
 	{
 		Image = "storybookanimTX.box_button";
 		SaveSlots[0].Caption = "";
 		SaveSlots[0].Hint = lhStartGame;
+		class'savegameinfo'.default.Save0Name = "";
+		class'savegameinfo'.default.Save0Date = "";
 	}
 	
 	STY_SH_BTN0Save(Controller.GetStyle("SHBTN0SaveStyle")).Images[0] = Texture(DynamicLoadObject(Image, class'Texture'));
@@ -112,13 +122,23 @@ function UpdateSaveIcons()
 	{
 		Image = SHHeroController(PC).Save1Image;
 		SaveSlots[1].Caption = "2";
-		SaveSlots[1].Hint = class'savegameinfo'.default.Save1Name @ "--" @ class'savegameinfo'.default.Save1Date;
+		
+		if(class'savegameinfo'.default.Save1Name != "")
+		{
+			SaveSlots[1].Hint = class'savegameinfo'.default.Save1Name @ "--" @ class'savegameinfo'.default.Save1Date;
+		}
+		else
+		{
+			SaveSlots[1].Hint = lhStartGame;
+		}
 	}
 	else
 	{
 		Image = "storybookanimTX.box_button";
 		SaveSlots[1].Caption = "";
 		SaveSlots[1].Hint = lhStartGame;
+		class'savegameinfo'.default.Save1Name = "";
+		class'savegameinfo'.default.Save1Date = "";
 	}
 	
 	STY_SH_BTN1Save(Controller.GetStyle("SHBTN1SaveStyle")).Images[0] = Texture(DynamicLoadObject(Image, class'Texture'));
@@ -131,13 +151,23 @@ function UpdateSaveIcons()
 	{
 		Image = SHHeroController(PC).Save2Image;
 		SaveSlots[2].Caption = "3";
-		SaveSlots[2].Hint = class'savegameinfo'.default.Save2Name @ "--" @ class'savegameinfo'.default.Save2Date;
+		
+		if(class'savegameinfo'.default.Save2Name != "")
+		{
+			SaveSlots[2].Hint = class'savegameinfo'.default.Save2Name @ "--" @ class'savegameinfo'.default.Save2Date;
+		}
+		else
+		{
+			SaveSlots[2].Hint = lhStartGame;
+		}
 	}
 	else
 	{
 		Image = "storybookanimTX.box_button";
 		SaveSlots[2].Caption = "";
 		SaveSlots[2].Hint = lhStartGame;
+		class'savegameinfo'.default.Save2Name = "";
+		class'savegameinfo'.default.Save2Date = "";
 	}
 	
 	STY_SH_BTN2Save(Controller.GetStyle("SHBTN2SaveStyle")).Images[0] = Texture(DynamicLoadObject(Image, class'Texture'));
@@ -150,13 +180,23 @@ function UpdateSaveIcons()
 	{
 		Image = SHHeroController(PC).Save3Image;
 		SaveSlots[3].Caption = "4";
-		SaveSlots[3].Hint = class'savegameinfo'.default.Save3Name @ "--" @ class'savegameinfo'.default.Save3Date;
+		
+		if(class'savegameinfo'.default.Save3Name != "")
+		{
+			SaveSlots[3].Hint = class'savegameinfo'.default.Save3Name @ "--" @ class'savegameinfo'.default.Save3Date;
+		}
+		else
+		{
+			SaveSlots[3].Hint = lhStartGame;
+		}
 	}
 	else
 	{
 		Image = "storybookanimTX.box_button";
 		SaveSlots[3].Caption = "";
 		SaveSlots[3].Hint = lhStartGame;
+		class'savegameinfo'.default.Save3Name = "";
+		class'savegameinfo'.default.Save3Date = "";
 	}
 	
 	STY_SH_BTN3Save(Controller.GetStyle("SHBTN3SaveStyle")).Images[0] = Texture(DynamicLoadObject(Image, class'Texture'));
@@ -169,13 +209,23 @@ function UpdateSaveIcons()
 	{
 		Image = SHHeroController(PC).Save4Image;
 		SaveSlots[4].Caption = "5";
-		SaveSlots[4].Hint = class'savegameinfo'.default.Save4Name @ "--" @ class'savegameinfo'.default.Save4Date;
+		
+		if(class'savegameinfo'.default.Save4Name != "")
+		{
+			SaveSlots[4].Hint = class'savegameinfo'.default.Save4Name @ "--" @ class'savegameinfo'.default.Save4Date;
+		}
+		else
+		{
+			SaveSlots[4].Hint = lhStartGame;
+		}
 	}
 	else
 	{
 		Image = "storybookanimTX.box_button";
 		SaveSlots[4].Caption = "";
 		SaveSlots[4].Hint = lhStartGame;
+		class'savegameinfo'.default.Save4Name = "";
+		class'savegameinfo'.default.Save4Date = "";
 	}
 	
 	STY_SH_BTN4Save(Controller.GetStyle("SHBTN4SaveStyle")).Images[0] = Texture(DynamicLoadObject(Image, class'Texture'));
@@ -188,13 +238,23 @@ function UpdateSaveIcons()
 	{
 		Image = SHHeroController(PC).Save5Image;
 		SaveSlots[5].Caption = "6";
-		SaveSlots[5].Hint = class'savegameinfo'.default.Save5Name @ "--" @ class'savegameinfo'.default.Save5Date;
+		
+		if(class'savegameinfo'.default.Save5Name != "")
+		{
+			SaveSlots[5].Hint = class'savegameinfo'.default.Save5Name @ "--" @ class'savegameinfo'.default.Save5Date;
+		}
+		else
+		{
+			SaveSlots[5].Hint = lhStartGame;
+		}
 	}
 	else
 	{
 		Image = "storybookanimTX.box_button";
 		SaveSlots[5].Caption = "";
 		SaveSlots[5].Hint = lhStartGame;
+		class'savegameinfo'.default.Save5Name = "";
+		class'savegameinfo'.default.Save5Date = "";
 	}
 	
 	STY_SH_BTN5Save(Controller.GetStyle("SHBTN5SaveStyle")).Images[0] = Texture(DynamicLoadObject(Image, class'Texture'));
@@ -202,6 +262,8 @@ function UpdateSaveIcons()
 	STY_SH_BTN5Save(Controller.GetStyle("SHBTN5SaveStyle")).Images[2] = Texture(DynamicLoadObject(Image $ "_hili", class'Texture'));
 	STY_SH_BTN5Save(Controller.GetStyle("SHBTN5SaveStyle")).Images[3] = Texture(DynamicLoadObject(Image, class'Texture'));
 	STY_SH_BTN5Save(Controller.GetStyle("SHBTN5SaveStyle")).Images[4] = Texture(DynamicLoadObject(Image, class'Texture'));
+	
+	class'savegameinfo'.static.StaticSaveConfig();
 }
 
 event Timer()
