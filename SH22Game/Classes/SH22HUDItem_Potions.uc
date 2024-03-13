@@ -95,7 +95,7 @@ event RenderHud(Canvas C)
 	
 	C.SetDrawColor(255, 255, 255, 255);
 	
-	fHUDItemScale = (float(C.SizeY) / 768.0 + float(C.SizeX) / 1024.0) / 2.0;
+	fHUDItemScale = U.GetHUDScale(C);
 	
 	iPotionCount = GetPotionCount();
 	

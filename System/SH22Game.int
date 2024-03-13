@@ -1,0 +1,17 @@
+[SH22MainMenuPage]
+lhStartGame=Start an adventure!
+lOption=Options
+lhOption=Configure Shrek 2.2
+lDeleteSave=Delete Save
+lhDeleteSave=Delete a save
+lDeleteSavePrompt=Click A Save To Delete It
+lQuit=Quit Game
+lhQuit=Quit Shrek 2.2 to desktop
+lAreYouSure=Are You Sure?
+lhAreYouSure=Are you sure you wish to quit Shrek 2.2?
+lCustomAdventures=Custom Adventure
+lhCustomAdventures=[Not implemented] Play a custom adventure
+lCheats=Cheats
+lhCheats=[Not implemented] Configure your cheats
+lMultiplayer=Multiplayer
+lhMultiplayer=[Not implemented] Toggle online multiplayer mode
