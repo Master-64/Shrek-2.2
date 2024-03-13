@@ -2,7 +2,7 @@
 *A Master_64 Production
 
 
-**Lead Producer/Level Designer/Engineer/Modder
+**Lead Producer/Level Designer/Senior Engineer/Modder
 *Master_64
 
 
@@ -122,6 +122,7 @@ Donovan Moxey, Ph.D.
 
 *Uses Bink Video. (c) 1997-2004 by RAD Game Tools, Inc.
 *Uses Pixomatic Processing Technology. (c) 2002-2004 by RAD Game Tools, Inc.
+*Uses dgVoodoo. (c) 2013-2024 by Dege (http://dege.fw.hu/)
 
 
 **Amaze Entertainment
