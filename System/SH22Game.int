@@ -15,3 +15,13 @@ lCheats=Cheats
 lhCheats=[Not implemented] Configure your cheats
 lMultiplayer=Multiplayer
 lhMultiplayer=[Not implemented] Toggle online multiplayer mode
+
+[SH22OptionsPage]
+lGameTab=Game
+lhGameTab=Configure game settings
+lVideoTab=Video
+lhVideoTab=Configure video settings
+lSoundTab=Sound
+lhSoundTab=Configure sound settings
+lBack=Back
+lhBack=Go back to the main menu

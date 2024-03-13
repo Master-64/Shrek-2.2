@@ -10,7 +10,7 @@ class SH22MainMenuPage extends MGUIPage
 
 
 var automated config GUIButton SaveSlot0, SaveSlot1, SaveSlot2, SaveSlot3, SaveSlot4, SaveSlot5, OptionButton, DeleteSaveButton, QuitButton, CustomAdventuresButton, CheatsButton, MultiplayerButton;
-var automated GUIButton SaveSlots[6], MainButtons[6];
+var automated GUIButton SaveSlots[6], MainButtons[3], SideButtons[3];
 var automated config GUILabel GameBuildLabel;
 var automated config GUIImage GameLogo;
 var localized string lhStartGame, lOption, lhOption, lDeleteSave, lhDeleteSave, lDeleteSavePrompt, lQuit, lhQuit, lAreYouSure, lhAreYouSure, lCustomAdventures, lhCustomAdventures, lCheats, lhCheats, lMultiplayer, lhMultiplayer;
@@ -43,18 +43,24 @@ event InitComponent(GUIController MyController, GUIComponent MyOwner)
 	MainButtons[0] = OptionButton;
 	MainButtons[1] = DeleteSaveButton;
 	MainButtons[2] = QuitButton;
-	MainButtons[3] = CustomAdventuresButton;
-	MainButtons[4] = CheatsButton;
-	MainButtons[5] = MultiplayerButton;
+	
+	SideButtons[0] = CustomAdventuresButton;
+	SideButtons[1] = CheatsButton;
+	SideButtons[2] = MultiplayerButton;
 	
 	for(i = 0; i < 6; i++)
 	{
 		CenterComponent(SaveSlots[i]);
 	}
 	
-	for(i = 0; i < 6; i++)
+	for(i = 0; i < 3; i++)
 	{
 		CenterComponent(MainButtons[i]);
+	}
+	
+	for(i = 0; i < 3; i++)
+	{
+		CenterComponent(SideButtons[i]);
 	}
 	
 	CenterComponent(GameBuildLabel);
@@ -303,6 +309,25 @@ event PanicEnd()
 	DeleteSaveButton.Caption = lDeleteSave;
 }
 
+function GoToSettings()
+{
+	local SHMenuBook B;
+	
+	foreach U.AllActors(class'SHMenuBook', B)
+	{
+		break;
+	}
+	
+	if(B == none)
+	{
+		return;
+	}
+	
+	B.NextMenuPage = "SH22Game.SH22OptionsPage";
+	B.GotoState('TurnPage2Forward');
+	ClosePage();
+}
+
 event bool InternalOnClick(GUIComponent Sender)
 {
 	local int i;
@@ -312,7 +337,8 @@ event bool InternalOnClick(GUIComponent Sender)
 	switch(Sender)
 	{
 		case OptionButton:
-			Controller.ReplaceMenu("SHGame.Tab_Options");
+			Controller.ReplaceMenu("SH22Game.SH22OptionsPage");
+			//GoToSettings();
 			
 			break;
 		case DeleteSaveButton:
