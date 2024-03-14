@@ -50,4 +50,5 @@ auto state Visible
 defaultproperties
 {
 	bHideDuringCutscene=false
+	bReInitialize=false
 }

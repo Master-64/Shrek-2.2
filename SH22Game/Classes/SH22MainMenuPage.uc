@@ -309,25 +309,6 @@ event PanicEnd()
 	DeleteSaveButton.Caption = lDeleteSave;
 }
 
-function GoToSettings()
-{
-	local SHMenuBook B;
-	
-	foreach U.AllActors(class'SHMenuBook', B)
-	{
-		break;
-	}
-	
-	if(B == none)
-	{
-		return;
-	}
-	
-	B.NextMenuPage = "SH22Game.SH22OptionsPage";
-	B.GotoState('TurnPage2Forward');
-	ClosePage();
-}
-
 event bool InternalOnClick(GUIComponent Sender)
 {
 	local int i;
@@ -338,7 +319,6 @@ event bool InternalOnClick(GUIComponent Sender)
 	{
 		case OptionButton:
 			Controller.ReplaceMenu("SH22Game.SH22OptionsPage");
-			//GoToSettings();
 			
 			break;
 		case DeleteSaveButton:

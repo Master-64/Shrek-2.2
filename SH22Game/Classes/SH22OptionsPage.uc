@@ -87,7 +87,6 @@ function bool InternalOnClick(GUIComponent Sender)
 	{
 		case BackButton:
 			Controller.ReplaceMenu("SH22Game.SH22MainMenuPage");
-			//GoBack();
 			
 			break;
 		default:
@@ -102,24 +101,6 @@ event bool InternalOnKeyEvent(out byte Key, out byte State, float Delta)
 	return super.InternalOnKeyEvent(Key, State, Delta);
 }
 
-function GoBack()
-{
-	local SHMenuBook B;
-	
-	foreach U.AllActors(class'SHMenuBook', B)
-	{
-		break;
-	}
-	
-	if(B == none)
-	{
-		return;
-	}
-	
-	B.NextMenuPage = "SH22Game.SH22MainMenuPage";
-	B.GotoState('TurnPage2Backward');
-	ClosePage();
-}
 
 defaultproperties
 {
