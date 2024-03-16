@@ -26,6 +26,7 @@ enum EViewDistanceMode
     DM_Short
 };
 
+var config float fDefaultFOV;
 var config string sDifficultyMode;
 var config bool bAutoLevelCamera, bAutoFieldOfView, bSecretDifficultyModeUnlocked;
 var config EShadowDetailMode ShadowDetail;
@@ -38,9 +39,17 @@ event PostBeginPlay()
 	super.PostBeginPlay();
 }
 
+event PostLoadGame(bool bLoadFromSaveGame)
+{
+	PC = U.GetPC();
+	
+	PC.FOV(U.CalculateHorizontalFOV(fDefaultFOV));
+}
+
 
 defaultproperties
 {
+	fDefaultFOV=69.0
 	sDifficultyMode="Classic"
 	ShadowDetail=DM_High
 }

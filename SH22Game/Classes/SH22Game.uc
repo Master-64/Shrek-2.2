@@ -9,9 +9,13 @@ class SH22Game extends MGame
 	Config(SH22);
 
 
+var SH22Manager M;
+
 event PostBeginPlay()
 {
 	super.PostBeginPlay();
+	
+	M = Spawn(class'SH22Manager');
 }
 
 event PlayerController Login(string Portal, string Options, out string Error)

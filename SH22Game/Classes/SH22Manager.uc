@@ -15,6 +15,9 @@ var SH22Config C;
 event PostBeginPlay()
 {
 	super.PostBeginPlay();
+	
+	C = Spawn(class'SH22Config');
+	C.M = self;
 }
 
 

@@ -1,3 +1,5 @@
+[CutScene]
+line_0=NoBypass
 [Sequence_0]
 PawnTag=Main
 line_0=Cue _CAMERA_0

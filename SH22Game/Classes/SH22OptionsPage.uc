@@ -270,7 +270,7 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 	
 	// Initialize all slider GUIs
 	MouseSensitivity.SetValue(class'PlayerInput'.default.MouseSensitivity);
-	FieldOfView.SetValue(class'PlayerController'.default.DefaultFOV);
+	FieldOfView.SetValue(class'SH22Config'.default.fDefaultFOV);
 	ScreenBrightness.SetValue(1.0);
 	ScreenContrast.SetValue(1.0);
 	ScreenColorVibrancy.SetValue(1.0);
@@ -514,11 +514,8 @@ event InternalOnChange(GUIComponent Sender)
 			
 			break;
 		case FieldOfView:
-			U.CC("Set PlayerController DefaultFOV" @ string(FieldOfView.Value));
-			U.CC("Set PlayerController DesiredFOV" @ string(FieldOfView.Value));
-			class'PlayerController'.default.DefaultFOV = FieldOfView.Value;
-			class'PlayerController'.default.DesiredFOV = FieldOfView.Value;
-			class'PlayerController'.static.StaticSaveConfig();
+			class'SH22Config'.default.fDefaultFOV = FieldOfView.Value;
+			class'SH22Config'.static.StaticSaveConfig();
 			
 			break;
 		case ScreenResolution:
@@ -1155,7 +1152,7 @@ defaultproperties
 		StyleName="SHSlider"
 		CaptionStyleName="SHSlider"
 		MinValue=10
-		MaxValue=170
+		MaxValue=160
 		bIntSlider=true
 		bNeverFocus=true
 		WinTop=0.4
