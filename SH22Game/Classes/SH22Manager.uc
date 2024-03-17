@@ -34,7 +34,12 @@ event PostLoadGame(bool bLoadFromSaveGame)
 	PC = U.GetPC();
 	PC.FOV(C.GetFOV());
 	
-	InitializeDifficultyMode();
+	U.CC("Set SHHeroPawn SaveCameraNoSnapRotation" @ string(!C.bAutoLevelCamera));
+	U.CC("Set SHHeroPawn CameraNoSnapRotation" @ string(!C.bAutoLevelCamera));
+	
+	InitDifficultyMode();
+	InitViewDistance();
+	InitShadowDetail();
 }
 
 event Tick(float DeltaTime)
@@ -57,7 +62,7 @@ event Tick(float DeltaTime)
 	}
 }
 
-function InitializeDifficultyMode()
+function InitDifficultyMode()
 {
 	local MHeroPawn MHP;
 	local JumpMagnet JM;
@@ -97,6 +102,7 @@ function InitializeDifficultyMode()
 				MHP.fDamageMultiplier = 6.4;
 			}
 			
+			// Master_64: No idea if this works correctly but I'm not going to check until it's needed
 			foreach DynamicActors(class'MEnergyKeg', EK)
 			{
 				U.MFancySpawn(class'MEnergyBar', EK.Location);
@@ -116,6 +122,170 @@ function InitializeDifficultyMode()
 	}
 	
 	class'SH22Game'.static.LogEvent("Game difficulty:" @ string(C.DifficultyMode));
+}
+
+function InitViewDistance()
+{
+	local MPatcher P;
+	local ZoneInfo ZI;
+	local float fFogMultiplier;
+	local int i;
+	
+	switch(C.ViewDistance)
+	{
+		case DM_Infinite:
+			break;
+		case DM_VeryFar:
+			fFogMultiplier = 2.2;
+			
+			break;
+		case DM_Far:
+			fFogMultiplier = 1.0;
+			
+			break;
+		case DM_Medium:
+			fFogMultiplier = 0.64;
+			
+			break;
+		case DM_Short:
+			fFogMultiplier = 0.42;
+			
+			break;
+	}
+	
+	foreach AllActors(class'MPatcher', P)
+	{
+		if(P.PatchesToApply.bEnforceFogForZoneInfo && P.OptionalOptions.FogActions.Length != 0)
+		{
+			for(i = 0; i < P.OptionalOptions.FogActions.Length; i++)
+			{
+				if(fFogMultiplier == 0.0)
+				{
+					P.OptionalOptions.FogActions.Remove(i, 1);
+					
+					i--;
+					
+					continue;
+				}
+				
+				if(fFogMultiplier < 1.0)
+				{
+					P.OptionalOptions.FogActions[i].DistanceFogStart *= fFogMultiplier;
+				}
+				
+				P.OptionalOptions.FogActions[i].DistanceFogEnd *= fFogMultiplier;
+			}
+		}
+	}
+	
+	foreach AllActors(class'ZoneInfo', ZI)
+	{
+		if(fFogMultiplier == 0.0)
+		{
+			ZI.bDistanceFog = false;
+			
+			continue;
+		}
+		
+		if(fFogMultiplier < 1.0)
+		{
+			ZI.DistanceFogStart *= fFogMultiplier;
+		}
+		
+		ZI.DistanceFogEnd *= fFogMultiplier;
+	}
+}
+
+function InitShadowDetail()
+{
+	local KWPawn KWP;
+	local SHPropsStatic SHPS;
+	
+	switch(C.ShadowDetail)
+	{
+		case DM_SuperHigh:
+			U.CC("Set KWPawn bUseBlobShadow False");
+			U.CC("Set KWPawn bActorShadows True");
+			U.CC("Set SHPropsStatic bUseBlobShadow False");
+			U.CC("Set SHPropsStatic bActorShadows True");
+			
+			// bActorShadows corrections
+			U.CC("Set GenericGeyser bActorShadows False");
+			U.CC("Set LaserBeam bActorShadows False");
+			U.CC("Set PotionBottles bActorShadows False");
+			U.CC("Set PumpkinDonkey bActorShadows False");
+			U.CC("Set RasingGas bActorShadows False");
+			U.CC("Set RasingGasStopper bActorShadows False");
+			U.CC("Set SHMenuProps bActorShadows False");
+			
+			break;
+		case DM_High:
+			U.CC("Set KWPawn bUseBlobShadow False");
+			U.CC("Set KWPawn bActorShadows False");
+			U.CC("Set SHPropsStatic bUseBlobShadow False");
+			U.CC("Set SHPropsStatic bActorShadows False");
+			
+			// bUseBlobShadow corrections
+			U.CC("Set Bat bUseBlobShadow True");
+			U.CC("Set Rat bUseBlobShadow True");
+			U.CC("Set SHEnemy bUseBlobShadow True");
+			U.CC("Set SavePointFairy bUseBlobShadow True");
+			U.CC("Set Spider bUseBlobShadow True");
+			U.CC("Set WheelStealer bUseBlobShadow True");
+			
+			// bActorShadows corrections
+			U.CC("Set Bat bActorShadows True");
+			U.CC("Set BossPIB bActorShadows True");
+			U.CC("Set CastleHallKnight bActorShadows False");
+			U.CC("Set HazMatShrek bActorShadows True");
+			U.CC("Set Rat bActorShadows True");
+			U.CC("Set SHEnemy bActorShadows True");
+			U.CC("Set SHHeroPawn bActorShadows True");
+			U.CC("Set SavePointFairy bActorShadows True");
+			U.CC("Set Spider bActorShadows True");
+			U.CC("Set SwingAttachment bActorShadows True");
+			U.CC("Set WheelStealer bActorShadows True");
+			
+			break;
+		case DM_Low:
+			U.CC("Set KWPawn bUseBlobShadow True");
+			U.CC("Set KWPawn bActorShadows False");
+			U.CC("Set SHPropsStatic bUseBlobShadow True");
+			U.CC("Set SHPropsStatic bActorShadows False");
+			
+			// bActorShadows corrections
+			U.CC("Set Bat bActorShadows True");
+			U.CC("Set BossPIB bActorShadows True");
+			U.CC("Set CastleHallKnight bActorShadows False");
+			U.CC("Set HazMatShrek bActorShadows True");
+			U.CC("Set Rat bActorShadows True");
+			U.CC("Set SHEnemy bActorShadows True");
+			U.CC("Set SHHeroPawn bActorShadows True");
+			U.CC("Set SavePointFairy bActorShadows True");
+			U.CC("Set Spider bActorShadows True");
+			U.CC("Set SwingAttachment bActorShadows True");
+			U.CC("Set WheelStealer bActorShadows True");
+			
+			break;
+		case DM_None:
+			break;
+	}
+	
+	U.CC("Set KWGame NoShadows" @ U.BoolToString(C.ShadowDetail == DM_None));
+	U.CC("Set KWPawn bNoShadows" @ U.BoolToString(C.ShadowDetail == DM_None));
+	U.CC("Set SHPropsStatic bNoShadows" @ U.BoolToString(C.ShadowDetail == DM_None));
+	
+	foreach AllActors(class'KWPawn', KWP)
+	{
+		KWP.KWRemoveShadow();
+		KWP.KWAddShadow();
+	}
+	
+	foreach AllActors(class'SHPropsStatic', SHPS)
+	{
+		SHPS.SHPropsStaticRemoveShadow();
+		SHPS.SHPropsStaticAddShadow();
+	}
 }
 
 

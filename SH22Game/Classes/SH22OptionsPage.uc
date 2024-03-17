@@ -452,10 +452,8 @@ event bool InternalOnClick(GUIComponent Sender)
 			
 			break;
 		case AutoLevelCamera:
-			class'SH22Config'.default.bAutoLevelCamera = !bool(U.CC("Get SHHeroPawn SaveCameraNoSnapRotation"));
+			class'SH22Config'.default.bAutoLevelCamera = !class'SH22Config'.default.bAutoLevelCamera;
 			class'SH22Config'.static.StaticSaveConfig();
-			
-			U.CC("Set SHHeroPawn SaveCameraNoSnapRotation" @ string(class'SH22Config'.default.bAutoLevelCamera));
 			
 			if(class'SH22Config'.default.bAutoLevelCamera)
 			{
@@ -754,15 +752,15 @@ event InternalOnLoadINI(GUIComponent Sender, string S)
 			switch(GetObjectDetail())
 			{
 				case 2:
-					ObjectDetail.SetText("High");
+					ObjectDetail.SetText(lObjectDetailHigh);
 					
 					break;
 				case 1:
-					ObjectDetail.SetText("Medium");
+					ObjectDetail.SetText(lObjectDetailMedium);
 					
 					break;
 				case 0:
-					ObjectDetail.SetText("Low");
+					ObjectDetail.SetText(lObjectDetailLow);
 					
 					break;
 			}
@@ -772,19 +770,19 @@ event InternalOnLoadINI(GUIComponent Sender, string S)
 			switch(class'SH22Config'.default.ShadowDetail)
 			{
 				case DM_SuperHigh:
-					ObjectDetail.SetText("Super High");
+					ShadowDetail.SetText(lShadowDetailSuperHigh);
 					
 					break;
 				case DM_High:
-					ObjectDetail.SetText("High");
+					ShadowDetail.SetText(lShadowDetailHigh);
 					
 					break;
 				case DM_Low:
-					ObjectDetail.SetText("Low");
+					ShadowDetail.SetText(lShadowDetailLow);
 					
 					break;
 				case DM_None:
-					ObjectDetail.SetText("None");
+					ShadowDetail.SetText(lShadowDetailNone);
 					
 					break;
 			}
@@ -794,23 +792,23 @@ event InternalOnLoadINI(GUIComponent Sender, string S)
 			switch(class'SH22Config'.default.ViewDistance)
 			{
 				case DM_Infinite:
-					ObjectDetail.SetText("Infinite");
+					ViewDistance.SetText(lViewDistanceInfinite);
 					
 					break;
 				case DM_VeryFar:
-					ObjectDetail.SetText("Very Far");
+					ViewDistance.SetText(lViewDistanceVeryFar);
 					
 					break;
 				case DM_Far:
-					ObjectDetail.SetText("Far");
+					ViewDistance.SetText(lViewDistanceFar);
 					
 					break;
 				case DM_Medium:
-					ObjectDetail.SetText("Medium");
+					ViewDistance.SetText(lViewDistanceMedium);
 					
 					break;
 				case DM_Short:
-					ObjectDetail.SetText("Short");
+					ViewDistance.SetText(lViewDistanceShort);
 					
 					break;
 			}
@@ -912,6 +910,12 @@ function ResetKeyBindings() // Resets all keybindings back to their original act
 			U.CC("Set Input" @ sIniKeyName @ sOldKeyBind);
 		}
 	}
+	
+	U.CC("Set PlayerInput MouseSensitivity 3.0");
+	class'PlayerInput'.default.MouseSensitivity = 3.0;
+	class'PlayerInput'.static.StaticSaveConfig();
+	
+	MouseSensitivity.SetValue(class'PlayerInput'.default.MouseSensitivity);
 }
 
 
