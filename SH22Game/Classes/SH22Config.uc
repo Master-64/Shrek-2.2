@@ -9,6 +9,14 @@ class SH22Config extends MInfo
 	Config(SH22Config);
 
 
+enum EDifficultyMode
+{
+    DM_Relaxed,
+    DM_Classic,
+    DM_Knight,
+    DM_INeedAHero
+};
+
 enum EShadowDetailMode
 {
     DM_SuperHigh,
@@ -27,8 +35,8 @@ enum EViewDistanceMode
 };
 
 var config float fDefaultFOV;
-var config string sDifficultyMode;
-var config bool bAutoLevelCamera, bAutoFieldOfView, bSecretDifficultyModeUnlocked;
+var config EDifficultyMode DifficultyMode;
+var config bool bAutoLevelCamera, bSecretDifficultyModeUnlocked;
 var config EShadowDetailMode ShadowDetail;
 var config EViewDistanceMode ViewDistance;
 var SH22Manager M;
@@ -39,17 +47,15 @@ event PostBeginPlay()
 	super.PostBeginPlay();
 }
 
-event PostLoadGame(bool bLoadFromSaveGame)
+function float GetFOV()
 {
-	PC = U.GetPC();
-	
-	PC.FOV(U.CalculateHorizontalFOV(fDefaultFOV));
+	return U.CalculateHorizontalFOV(fDefaultFOV);
 }
 
 
 defaultproperties
 {
 	fDefaultFOV=69.0
-	sDifficultyMode="Classic"
+	DifficultyMode=DM_Classic
 	ShadowDetail=DM_High
 }

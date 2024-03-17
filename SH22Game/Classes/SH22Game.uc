@@ -11,6 +11,7 @@ class SH22Game extends MGame
 
 var SH22Manager M;
 
+
 event PostBeginPlay()
 {
 	super.PostBeginPlay();
@@ -21,6 +22,11 @@ event PostBeginPlay()
 event PlayerController Login(string Portal, string Options, out string Error)
 {
 	return super.Login(Portal, Options, Error);
+}
+
+static function LogEvent(string S)
+{
+	Log(class'SH22Version'.default.ModName @ "--" @ S);
 }
 
 

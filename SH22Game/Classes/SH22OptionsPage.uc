@@ -509,7 +509,26 @@ event InternalOnChange(GUIComponent Sender)
 			
 			break;
 		case DifficultyModes:
-			class'SH22Config'.default.sDifficultyMode = DifficultyModes.Edit.GetText();
+			switch(DifficultyModes.Edit.GetText())
+			{
+				case lDifficultyMode1:
+					class'SH22Config'.default.DifficultyMode = DM_Relaxed;
+					
+					break;
+				case lDifficultyMode2:
+					class'SH22Config'.default.DifficultyMode = DM_Classic;
+					
+					break;
+				case lDifficultyMode3:
+					class'SH22Config'.default.DifficultyMode = DM_Knight;
+					
+					break;
+				case lDifficultyMode4:
+					class'SH22Config'.default.DifficultyMode = DM_INeedAHero;
+					
+					break;
+			}
+			
 			class'SH22Config'.static.StaticSaveConfig();
 			
 			break;
@@ -706,7 +725,25 @@ event InternalOnLoadINI(GUIComponent Sender, string S)
 	switch(Sender)
 	{
 		case DifficultyModes:
-			DifficultyModes.SetText(class'SH22Config'.default.sDifficultyMode);
+			switch(class'SH22Config'.default.DifficultyMode)
+			{
+				case DM_Relaxed:
+					DifficultyModes.SetText(lDifficultyMode1);
+					
+					break;
+				case DM_Classic:
+					DifficultyModes.SetText(lDifficultyMode2);
+					
+					break;
+				case DM_Knight:
+					DifficultyModes.SetText(lDifficultyMode3);
+					
+					break;
+				case DM_INeedAHero:
+					DifficultyModes.SetText(lDifficultyMode4);
+					
+					break;
+			}
 			
 			break;
 		case ScreenResolution:
