@@ -831,7 +831,14 @@ event InternalOnLoadINI(GUIComponent Sender, string S)
 			
 			break;
 		case FramerateLimit:
-			FramerateLimit.SetText(dgVoodooVariables.FPSLimit);
+			if(int(dgVoodooVariables.FPSLimit) == 0)
+			{
+				FramerateLimit.SetText("Uncapped");
+			}
+			else
+			{
+				FramerateLimit.SetText(dgVoodooVariables.FPSLimit);
+			}
 			
 			break;
 		case TextureFiltering:
@@ -986,7 +993,7 @@ function WritedgVoodooVariables() // Takes the current values of the advanced vi
 	
 	if(dgVoodooVariables.FPSLimit ~= "Uncapped")
 	{
-		dgVoodooVariables.FPSLimit = "Unlimited";
+		dgVoodooVariables.FPSLimit = "0";
 	}
 	
 	dgVoodooVariables.Filtering = Mid(TextureFiltering.Edit.GetText(), 12, Len(TextureFiltering.Edit.GetText()) - 13);
