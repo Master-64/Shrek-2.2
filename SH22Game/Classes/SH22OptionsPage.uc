@@ -78,9 +78,10 @@ var localized string lFramerateLimit, lhFramerateLimit, lTextureFiltering, lhTex
 
 // Sound options
 var automated config GUISlider GameVolume, MusicVolume;
-var automated config GUIComponent SoundOptions[2];
-var automated config GUILabel GameVolumeLabel, MusicVolumeLabel, SoundLabels[2];
-var localized string lGameVolume, lhGameVolume, lMusicVolume, lhMusicVolume;
+var automated config GUIButton RestartSoundDriver;
+var automated config GUIComponent SoundOptions[3];
+var automated config GUILabel GameVolumeLabel, MusicVolumeLabel, RestartSoundDriverLabel, SoundLabels[3];
+var localized string lGameVolume, lhGameVolume, lMusicVolume, lhMusicVolume, lRestartSoundDriver, lhRestartSoundDriver;
 
 
 function InitComponent(GUIController MyController, GUIComponent MyOwner)
@@ -198,10 +199,12 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 	
 	SoundOptions[0] = GameVolume;
 	SoundOptions[1] = MusicVolume;
+	SoundOptions[2] = RestartSoundDriver;
 	SoundLabels[0] = GameVolumeLabel;
 	SoundLabels[1] = MusicVolumeLabel;
+	SoundLabels[3] = RestartSoundDriverLabel;
 	
-	for(i = 0; i < 2; i++)
+	for(i = 0; i < 3; i++)
 	{
 		CenterComponent(SoundOptions[i]);
 		CenterComponent(SoundLabels[i]);
@@ -283,6 +286,8 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 	GameVolume.Hint = lhGameVolume;
 	MusicVolumeLabel.Caption = lMusicVolume;
 	MusicVolume.Hint = lhMusicVolume;
+	RestartSoundDriver.Caption = lRestartSoundDriver;
+	RestartSoundDriver.Hint = lhRestartSoundDriver;
 	
 	// Initialize all slider GUIs
 	MouseSensitivity.SetValue(class'PlayerInput'.default.MouseSensitivity);
@@ -396,7 +401,7 @@ function ChangeMenu(ECurrentMenu NewMenu) // Changes the current menu
 	
 	bShow = NewMenu == CM_Sound;
 	
-	for(i = 0; i < 2; i++)
+	for(i = 0; i < 3; i++)
 	{
 		SoundOptions[i].SetVisibility(bShow);
 		SoundOptions[i].bAcceptsInput = bShow;
@@ -503,6 +508,10 @@ event bool InternalOnClick(GUIComponent Sender)
 			CompatibilityMode.Caption = U.BoolToString(bool(dgVoodooVariables.DisableAndPassThru));
 			
 			bAdvancedVideoOptionsChanged = true;
+			
+			break;
+		case RestartSoundDriver:
+			U.RestartSound();
 			
 			break;
 		default:
@@ -1728,6 +1737,25 @@ defaultproperties
 		WinHeight=0.05
 	End Object
 	MusicVolumeLabel=lblMusicVolume0
+	Begin Object Name=btnRestartSoundDriver0 Class=GUIButton
+		StyleName="SHSolidBox"
+		bNeverFocus=true
+		WinTop=0.8
+		WinLeft=0.5
+		WinWidth=0.2
+		WinHeight=0.05
+		OnClick=InternalOnClick
+	End Object
+	RestartSoundDriver=btnRestartSoundDriver0
+	Begin Object Name=lblRestartSoundDriver0 Class=GUILabel
+		StyleName="SHSolidBox"
+		TextAlign=TXTA_Center
+		WinTop=0.75
+		WinLeft=0.5
+		WinWidth=0.2
+		WinHeight=0.05
+	End Object
+	RestartSoundDriverLabel=lblRestartSoundDriver0
 	sKeyBindActions(0)="MoveForward"
 	sKeyBindActions(1)="MoveBackward"
 	sKeyBindActions(2)="StrafeLeft"
