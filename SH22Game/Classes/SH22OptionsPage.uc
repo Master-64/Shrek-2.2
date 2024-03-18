@@ -3,8 +3,6 @@
 // *		  Copyrighted (c) Master_64, 2019		   *
 // *   May be modified but not without proper credit!  *
 // *****************************************************
-// 
-// Add way to determine all key actions initially
 
 
 class SH22OptionsPage extends MGUIPage
@@ -27,11 +25,18 @@ struct KeyActions
 	var string Key, Action;
 };
 
+struct dgVoodooVariablesStruct
+{
+	var string FPSLimit, Filtering, Antialiasing, VRAM, Brightness, Contrast, Color, DisableAndPassThru, Bilinear2DOperations, FastVideoMemoryAccess;
+};
+
 var ECurrentMenu CurrentMenu;
 var GUIComponent KeyToBind;
-var array<KeyActions> sKeyBinds;
+var array<KeyActions> KeyBinds;
+var dgVoodooVariablesStruct dgVoodooVariables;
 var array<string> sKeyBindActions;
 var array<int> iCurrentKeyBindActions;
+var bool bAdvancedVideoOptionsChanged;
 var localized string lNoKeyAction, lDifficultyMode1, lDifficultyMode2, lDifficultyMode3, lDifficultyMode4, lObjectDetailHigh, lObjectDetailMedium, lObjectDetailLow, lShadowDetailSuperHigh, lShadowDetailHigh, lShadowDetailLow, lShadowDetailNone, lViewDistanceInfinite, lViewDistanceVeryFar, lViewDistanceFar, lViewDistanceMedium, lViewDistanceShort, lFramerateLimitUncapped, lTrue, lFalse;
 var config array<int> iFramerateCaps;
 var config array<string> sSupportedResolutions;
@@ -66,9 +71,10 @@ var localized string lScreenResolution, lhScreenResolution, lObjectDetail, lhObj
 // Advanced video options
 var automated config SHGUIComboBox FramerateLimit, TextureFiltering, Antialiasing, VRAMAllocation;
 var automated config GUISlider ScreenBrightness, ScreenContrast, ScreenColorVibrancy;
-var automated config GUIComponent AdvancedVideoOptions[7];
-var automated config GUILabel FramerateLimitLabel, TextureFilteringLabel, AntialiasingLabel, VRAMAllocationLabel, ScreenBrightnessLabel, ScreenContrastLabel, ScreenColorVibrancyLabel, AdvancedVideoLabels[7];
-var localized string lFramerateLimit, lhFramerateLimit, lTextureFiltering, lhTextureFiltering, lAntialiasing, lhAntialiasing, lVRAMAllocation, lhVRAMAllocation, lScreenBrightness, lhScreenBrightness, lScreenContrast, lhScreenContrast, lScreenColorVibrancy, lhScreenColorVibrancy;
+var automated config GUIButton PerformanceMode, CompatibilityMode;
+var automated config GUIComponent AdvancedVideoOptions[9];
+var automated config GUILabel FramerateLimitLabel, TextureFilteringLabel, AntialiasingLabel, VRAMAllocationLabel, ScreenBrightnessLabel, ScreenContrastLabel, ScreenColorVibrancyLabel, PerformanceModeLabel, CompatibilityModeLabel, AdvancedVideoLabels[9];
+var localized string lFramerateLimit, lhFramerateLimit, lTextureFiltering, lhTextureFiltering, lAntialiasing, lhAntialiasing, lVRAMAllocation, lhVRAMAllocation, lScreenBrightness, lhScreenBrightness, lScreenContrast, lhScreenContrast, lScreenColorVibrancy, lhScreenColorVibrancy, lPerformanceMode, lhPerformanceMode, lCompatibilityMode, lhCompatibilityMode;
 
 // Sound options
 var automated config GUISlider GameVolume, MusicVolume;
@@ -93,6 +99,8 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 	
 	TabFooter.WinLeft = 0.493;
 	TabFooter.WinTop = 0.9;
+	
+	GetdgVoodooVariables();
 	
 	// Sort and center all GUI components
 	CoreOptions[0] = InputTab;
@@ -170,6 +178,8 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 	AdvancedVideoOptions[4] = ScreenBrightness;
 	AdvancedVideoOptions[5] = ScreenContrast;
 	AdvancedVideoOptions[6] = ScreenColorVibrancy;
+	AdvancedVideoOptions[7] = PerformanceMode;
+	AdvancedVideoOptions[8] = CompatibilityMode;
 	AdvancedVideoLabels[0] = FramerateLimitLabel;
 	AdvancedVideoLabels[1] = TextureFilteringLabel;
 	AdvancedVideoLabels[2] = AntialiasingLabel;
@@ -177,8 +187,10 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 	AdvancedVideoLabels[4] = ScreenBrightnessLabel;
 	AdvancedVideoLabels[5] = ScreenContrastLabel;
 	AdvancedVideoLabels[6] = ScreenColorVibrancyLabel;
+	AdvancedVideoLabels[7] = PerformanceModeLabel;
+	AdvancedVideoLabels[8] = CompatibilityModeLabel;
 	
-	for(i = 0; i < 7; i++)
+	for(i = 0; i < 9; i++)
 	{
 		CenterComponent(AdvancedVideoOptions[i]);
 		CenterComponent(AdvancedVideoLabels[i]);
@@ -262,6 +274,10 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 	ScreenContrast.Hint = lhScreenContrast;
 	ScreenColorVibrancyLabel.Caption = lScreenColorVibrancy;
 	ScreenColorVibrancy.Hint = lhScreenColorVibrancy;
+	PerformanceModeLabel.Caption = lPerformanceMode;
+	PerformanceMode.Hint = lhPerformanceMode;
+	CompatibilityModeLabel.Caption = lCompatibilityMode;
+	CompatibilityMode.Hint = lhCompatibilityMode;
 	
 	GameVolumeLabel.Caption = lGameVolume;
 	GameVolume.Hint = lhGameVolume;
@@ -271,9 +287,9 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 	// Initialize all slider GUIs
 	MouseSensitivity.SetValue(class'PlayerInput'.default.MouseSensitivity);
 	FieldOfView.SetValue(class'SH22Config'.default.fDefaultFOV);
-	ScreenBrightness.SetValue(1.0);
-	ScreenContrast.SetValue(1.0);
-	ScreenColorVibrancy.SetValue(1.0);
+	ScreenBrightness.SetValue(int(dgVoodooVariables.Brightness));
+	ScreenContrast.SetValue(int(dgVoodooVariables.Contrast));
+	ScreenColorVibrancy.SetValue(int(dgVoodooVariables.Color));
 	GameVolume.SetValue(float(U.CC("Get ini:Engine.Engine.AudioDevice SoundVolume")));
 	MusicVolume.SetValue(float(U.CC("Get ini:Engine.Engine.AudioDevice MusicVolume")));
 	
@@ -332,14 +348,9 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 	VRAMAllocation.AddItem("1024 MB");
 	
 	// Miscellaneous initialization
-	if(class'SH22Config'.default.bAutoLevelCamera)
-	{
-		AutoLevelCamera.Caption = lTrue;
-	}
-	else
-	{
-		AutoLevelCamera.Caption = lFalse;
-	}
+	AutoLevelCamera.Caption = U.BoolToString(class'SH22Config'.default.bAutoLevelCamera);
+	PerformanceMode.Caption = U.BoolToString(bool(dgVoodooVariables.Bilinear2DOperations));
+	CompatibilityMode.Caption = U.BoolToString(bool(dgVoodooVariables.DisableAndPassThru));
 	
 	GetKeyBindings();
 	UpdateKeyBindings();
@@ -393,7 +404,7 @@ function ChangeMenu(ECurrentMenu NewMenu) // Changes the current menu
 		SoundLabels[i].SetVisibility(bShow);
 	}
 	
-	for(i = 0; i < 7; i++)
+	for(i = 0; i < 9; i++)
 	{
 		AdvancedVideoOptions[i].SetVisibility(false);
 		AdvancedVideoOptions[i].bAcceptsInput = false;
@@ -429,6 +440,13 @@ event bool InternalOnClick(GUIComponent Sender)
 			
 			break;
 		case Back:
+			if(bAdvancedVideoOptionsChanged)
+			{
+				WritedgVoodooVariables();
+				
+				return true;
+			}
+			
 			Controller.ReplaceMenu("SH22Game.SH22MainMenuPage");
 			
 			break;
@@ -455,18 +473,11 @@ event bool InternalOnClick(GUIComponent Sender)
 			class'SH22Config'.default.bAutoLevelCamera = !class'SH22Config'.default.bAutoLevelCamera;
 			class'SH22Config'.static.StaticSaveConfig();
 			
-			if(class'SH22Config'.default.bAutoLevelCamera)
-			{
-				AutoLevelCamera.Caption = "True";
-			}
-			else
-			{
-				AutoLevelCamera.Caption = "False";
-			}
+			AutoLevelCamera.Caption = U.BoolToString(class'SH22Config'.default.bAutoLevelCamera);
 			
 			break;
 		case AdvancedSettings:
-			for(i = 0; i < 7; i++)
+			for(i = 0; i < 9; i++)
 			{
 				AdvancedVideoOptions[i].SetVisibility(true);
 				AdvancedVideoOptions[i].bAcceptsInput = true;
@@ -475,6 +486,23 @@ event bool InternalOnClick(GUIComponent Sender)
 			
 			AdvancedSettings.SetVisibility(false);
 			AdvancedSettingsLabel.SetVisibility(false);
+			
+			break;
+		case PerformanceMode:
+			dgVoodooVariables.Bilinear2DOperations = U.BoolToString(!bool(dgVoodooVariables.Bilinear2DOperations));
+			dgVoodooVariables.FastVideoMemoryAccess = U.BoolToString(!bool(dgVoodooVariables.FastVideoMemoryAccess));
+			
+			PerformanceMode.Caption = U.BoolToString(bool(dgVoodooVariables.Bilinear2DOperations));
+			
+			bAdvancedVideoOptionsChanged = true;
+			
+			break;
+		case CompatibilityMode:
+			dgVoodooVariables.DisableAndPassThru = U.BoolToString(!bool(dgVoodooVariables.DisableAndPassThru));
+			
+			CompatibilityMode.Caption = U.BoolToString(bool(dgVoodooVariables.DisableAndPassThru));
+			
+			bAdvancedVideoOptionsChanged = true;
 			
 			break;
 		default:
@@ -491,8 +519,6 @@ event Timer()
 
 event InternalOnChange(GUIComponent Sender)
 {
-	local int i;
-	
 	if(!Controller.bCurMenuInitialized)
 	{
 		return;
@@ -615,25 +641,15 @@ event InternalOnChange(GUIComponent Sender)
 			class'SH22Config'.static.StaticSaveConfig();
 			
 			break;
-		case FramerateLimit: // !?
-			for(i = 0; i < iFramerateCaps.Length; i++)
-			{
-				if(FramerateLimit.Edit.GetText() == string(iFramerateCaps[i]))
-				{
-					break;
-				}
-			}
+		case FramerateLimit:
+		case TextureFiltering:
+		case Antialiasing:
+		case VRAMAllocation:
+		case ScreenBrightness:
+		case ScreenContrast:
+		case ScreenColorVibrancy:
+			bAdvancedVideoOptionsChanged = true;
 			
-			break;
-		case TextureFiltering: // !?
-			break;
-		case Antialiasing: // !?
-			break;
-		case VRAMAllocation: // !?
-			break;
-		case ScreenBrightness: // !?
-		case ScreenContrast: // !?
-		case ScreenColorVibrancy: // !?
 			break;
 		case GameVolume:
 			U.CC("Set ini:Engine.Engine.AudioDevice SoundVolume" @ string(GameVolume.Value));
@@ -814,10 +830,28 @@ event InternalOnLoadINI(GUIComponent Sender, string S)
 			}
 			
 			break;
-		case FramerateLimit: // !?
-		case TextureFiltering: // !?
-		case Antialiasing: // !?
-		case VRAMAllocation: // !?
+		case FramerateLimit:
+			FramerateLimit.SetText(dgVoodooVariables.FPSLimit);
+			
+			break;
+		case TextureFiltering:
+			TextureFiltering.SetText("Anisotropic" @ dgVoodooVariables.Filtering $ "x");
+			
+			break;
+		case Antialiasing:
+			if(dgVoodooVariables.Antialiasing ~= "appdriven")
+			{
+				Antialiasing.SetText("Disabled");
+			}
+			else
+			{
+				Antialiasing.SetText("MSAA" @ dgVoodooVariables.Antialiasing);
+			}
+			
+			break;
+		case VRAMAllocation:
+			VRAMAllocation.SetText(dgVoodooVariables.VRAM @ "MB");
+			
 			break;
 		default:
 			break;
@@ -846,18 +880,18 @@ function byte GetObjectDetail() // Returns with the current object detail (0 = L
 	return B;
 }
 
-function GetKeyBindings() // Gets all keybindings, also known as updating the variable <sKeyBinds>
+function GetKeyBindings() // Gets all keybindings, also known as updating the variable <KeyBinds>
 {
 	local int i;
 	
-	sKeyBinds.Remove(0, sKeyBinds.Length);
-	sKeyBinds.Insert(0, 255);
+	KeyBinds.Remove(0, KeyBinds.Length);
+	KeyBinds.Insert(0, 255);
 	
-	for(i = 0; i < sKeyBinds.Length; i++)
+	for(i = 0; i < KeyBinds.Length; i++)
 	{
-		sKeyBinds[i].bKey = i;
-		sKeyBinds[i].Key = U.CC("KeyName" @ string(i));
-		sKeyBinds[i].Action = U.CC("Get Input" @ sKeyBinds[i].Key);
+		KeyBinds[i].bKey = i;
+		KeyBinds[i].Key = U.CC("KeyName" @ string(i));
+		KeyBinds[i].Action = U.CC("Get Input" @ KeyBinds[i].Key);
 	}
 }
 
@@ -872,9 +906,9 @@ function UpdateKeyBindings() // Updates all keybindings. Recommended to run GetK
 	{
 		for(i = 0; i < 255; i++)
 		{
-			if(InStr(Caps(sKeyBinds[i].Action), Caps(sKeyBindActions[j])) > -1)
+			if(InStr(Caps(KeyBinds[i].Action), Caps(sKeyBindActions[j])) > -1)
 			{
-				iCurrentKeyBindActions[j] = sKeyBinds[i].bKey;
+				iCurrentKeyBindActions[j] = KeyBinds[i].bKey;
 				
 				break;
 			}
@@ -885,7 +919,7 @@ function UpdateKeyBindings() // Updates all keybindings. Recommended to run GetK
 	{
 		if(iCurrentKeyBindActions[i] != 0)
 		{
-			GUIButton(InputOptions[i]).Caption = sKeyBinds[iCurrentKeyBindActions[i]].Key;
+			GUIButton(InputOptions[i]).Caption = KeyBinds[iCurrentKeyBindActions[i]].Key;
 		}
 		else
 		{
@@ -916,6 +950,92 @@ function ResetKeyBindings() // Resets all keybindings back to their original act
 	class'PlayerInput'.static.StaticSaveConfig();
 	
 	MouseSensitivity.SetValue(class'PlayerInput'.default.MouseSensitivity);
+}
+
+function GetdgVoodooVariables() // Gets the advanced video option values for the GUI components
+{
+	local array<string> File;
+	
+	U.LoadStringArray(File, "..\\System\\dgVoodoo.conf");
+	
+	dgVoodooVariables.FPSLimit = GetdgVoodooVariableValue(File[119]);
+	dgVoodooVariables.Filtering = GetdgVoodooVariableValue(File[194]);
+	dgVoodooVariables.Antialiasing = GetdgVoodooVariableValue(File[198]);
+	dgVoodooVariables.VRAM = GetdgVoodooVariableValue(File[193]);
+	dgVoodooVariables.Brightness = GetdgVoodooVariableValue(File[32]);
+	dgVoodooVariables.Contrast = GetdgVoodooVariableValue(File[34]);
+	dgVoodooVariables.Color = GetdgVoodooVariableValue(File[33]);
+	dgVoodooVariables.DisableAndPassThru = GetdgVoodooVariableValue(File[190]);
+	dgVoodooVariables.Bilinear2DOperations = GetdgVoodooVariableValue(File[203]);
+	dgVoodooVariables.FastVideoMemoryAccess = GetdgVoodooVariableValue(File[207]);
+}
+
+function string GetdgVoodooVariableValue(string S) // Gets the individual value from a dgVoodoo.conf file from a provided line
+{
+	return Mid(S, InStr(S, "= ") + 2);
+}
+
+function WritedgVoodooVariables() // Takes the current values of the advanced video options, applies the changes to the configuration file directly, then closes the game since it requires a restart
+{
+	local array<string> File;
+	
+	U.LoadStringArray(File, "..\\System\\dgVoodoo.conf");
+	
+	// Prepare file changes
+	dgVoodooVariables.FPSLimit = FramerateLimit.Edit.GetText();
+	
+	if(dgVoodooVariables.FPSLimit ~= "Uncapped")
+	{
+		dgVoodooVariables.FPSLimit = "Unlimited";
+	}
+	
+	dgVoodooVariables.Filtering = Mid(TextureFiltering.Edit.GetText(), 12, Len(TextureFiltering.Edit.GetText()) - 13);
+	
+	if(dgVoodooVariables.Filtering ~= "1")
+	{
+		dgVoodooVariables.Filtering = "appdriven";
+	}
+	
+	if(Antialiasing.Edit.GetText() ~= "Disabled")
+	{
+		dgVoodooVariables.Antialiasing = "appdriven";
+	}
+	else
+	{
+		dgVoodooVariables.Antialiasing = Mid(Antialiasing.Edit.GetText(), 5);
+	}
+	
+	dgVoodooVariables.VRAM = Left(VRAMAllocation.Edit.GetText(), Len(VRAMAllocation.Edit.GetText()) - 3);
+	dgVoodooVariables.Brightness = string(int(ScreenBrightness.Value));
+	dgVoodooVariables.Contrast = string(int(ScreenContrast.Value));
+	dgVoodooVariables.Color = string(int(ScreenColorVibrancy.Value));
+	dgVoodooVariables.DisableAndPassThru = U.Lower(CompatibilityMode.Caption);
+	dgVoodooVariables.Bilinear2DOperations = U.Lower(PerformanceMode.Caption);
+	dgVoodooVariables.FastVideoMemoryAccess = U.Lower(PerformanceMode.Caption);
+	
+	// Apply the changes to the file
+	WritedgVoodooVariableValue(File[119], dgVoodooVariables.FPSLimit);
+	WritedgVoodooVariableValue(File[194], dgVoodooVariables.Filtering);
+	WritedgVoodooVariableValue(File[198], dgVoodooVariables.Antialiasing);
+	WritedgVoodooVariableValue(File[193], dgVoodooVariables.VRAM);
+	WritedgVoodooVariableValue(File[32], dgVoodooVariables.Brightness);
+	WritedgVoodooVariableValue(File[34], dgVoodooVariables.Contrast);
+	WritedgVoodooVariableValue(File[33], dgVoodooVariables.Color);
+	WritedgVoodooVariableValue(File[190], dgVoodooVariables.DisableAndPassThru);
+	WritedgVoodooVariableValue(File[203], dgVoodooVariables.Bilinear2DOperations);
+	WritedgVoodooVariableValue(File[207], dgVoodooVariables.FastVideoMemoryAccess);
+	
+	// Write the changes to the file
+	U.SaveStringArray(File, "..\\System\\dgVoodoo.conf");
+	U.Quit();
+}
+
+function string WritedgVoodooVariableValue(out string S, string sValue) // Outputs through <S> a value change to a provided line with the new value of <sValue>
+{
+	S = Mid(S, 0, InStr(S, "= ") + 2);
+	S = S $ sValue;
+	
+	return S $ sValue;
 }
 
 
@@ -1453,8 +1573,9 @@ defaultproperties
 	Begin Object Name=sldScreenBrightness0 Class=GUISlider
 		StyleName="SHSlider"
 		CaptionStyleName="SHSlider"
-		MinValue=0.0
-		MaxValue=4.0
+		MinValue=0
+		MaxValue=400
+		bIntSlider=true
 		bNeverFocus=true
 		WinTop=0.6
 		WinLeft=0.3
@@ -1475,8 +1596,9 @@ defaultproperties
 	Begin Object Name=sldScreenContrast0 Class=GUISlider
 		StyleName="SHSlider"
 		CaptionStyleName="SHSlider"
-		MinValue=0.0
-		MaxValue=4.0
+		MinValue=0
+		MaxValue=400
+		bIntSlider=true
 		bNeverFocus=true
 		WinTop=0.6
 		WinLeft=0.5
@@ -1497,8 +1619,9 @@ defaultproperties
 	Begin Object Name=sldScreenColorVibrancy0 Class=GUISlider
 		StyleName="SHSlider"
 		CaptionStyleName="SHSlider"
-		MinValue=0.0
-		MaxValue=4.0
+		MinValue=0
+		MaxValue=400
+		bIntSlider=true
 		bNeverFocus=true
 		WinTop=0.6
 		WinLeft=0.7
@@ -1516,6 +1639,44 @@ defaultproperties
 		WinHeight=0.05
 	End Object
 	ScreenColorVibrancyLabel=lblScreenColorVibrancy0
+	Begin Object Name=btnPerformanceMode0 Class=GUIButton
+		StyleName="SHSolidBox"
+		bNeverFocus=true
+		WinTop=0.8
+		WinLeft=0.4
+		WinWidth=0.1
+		WinHeight=0.05
+		OnClick=InternalOnClick
+	End Object
+	PerformanceMode=btnPerformanceMode0
+	Begin Object Name=lblPerformanceMode0 Class=GUILabel
+		StyleName="SHSolidBox"
+		TextAlign=TXTA_Center
+		WinTop=0.75
+		WinLeft=0.4
+		WinWidth=0.2
+		WinHeight=0.05
+	End Object
+	PerformanceModeLabel=lblPerformanceMode0
+	Begin Object Name=btnCompatibilityMode0 Class=GUIButton
+		StyleName="SHSolidBox"
+		bNeverFocus=true
+		WinTop=0.8
+		WinLeft=0.6
+		WinWidth=0.1
+		WinHeight=0.05
+		OnClick=InternalOnClick
+	End Object
+	CompatibilityMode=btnCompatibilityMode0
+	Begin Object Name=lblCompatibilityMode0 Class=GUILabel
+		StyleName="SHSolidBox"
+		TextAlign=TXTA_Center
+		WinTop=0.75
+		WinLeft=0.6
+		WinWidth=0.2
+		WinHeight=0.05
+	End Object
+	CompatibilityModeLabel=lblCompatibilityMode0
 	Begin Object Name=sldGameVolume0 Class=GUISlider
 		StyleName="SHSlider"
 		CaptionStyleName="SHSlider"
