@@ -26,6 +26,8 @@ event PostBeginPlay()
 
 event PostLoadGame(bool bLoadFromSaveGame)
 {
+	local MHeroPawn MHP;
+	
 	if(bLoadFromSaveGame)
 	{
 		return;
@@ -33,6 +35,11 @@ event PostLoadGame(bool bLoadFromSaveGame)
 	
 	PC = U.GetPC();
 	PC.FOV(C.GetFOV());
+	
+	foreach DynamicActors(class'MHeroPawn', MHP)
+	{
+		MHP.bModifiedBumplines = true;
+	}
 	
 	U.CC("Set SHHeroPawn SaveCameraNoSnapRotation" @ string(!C.bAutoLevelCamera));
 	U.CC("Set SHHeroPawn CameraNoSnapRotation" @ string(!C.bAutoLevelCamera));

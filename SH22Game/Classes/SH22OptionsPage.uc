@@ -883,15 +883,8 @@ function byte GetObjectDetail() // Returns with the current object detail (0 = L
 {
 	local byte B;
 	
-	if(bool(U.CC("Get ini:Engine.Engine.RenderDevice SuperHighDetailActors")))
-	{
-		B++;
-	}
-	
-	if(bool(U.CC("Get ini:Engine.Engine.RenderDevice HighDetailActors")))
-	{
-		B++;
-	}
+	B += byte(bool(U.CC("Get ini:Engine.Engine.RenderDevice SuperHighDetailActors")));
+	B += byte(bool(U.CC("Get ini:Engine.Engine.RenderDevice HighDetailActors")));
 	
 	return B;
 }
