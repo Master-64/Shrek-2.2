@@ -4,9 +4,9 @@ This mod is majorly in alpha and is not considered to be anywhere close to finis
 
 
 # To play yourself:
-- Download the entire project, then make a new game directory and use this project as the directory
-- Unzip AllDialog.zip in ...\Sounds
-- Run game.exe in ...\System
+- Clone the entire project with the GitHub Desktop software (provide the URL to this repository)
+- (Install 7-zip if you don't have it) Unzip AllDialog.7z.001 (click "Extract Here") in ..\Sounds
+- Run game.exe in ..\System
 - Have fun :) -- If you run into any issues, report it as an issue on the issues board
 
 
