@@ -26,8 +26,6 @@ event PostBeginPlay()
 
 event PostLoadGame(bool bLoadFromSaveGame)
 {
-	local MHeroPawn MHP;
-	
 	if(bLoadFromSaveGame)
 	{
 		return;
@@ -36,11 +34,7 @@ event PostLoadGame(bool bLoadFromSaveGame)
 	PC = U.GetPC();
 	PC.FOV(C.GetFOV());
 	
-	foreach DynamicActors(class'MHeroPawn', MHP)
-	{
-		MHP.bModifiedBumplines = true;
-	}
-	
+	U.CC("Set MHeroPawn bModifiedBumplines True");
 	U.CC("Set SHHeroPawn SaveCameraNoSnapRotation" @ string(!C.bAutoLevelCamera));
 	U.CC("Set SHHeroPawn CameraNoSnapRotation" @ string(!C.bAutoLevelCamera));
 	
@@ -78,10 +72,7 @@ function InitDifficultyMode()
 	
 	bPlayerRegeneration = C.DifficultyMode == DM_Relaxed;
 	
-	foreach DynamicActors(class'MHeroPawn', MHP)
-	{
-		MHP.bLandSlowdown = C.DifficultyMode == DM_Relaxed;
-	}
+	U.CC("Set MHeroPawn bLandSlowdown" @ U.BoolToString(C.DifficultyMode == DM_Relaxed));
 	
 	foreach AllActors(class'JumpMagnet', JM)
 	{
@@ -96,7 +87,7 @@ function InitDifficultyMode()
 		case DM_Knight:
 			foreach DynamicActors(class'MHeroPawn', MHP)
 			{
-				MHP.fDamageMultiplier = 3.0;
+				MHP.fDamageMultiplier *= 3.0;
 			}
 			
 			// Buff level difficulty
@@ -106,7 +97,7 @@ function InitDifficultyMode()
 		case DM_INeedAHero:
 			foreach DynamicActors(class'MHeroPawn', MHP)
 			{
-				MHP.fDamageMultiplier = 6.4;
+				MHP.fDamageMultiplier *= 6.4;
 			}
 			
 			// Master_64: No idea if this works correctly but I'm not going to check until it's needed
@@ -245,6 +236,7 @@ function InitShadowDetail()
 			U.CC("Set BossPIB bActorShadows True");
 			U.CC("Set CastleHallKnight bActorShadows False");
 			U.CC("Set HazMatShrek bActorShadows True");
+			U.CC("Set MHazMatShrek bActorShadows True");
 			U.CC("Set Rat bActorShadows True");
 			U.CC("Set SHEnemy bActorShadows True");
 			U.CC("Set SHHeroPawn bActorShadows True");
@@ -265,6 +257,7 @@ function InitShadowDetail()
 			U.CC("Set BossPIB bActorShadows True");
 			U.CC("Set CastleHallKnight bActorShadows False");
 			U.CC("Set HazMatShrek bActorShadows True");
+			U.CC("Set MHazMatShrek bActorShadows True");
 			U.CC("Set Rat bActorShadows True");
 			U.CC("Set SHEnemy bActorShadows True");
 			U.CC("Set SHHeroPawn bActorShadows True");
