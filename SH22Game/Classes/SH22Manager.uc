@@ -41,6 +41,16 @@ event PostLoadGame(bool bLoadFromSaveGame)
 	InitDifficultyMode();
 	InitViewDistance();
 	InitShadowDetail();
+	
+	SetTimer(0.01, false);
+}
+
+event Timer()
+{
+	if(CanDisableIntroMovies())
+	{
+		U.ChangeLevel(class'SHFEGUIPage'.default.FEMenuLevel);
+	}
 }
 
 event Tick(float DeltaTime)
@@ -286,6 +296,11 @@ function InitShadowDetail()
 		SHPS.SHPropsStaticRemoveShadow();
 		SHPS.SHPropsStaticAddShadow();
 	}
+}
+
+function bool CanDisableIntroMovies()
+{
+	return U.GetCurrentMap() ~= "0_Preamble" && class'SH22Config'.default.bDisableIntroMovies;
 }
 
 

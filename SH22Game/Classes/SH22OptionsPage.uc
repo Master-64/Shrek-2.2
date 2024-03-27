@@ -56,10 +56,10 @@ var localized string lKeyForward, lhKeyForward, lKeyBackward, lhKeyBackward, lKe
 // Game options
 var automated config SHGUIComboBox DifficultyModes;
 var automated config GUISlider FieldOfView;
-var automated config GUIButton AutoLevelCamera;
-var automated config GUIComponent GameOptions[3];
-var automated config GUILabel DifficultyModesLabel, FieldOfViewLabel, AutoLevelCameraLabel, GameLabels[3];
-var localized string lDifficultyModes, lhDifficultyModes, lFieldOfView, lhFieldOfView, lAutoLevelCamera, lhAutoLevelCamera;
+var automated config GUIButton AutoLevelCamera, DisableIntroMovies;
+var automated config GUIComponent GameOptions[4];
+var automated config GUILabel DifficultyModesLabel, FieldOfViewLabel, AutoLevelCameraLabel, DisableIntroMoviesLabel, GameLabels[4];
+var localized string lDifficultyModes, lhDifficultyModes, lFieldOfView, lhFieldOfView, lAutoLevelCamera, lhAutoLevelCamera, lDisableIntroMovies, lhDisableIntroMovies;
 
 // Video options
 var automated config SHGUIComboBox ScreenResolution, ObjectDetail, ShadowDetail, ViewDistance;
@@ -145,11 +145,13 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 	GameOptions[0] = DifficultyModes;
 	GameOptions[1] = FieldOfView;
 	GameOptions[2] = AutoLevelCamera;
+	GameOptions[3] = DisableIntroMovies;
 	GameLabels[0] = DifficultyModesLabel;
 	GameLabels[1] = FieldOfViewLabel;
 	GameLabels[2] = AutoLevelCameraLabel;
+	GameLabels[3] = DisableIntroMoviesLabel;
 	
-	for(i = 0; i < 3; i++)
+	for(i = 0; i < 4; i++)
 	{
 		CenterComponent(GameOptions[i]);
 		CenterComponent(GameLabels[i]);
@@ -251,6 +253,8 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 	FieldOfView.Hint = lhFieldOfView;
 	AutoLevelCameraLabel.Caption = lAutoLevelCamera;
 	AutoLevelCamera.Hint = lhAutoLevelCamera;
+	DisableIntroMoviesLabel.Caption = lDisableIntroMovies;
+	DisableIntroMovies.Hint = lhDisableIntroMovies;
 	
 	ScreenResolutionLabel.Caption = lScreenResolution;
 	ScreenResolution.Edit.Hint = lhScreenResolution;
@@ -354,6 +358,7 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 	
 	// Miscellaneous initialization
 	AutoLevelCamera.Caption = U.BoolToString(class'SH22Config'.default.bAutoLevelCamera);
+	DisableIntroMovies.Caption = U.BoolToString(class'SH22Config'.default.bDisableIntroMovies);
 	PerformanceMode.Caption = U.BoolToString(bool(dgVoodooVariables.Bilinear2DOperations));
 	CompatibilityMode.Caption = U.BoolToString(bool(dgVoodooVariables.DisableAndPassThru));
 	
@@ -381,7 +386,7 @@ function ChangeMenu(ECurrentMenu NewMenu) // Changes the current menu
 	
 	bShow = NewMenu == CM_Game;
 	
-	for(i = 0; i < 3; i++)
+	for(i = 0; i < 4; i++)
 	{
 		GameOptions[i].SetVisibility(bShow);
 		GameOptions[i].bAcceptsInput = bShow;
@@ -479,6 +484,13 @@ event bool InternalOnClick(GUIComponent Sender)
 			class'SH22Config'.static.StaticSaveConfig();
 			
 			AutoLevelCamera.Caption = U.BoolToString(class'SH22Config'.default.bAutoLevelCamera);
+			
+			break;
+		case DisableIntroMovies:
+			class'SH22Config'.default.bDisableIntroMovies = !class'SH22Config'.default.bDisableIntroMovies;
+			class'SH22Config'.static.StaticSaveConfig();
+			
+			DisableIntroMovies.Caption = U.BoolToString(class'SH22Config'.default.bDisableIntroMovies);
 			
 			break;
 		case AdvancedSettings:
@@ -1360,6 +1372,25 @@ defaultproperties
 		WinHeight=0.05
 	End Object
 	AutoLevelCameraLabel=lblAutoLevelCamera0
+	Begin Object Name=btnDisableIntroMovies0 Class=GUIButton
+		StyleName="SHSolidBox"
+		bNeverFocus=true
+		WinTop=0.6
+		WinLeft=0.5
+		WinWidth=0.1
+		WinHeight=0.05
+		OnClick=InternalOnClick
+	End Object
+	DisableIntroMovies=btnDisableIntroMovies0
+	Begin Object Name=lblDisableIntroMovies0 Class=GUILabel
+		StyleName="SHSolidBox"
+		TextAlign=TXTA_Center
+		WinTop=0.55
+		WinLeft=0.5
+		WinWidth=0.2
+		WinHeight=0.05
+	End Object
+	DisableIntroMoviesLabel=lblDisableIntroMovies0
 	Begin Object Name=cbScreenResolution0 Class=SHGUIComboBox
 		StyleName="SHSolidBox"
 		bNeverFocus=true

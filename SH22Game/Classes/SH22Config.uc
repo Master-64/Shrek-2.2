@@ -36,7 +36,7 @@ enum EViewDistanceMode
 
 var config float fDefaultFOV;
 var config EDifficultyMode DifficultyMode;
-var config bool bAutoLevelCamera, bSecretDifficultyModeUnlocked;
+var config bool bAutoLevelCamera, bSecretDifficultyModeUnlocked, bDisableIntroMovies;
 var config EShadowDetailMode ShadowDetail;
 var config EViewDistanceMode ViewDistance;
 var SH22Manager M;
