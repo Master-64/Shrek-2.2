@@ -300,7 +300,7 @@ function InitShadowDetail()
 
 function bool CanDisableIntroMovies()
 {
-	return U.GetCurrentMap() ~= "0_Preamble" && class'SH22Config'.default.bDisableIntroMovies;
+	return U.GetCurrentMap() ~= "0_Preamble" && C.bDisableIntroMovies;
 }
 
 
