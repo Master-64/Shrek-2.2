@@ -15,6 +15,7 @@ lCheats=Cheats
 lhCheats=[NOT IMPLEMENTED] Configure your cheats
 lMultiplayer=Multiplayer
 lhMultiplayer=[NOT IMPLEMENTED] Toggle online multiplayer mode
+lActivisionLabel=THIS MATERIAL IS NOT MADE OR SUPPORTED BY ACTIVISION.
 
 [SH22OptionsPage]
 lInputTab=Input

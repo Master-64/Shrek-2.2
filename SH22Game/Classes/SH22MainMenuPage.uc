@@ -11,9 +11,9 @@ class SH22MainMenuPage extends MGUIPage
 
 var automated config GUIButton SaveSlot0, SaveSlot1, SaveSlot2, SaveSlot3, SaveSlot4, SaveSlot5, OptionButton, DeleteSaveButton, QuitButton, CustomAdventuresButton, CheatsButton, MultiplayerButton;
 var automated GUIButton SaveSlots[6], MainButtons[3], SideButtons[3];
-var automated config GUILabel GameBuildLabel;
+var automated config GUILabel GameBuildLabel, ActivisionLabel;
 var automated config GUIImage GameLogo;
-var localized string lhStartGame, lOption, lhOption, lDeleteSave, lhDeleteSave, lDeleteSavePrompt, lQuit, lhQuit, lAreYouSure, lhAreYouSure, lCustomAdventures, lhCustomAdventures, lCheats, lhCheats, lMultiplayer, lhMultiplayer;
+var localized string lhStartGame, lOption, lhOption, lDeleteSave, lhDeleteSave, lDeleteSavePrompt, lQuit, lhQuit, lAreYouSure, lhAreYouSure, lCustomAdventures, lhCustomAdventures, lCheats, lhCheats, lMultiplayer, lhMultiplayer, lActivisionLabel;
 var config string sFirstLevel;
 var bool bPanic, bDeleteSaveButtonState;
 var int iPanicButtonCounter;
@@ -32,6 +32,7 @@ event InitComponent(GUIController MyController, GUIComponent MyOwner)
 	TabFooter.WinTop = 0.9;
 	
 	GameBuildLabel.Caption = Localize("General", "Product", "game");
+	ActivisionLabel.Caption = lActivisionLabel;
 	
 	SaveSlots[0] = SaveSlot0;
 	SaveSlots[1] = SaveSlot1;
@@ -64,6 +65,7 @@ event InitComponent(GUIController MyController, GUIComponent MyOwner)
 	}
 	
 	CenterComponent(GameBuildLabel);
+	CenterComponent(ActivisionLabel);
 	CenterComponent(TabFooter);
 	
 	OptionButton.Caption = lOption;
@@ -439,6 +441,16 @@ defaultproperties
 		WinHeight=0.05
 	End Object
 	GameBuildLabel=lblGameBuild0
+	Begin Object Name=lblActivision0 Class=GUILabel
+		StyleName="FontSH10Auptimagh"
+		TextAlign=TXTA_Left
+		bMultiLine=true
+		WinTop=0.98
+		WinLeft=0.15
+		WinWidth=0.3
+		WinHeight=0.1
+	End Object
+	ActivisionLabel=lblActivision0
 	Begin Object Name=btnSaveSlot0 Class=GUIButton
 		StyleName="SHBTN0SaveStyle"
 		WinTop=0.3
