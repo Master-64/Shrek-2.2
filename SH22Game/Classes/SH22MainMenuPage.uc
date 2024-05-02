@@ -66,6 +66,7 @@ event InitComponent(GUIController MyController, GUIComponent MyOwner)
 	
 	CenterComponent(GameBuildLabel);
 	CenterComponent(ActivisionLabel);
+	CenterComponent(GameLogo);
 	CenterComponent(TabFooter);
 	
 	OptionButton.Caption = lOption;
@@ -346,6 +347,10 @@ event bool InternalOnClick(GUIComponent Sender)
 			StartPanic();
 			
 			break;
+		case MultiplayerButton:
+			Controller.ReplaceMenu("SH22Game.SH22MultiplayerPage");
+			
+			break;
 		default:
 			break;
 	}
@@ -415,6 +420,8 @@ event bool InternalOnClick(GUIComponent Sender)
 				SHHeroController(PC).SaveConfig();
 				
 				UpdateSaveIcons();
+				
+				PanicEnd();
 			}
 			
 			break;
@@ -573,11 +580,11 @@ defaultproperties
 	MultiplayerButton=btnMultiplayer0
 	Begin Object Name=imgLogo0 Class=GUIImage
 		Image=Texture'SH22_Tex.Logo_Text'
-		ImageAlign=IMGA_Center
+		ImageStyle=ISTY_Scaled
 		WinTop=0.1
 		WinLeft=0.5
-		WinWidth=1.0
-		WinHeight=1.0
+		WinWidth=0.75
+		WinHeight=0.1875
 	End Object
 	GameLogo=imgLogo0
 	bEscapeClosesPage=false

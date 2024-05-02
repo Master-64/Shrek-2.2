@@ -110,3 +110,17 @@ lViewDistanceShort=Short
 lFramerateLimitUncapped=Uncapped
 lTrue=True
 lFalse=False
+
+[SH22MultiplayerPage]
+lUsernameBox=Username
+lhUsernameBox=Type your username
+lIPAddressBox=IP Address
+lhIPAddressBox=Type the IP address that points to the server you wish to join
+lPortBox=Port
+lhPortBox=Type the port related to the IP address
+lCharacterSelect=Character Select
+lhCharacterSelect=Select your character
+lBack=Back
+lhBack=Go back to the main menu
+lConnect=Connect
+lhConnect=Connect to a server
