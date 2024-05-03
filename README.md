@@ -20,3 +20,28 @@ In the end, I wish for this project to be the ultimate Shrek 2 (PC) experience e
 
 # How is this project in alpha after 5 years?
 Lots of modding discoveries have been constantly happening since this time, and a lot of time was put into side-projects that weren't related to Shrek 2.2, aside from the Master Pack library mod, which has been in development for over 2 years, which will make Shrek 2.2 possible to program. Had it not taken this long to get where we are now, Shrek 2.2 would not have the potential to be as good as it will be in the future. You will just have to trust in the fact this project has been constantly been in development for over 5 years, despite a majority of that time not being put directly into Shrek 2.2, rather the time was put into making better modding tools to make this sort of project possible.
+
+# Features to expect upon release:
+- Online P2P Multiplayer
+- Full-game overhaul while keeping the original game style
+- Gameplay extensions/reworks all across the game
+- All-new maps, with all existing maps being heavily improved/extended
+- New paths & optional paths
+- Replayability
+- Unique player abilities
+- Quests
+- New cutscenes and voicelines
+- Achievements
+- More secret areas
+- The full collection of all official Shrek 2 music
+- A full revamp of the potion system
+- Difficulty modes
+- More options to customize your experience
+- Official 16:9 aspect ratio support
+- Tons of fixes to annoying problems
+- Statistics
+- Unlockable cheats
+- Automatic support for custom maps
+- Easter eggs
+- More mod support
+- And much, much more!
