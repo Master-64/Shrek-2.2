@@ -29,9 +29,7 @@ Lots of modding discoveries have been constantly happening since this time, and 
 - New paths & optional paths
 - Replayability
 - Unique player abilities
-- Quests
 - New cutscenes and voicelines
-- Achievements
 - More secret areas
 - The full collection of all official Shrek 2 music
 - A full revamp of the potion system
