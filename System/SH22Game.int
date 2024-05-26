@@ -10,7 +10,7 @@ lhQuit=Quit Shrek 2.2 to desktop
 lAreYouSure=Are You Sure?
 lhAreYouSure=Are you sure you wish to quit Shrek 2.2?
 lCustomAdventures=Custom Adventure
-lhCustomAdventures=[NOT IMPLEMENTED] Play a custom adventure
+lhCustomAdventures=Play a custom adventure
 lCheats=Cheats
 lhCheats=[NOT IMPLEMENTED] Configure your cheats
 lMultiplayer=Multiplayer
@@ -124,3 +124,11 @@ lBack=Back
 lhBack=Go back to the main menu
 lConnect=Connect
 lhConnect=Connect to a server
+
+[SH22CustomAdventuresPage]
+lBack=Back
+lhBack=Go back to the main menu
+lBegin=Begin
+lhBegin=Begin a custom adventure from the selected level
+lLevelSelect=Level Selector
+lhLevelSelect=Select the starting level for the custom adventure

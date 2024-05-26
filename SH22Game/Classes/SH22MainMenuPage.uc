@@ -349,6 +349,11 @@ event bool InternalOnClick(GUIComponent Sender)
 			break;
 		case MultiplayerButton:
 			Controller.ReplaceMenu("SH22Game.SH22MultiplayerPage");
+			U.Announce("THIS MENU IS NOT FUNCTIONAL YET!!!");
+			
+			break;
+		case CustomAdventuresButton:
+			Controller.ReplaceMenu("SH22Game.SH22CustomAdventuresPage");
 			
 			break;
 		default:

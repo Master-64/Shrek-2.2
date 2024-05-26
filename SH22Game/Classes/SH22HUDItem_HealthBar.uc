@@ -108,6 +108,32 @@ function UpdateHealthIconStatus()
 	SetHealthStatusVars();
 }
 
+function SetHealthStatusVars()
+{
+	// KnowWonder code port + tweaks for 2.2 compatibility
+	
+	local int newnumicons, realhealth;
+	
+	newnumicons = Clamp(U.GetInventoryCount(class'ShamrockCollection') + 1, 1, 9);
+	
+	if(newnumicons != NumIcons)
+	{
+		textureIcon = Texture(DynamicLoadObject(BarIcons[newnumicons - 1], class'Texture'));
+		
+		UpdateRequired = true;
+	}
+	
+	NumIcons = newnumicons;
+	realhealth = int(U.GetHealth(U.GetHP()));
+	
+	if(realhealth < 0.0)
+	{
+		realhealth = 0.0;
+	}
+	
+	PlayerHealth = float(realhealth) / (100.0 * float(NumIcons));
+}
+
 function RenderGlow(Canvas C);
 
 state DoGlow
