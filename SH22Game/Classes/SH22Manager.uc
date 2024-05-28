@@ -42,6 +42,10 @@ event PostLoadGame(bool bLoadFromSaveGame)
 	InitViewDistance();
 	InitShadowDetail();
 	
+	// Hack for peasant skins for now
+	FixPeasantSkins();
+	
+	// Super latent logic
 	SetTimer(0.01, false);
 }
 
@@ -50,6 +54,18 @@ event Timer()
 	if(CanDisableIntroMovies())
 	{
 		U.ChangeLevel(class'SHFEGUIPage'.default.FEMenuLevel);
+	}
+}
+
+function FixPeasantSkins()
+{
+	local Peasant P;
+	
+	foreach DynamicActors(class'Peasant', P)
+	{
+		P.Skins.Insert(P.Skins.Length, 2);
+		P.Skins[1] = P.Skins[0];
+		P.Skins[2] = P.Skins[0];
 	}
 }
 
