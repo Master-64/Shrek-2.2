@@ -135,6 +135,7 @@ Donovan Moxey, Ph.D.
 *Uses Bink Video. (c) 1997-2004 by RAD Game Tools, Inc.
 *Uses Pixomatic Processing Technology. (c) 2002-2004 by RAD Game Tools, Inc.
 *Uses dgVoodoo. (c) 2013-2024 by Dege (http://dege.fw.hu/)
+*Uses Upscayl. (c) 2022-2024 by Nayam Amarshe and TGS963 (https://www.upscayl.org/)
 
 
 **Amaze Entertainment
