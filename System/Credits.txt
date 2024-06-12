@@ -1,5 +1,6 @@
 **SHREK 2.2 PC TEAM CREDITS
 *A Master_64 Production
+*Made with love...
 
 
 **Lead Producer/Lead Level Designer/Senior Engineer/Lead Project Manager
@@ -20,6 +21,49 @@
 *SurDno
 *Yacine_Sn
 *Robin
+
+
+**Sky Graphic Designers
+*MrRockman888
+*Tommy100
+*t.I.P.
+*Necros
+*Komaokc
+*Karatekaefer
+*The Mighty Pete
+*HaZZaRDouZ
+*GreenWallMapper
+*T-R-O-N
+*Serhat Ondes
+*AmstaFF
+*gleb_erilov
+*Burnfingers
+*amethyst7
+*Mr-Gibs
+*Colin Lowndes
+*Hazel Whorley
+*Techx
+*Justin Fisher
+*Mr. White
+*aXon
+*SlowHandd
+*Adam W. Stiles
+*Sock
+*Sorbet
+*Jauhn Dabz
+*Roblox
+*Mark Alsip
+*John Shedletsky
+*Blockland
+*Jose "Jaj" Arcediano
+*Isla Kamamee
+*Jockum Skoglund
+*LedIris
+*Pieter Verhoeven
+*Mayhem
+*Westbeam
+*vladislavzh
+*Plus some anonymous & unknown sources...
 
 
 **General Help/Thanks
@@ -132,8 +176,8 @@ Vikki Zarkovich
 Interactive Multimedia Solutions, Inc.
 Donovan Moxey, Ph.D.
 
-*Uses Bink Video. (c) 1997-2004 by RAD Game Tools, Inc.
-*Uses Pixomatic Processing Technology. (c) 2002-2004 by RAD Game Tools, Inc.
+*Uses Bink Video. (c) 1997-2004 by RAD Game Tools, Inc. (https://www.radgametools.com/)
+*Uses Pixomatic Processing Technology. (c) 2002-2004 by RAD Game Tools, Inc. (https://www.radgametools.com/)
 *Uses dgVoodoo. (c) 2013-2024 by Dege (http://dege.fw.hu/)
 *Uses Upscayl. (c) 2022-2024 by Nayam Amarshe and TGS963 (https://www.upscayl.org/)
 
