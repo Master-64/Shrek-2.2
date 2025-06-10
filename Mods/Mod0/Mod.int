@@ -1,0 +1,19 @@
+[Info]
+Name=Hiver (Mod Loader)
+Blurb=A mod loader for Shrek 2
+Description=Hiver is a mod loader for Shrek 2, designed to make loading mods and maps as easy as possible.
+Version=v1.0.1
+Langauge=INT
+Authors=Master_64
+Coauthors=
+Others=
+
+[ModLoader]
+ModType=Core,Mutator
+ModFileName=Hiver
+MutatorClassName=MutHiver
+
+[ModInstantiation]
+InstantiateOnMapLoad=true
+MapLoadWhiteList=
+LaunchOptions=
