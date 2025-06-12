@@ -1,7 +1,8 @@
 [Public]
-;Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console)
+Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console)
 Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.MasterMD5Commandlet,Class=Class,MetaClass=Core.Commandlet)
+Preferences=(Caption="Console Key",Parent="Advanced",Class=Engine.Console,Immediate=True)
 Preferences=(Caption="Game Engine Settings",Parent="Advanced",Class=Engine.GameEngine,Category=Settings,Immediate=True)
 Preferences=(Caption="Key Aliases",Parent="Advanced",Class=Engine.Input,Immediate=True,Category=Aliases)
 Preferences=(Caption="Raw Key Bindings",Parent="Advanced",Class=Engine.Input,Immediate=True,Category=RawKeys)
@@ -171,5 +172,5 @@ HelpWebLink=http://unreal.epicgames.com/servertips.htm
 HelpParm[0]=Log
 HelpDesc[0]=Specify the log file to generate
 HelpParm[1]=AllAdmin
-HelpDesc[1]=Give all players admin privelages
+HelpDesc[1]=Give all players admin privileges
 
