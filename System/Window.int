@@ -68,7 +68,9 @@ ID_LogAdvancedOptions=&Advanced Options
 ID_LogFileExit=E&xit
 
 [IDDIALOG_CrashBox]
-IDC_Copy=Copy
-IDC_BugReport=Submit Bug Report
-IDC_CrashBox=Shrek 2.2 has crashed!
+IDC_Ok=Close
+IDC_Copy=Copy Crash Log Trace...
+IDC_BugReport=Submit Bug Report...
+IDC_CrashBoxWindow=Shrek 2.2 has crashed!
+IDC_CrashBox=Whoops, Shrek 2.2 just crashed! Please report this to Master_64!
 BugReportURL=https://github.com/Master-64/Shrek-2.2/issues
