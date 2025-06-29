@@ -4,7 +4,7 @@ Preferences=(Caption="Display",Parent="Advanced Options",Class=WinDrv.WindowsCli
 Preferences=(Caption="Joystick",Parent="Advanced Options",Class=WinDrv.WindowsClient,Immediate=True,Category=Joystick)
 
 [Errors]
-Failed3D=3d hardware initialization failed
+Failed3D=3D hardware initialization failed
 DDrawMode=DirectDraw was unable to set the requested video mode
 
 [General]

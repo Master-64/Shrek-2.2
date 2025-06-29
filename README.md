@@ -1,17 +1,23 @@
 # Shrek 2.2
 A major full-game mod designed to majorly improve the overall experience, as well as finishing a lot of things the developers likely would've done.
-This mod is majorly in alpha and is not considered to be anywhere close to finished. Support past the modified levels should not be expected, as the game will not play as intended.
+This mod is majorly in alpha and is not considered to be anywhere close to finished. Support past the modified levels should not be expected, as the game will likely not play as intended.
 
 
 # To play yourself:
-- Clone the entire project with the GitHub Desktop software (provide the URL to this repository)
+- Clone the entire project with the GitHub Desktop software (provide the website URL to this repository)
 - (Install 7-zip if you don't have it) Unzip AllDialog.7z.001 (click "Extract Here") in ..\Sounds
 - Run game.exe in ..\System
-- Have fun :) -- If you run into any issues, report it as an issue on the issues board
+- Have fun :)
+
+# Known Common Issues
+1a. I found an issue, or have something to suggest.
+1b. Make a GitHub account, and post your inquiry to the issue board. See issue board here: https://github.com/Master-64/Shrek-2.2/issues
+2a. The game fails to load when ran, with no crash window.
+2b. Check Windows Defender to see if it's blocking the game. If it's not that, open `dgVoodoo.conf` in the game `System` folder with a text editor, and set `DisableAndPassThru` to equal `true`.
 
 
 # How to help contribute to the project
-If you think you're capable of creating content for Shrek 2.2, whether it be maps, graphics, sounds, scripts or animations, you are needed! You can get started by download GitHub Desktop, then cloning this repository with the software. From this point, you need to patch your level editor with the 2.2 files (every time a build is pushed just to be safe), which you can do by locating modified files in the 2.2 directory, such as the modified files in the following folders: Animations, Sounds, StaticMeshes, System (only for SH22.u and MPak.u) and Textures. Once you do that and make your changes, propose an issue to become a contributor, then once you are added as a contributor (if you become verified), you can make a commit to the repository, which can then be reviewed by other modders. If you are unsure how to help but want to help, please contact Master_64 in the Shrekciety Discord: https://discord.com/invite/0VEIly8qa8WUZAzV
+If you think you're capable of creating content for Shrek 2.2, whether it be maps, graphics, sounds, scripts or animations, you are needed! You can get started by download GitHub Desktop, then cloning this repository with the software. From this point, clone the level editor ( https://github.com/Master-64/Shrek2-LevelEditor ) and download the 2.2 branch. Once you do that and make your changes, propose an issue to become a contributor, then once you are added as a contributor (if you become verified), you can make a commit to the repository, which can then be reviewed by other modders. If you are unsure how to help but want to help, please contact Master_64 in the Shrekciety Discord: https://discord.com/invite/0VEIly8qa8WUZAzV
 
 If you do not want to modify game files but you still want to provide suggestions for how Shrek 2.2 could be improved, please fill out feature suggestions or bug reports seen on the issue board!
 
@@ -22,14 +28,11 @@ In the end, I wish for this project to be the ultimate Shrek 2 (PC) experience e
 Lots of modding discoveries have been constantly happening since this time, and a lot of time was put into side-projects that weren't related to Shrek 2.2, aside from the Master Pack library mod, which has been in development for over 2 years, which will make Shrek 2.2 possible to program. Had it not taken this long to get where we are now, Shrek 2.2 would not have the potential to be as good as it will be in the future. You will just have to trust in the fact this project has been constantly been in development for over 5 years, despite a majority of that time not being put directly into Shrek 2.2, rather the time was put into making better modding tools to make this sort of project possible.
 
 # Features to expect upon release:
-- Online P2P Multiplayer
 - Full-game overhaul while keeping the original game style
 - Gameplay extensions/reworks all across the game
 - All-new maps, with all existing maps being heavily improved/extended
-- New paths & optional paths
 - Replayability
 - Unique player abilities
-- New cutscenes and voicelines
 - More secret areas
 - The full collection of all official Shrek 2 music
 - A full revamp of the potion system
@@ -37,9 +40,15 @@ Lots of modding discoveries have been constantly happening since this time, and 
 - More options to customize your experience
 - Official 16:9 aspect ratio support
 - Tons of fixes to annoying problems
-- Statistics
 - Unlockable cheats
 - Automatic support for custom maps
-- Easter eggs
 - More mod support
+- And much, much more!
+
+# Features to expect past release:
+- Online P2P Multiplayer
+- New paths & optional paths
+- New cutscenes and voicelines
+- Statistics
+- Easter eggs
 - And much, much more!

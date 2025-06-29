@@ -11,7 +11,7 @@
 *Karpai
 
 
-**Level Designer
+**Assistant Level Designer
 *Im_a_mirror
 
 
@@ -21,6 +21,7 @@
 *SurDno
 *Yacine_Sn
 *Robin
+*DOOTGUY
 
 
 **Sky Graphic Designers
@@ -178,8 +179,8 @@ Donovan Moxey, Ph.D.
 
 *Uses Bink Video. (c) 1997-2004 by RAD Game Tools, Inc. (https://www.radgametools.com/)
 *Uses Pixomatic Processing Technology. (c) 2002-2004 by RAD Game Tools, Inc. (https://www.radgametools.com/)
-*Uses dgVoodoo. (c) 2013-2024 by Dege (http://dege.fw.hu/)
-*Uses Upscayl. (c) 2022-2024 by Nayam Amarshe and TGS963 (https://www.upscayl.org/)
+*Uses dgVoodoo. (c) 2013-2025 by Dege (http://dege.fw.hu/)
+*Uses Upscayl. (c) 2022-2025 by Nayam Amarshe and TGS963 (https://www.upscayl.org/)
 
 
 **Amaze Entertainment

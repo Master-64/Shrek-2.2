@@ -21,7 +21,7 @@ NetInvalid=Received invalid file request
 NoDownload=Package '%s' is not downloadable
 DownloadFailed=Downloading package '%s' failed: %s
 RequestDenied=Server requested file from pending level: Denied
-ConnectionFailed=
+ConnectionFailed=Connection failed
 ChAllocate=Couldn't allocate channel
 NetAlready=Already networking
 NetListen=Listen failed: No linker context available
@@ -78,6 +78,7 @@ HelpParm[2]=-s
 HelpDesc[2]=Show the current database.
 HelpParm[3]=-r
 HelpDesc[3]=Force the revision of all entries to <param>
+
 [General]
 Upgrade=To enter this server, you need the latest free update to Unreal available from Epic's Web site:
 UpgradeURL=http://www.unreal.com/upgrade
